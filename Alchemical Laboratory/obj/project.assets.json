@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Sharprompt/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Sharprompt.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Sharprompt.dll": {}
+        },
+        "resource": {
+          "lib/net8.0/de-DE/Sharprompt.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/net8.0/ja/Sharprompt.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sharprompt/3.0.0": {
+      "sha512": "Jt8vE5Ryu5LYg6EraizPR1bNFfpbBOnyjWonwOyNCmKkTE8eOqE/5G8o1H/WGT2l9JTftkQw7Vl8EkmJ8K2qkw==",
+      "type": "package",
+      "path": "sharprompt/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Sharprompt.dll",
+        "lib/net8.0/de-DE/Sharprompt.resources.dll",
+        "lib/net8.0/ja/Sharprompt.resources.dll",
+        "sharprompt.3.0.0.nupkg.sha512",
+        "sharprompt.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Sharprompt >= 3.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DmitryPC\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Working folder of Dima\\Univer Sem_4\\CSharp OOP\\Alchemical Laboratory\\Alchemical Laboratory.csproj",
+      "projectName": "Alchemical Laboratory",
+      "projectPath": "C:\\Working folder of Dima\\Univer Sem_4\\CSharp OOP\\Alchemical Laboratory\\Alchemical Laboratory.csproj",
+      "packagesPath": "C:\\Users\\DmitryPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Working folder of Dima\\Univer Sem_4\\CSharp OOP\\Alchemical Laboratory\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\DmitryPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Sharprompt": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
