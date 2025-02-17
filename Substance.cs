@@ -34,6 +34,11 @@ namespace Alchemical_Laboratory
                 Console.WriteLine("Необходимые инструменты: " + string.Join(", ", RequiredTools));
             }
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
 }

@@ -5,13 +5,17 @@ using System.Text;
 
 namespace Alchemical_Laboratory
 {
-    public class UnlimitedGameState
+    public class UnlimitedGameState : IGameState
     {
         public SortedSet<Substance> Inventory { get; set; } = new SortedSet<Substance>();
         public double RiskLevel { get; set; } = 0;
         public bool RecipeDiscovered { get; set; } = false; // End flag
 
-        public Substance Mix2(Substance sub1, Substance sub2)
+        //public Substance Mix2(Substance sub1, Substance sub2)
+        //{
+
+        //    return 
+        //}
 
         public void DisplayInventory()
         {

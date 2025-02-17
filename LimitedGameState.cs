@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Alchemical_Laboratory
 {
-    public class LimitedGameState
+    public class LimitedGameState : IGameState
     {
         public List<KeyValuePair<Substance, int>> Inventory { get; set; } = new List<KeyValuePair<Substance, int>>();
         public double RiskLevel { get; set; } = 0;
@@ -24,6 +24,11 @@ namespace Alchemical_Laboratory
             {
                 Console.WriteLine($"{i + 1}. {Inventory[i].Key.Name}: {Inventory[i].Value}");
             }
+        }
+
+        public void IsSuccess()
+        {
+            if (RecipeDiscovered) { }
         }
     }
 }

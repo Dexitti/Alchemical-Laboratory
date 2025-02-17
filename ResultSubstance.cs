@@ -7,8 +7,9 @@ namespace Alchemical_Laboratory
 {
     public sealed class ResultSubstance
     {
-        List<Substance> substances;
-        Substance RandomSubstance { get; set; }
+        readonly List<CompoundSubstance> substances;
+        readonly List<Recipe> allRecipes;
+        CompoundSubstance RandomSubstance { get; set; }
 
         public static readonly ResultSubstance instance = new ResultSubstance(); //только 1 экземпляр!
         public ResultSubstance() {
@@ -22,7 +23,7 @@ namespace Alchemical_Laboratory
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.Write(RandomSubstance.Name);
             Console.ResetColor();
-            Console.Write(". Фантазируйте, химичьте и экспериментируйте. Удачи!");
+            //Console.Write(". Фантазируйте, химичьте и экспериментируйте. Удачи!");
         }
 
 

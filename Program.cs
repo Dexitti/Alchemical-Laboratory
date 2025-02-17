@@ -8,7 +8,6 @@ namespace Alchemical_Laboratory
         public static void Main()
         {
             Game game = new();
-            game.Start();
         }
     }
 }
