@@ -24,10 +24,13 @@ namespace Alchemical_Laboratory
         {
             Console.WriteLine($"Название: {Name}");
             Console.WriteLine($"Описание: {Description}");
-            Console.WriteLine("Свойства:");
-            foreach (var property in Properties)
+            if (Properties.Count > 0)
             {
-                Console.WriteLine($"  - {property.Key}: {property.Value}");
+                Console.WriteLine("Свойства:");
+                foreach (var property in Properties)
+                {
+                    Console.WriteLine($"  - {property.Key}: {property.Value}");
+                }
             }
             if (RequiredTools.Any())
             {
