@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Alchemical_Laboratory
 {
@@ -13,7 +14,8 @@ namespace Alchemical_Laboratory
         public CompoundSubstance(string name, string description) : base(name, description)
         {
             Components = new Dictionary<Substance, double>();
-            Recipe = $"Рецепт: {Recipe}";
+            var recipe = Game.Services.GetRequiredService<RecipesCollection>().Keys.FirstOrDefault(r => r == name);
+            Recipe = $"Рецепт: {recipe}";
         }
 
         public override void DisplayInfo()
@@ -27,4 +29,5 @@ namespace Alchemical_Laboratory
             Console.WriteLine($"Рецепт: {Recipe}");
         }
     }
+
 }

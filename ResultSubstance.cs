@@ -8,14 +8,15 @@ namespace Alchemical_Laboratory
 {
     public sealed class ResultSubstance
     {
-        readonly List<CompoundSubstance> substances = Game.Services.GetRequiredService<SubstancesCollection>().ToList();
-        readonly List<Recipe> allRecipes = Game.Services.GetRequiredService<RecipesCollection>().ToList();
+        readonly List<CompoundSubstance> substances = []; // Game.Services.GetRequiredService<SubstancesCollection>().Values.ToList();
+        readonly List<Recipe> allRecipes = Game.Services.GetRequiredService<RecipesCollection>().Values.ToList();
         CompoundSubstance RandomSubstance { get; set; }
 
-        public static readonly ResultSubstance instance = new ResultSubstance(); //только 1 экземпляр!
+        //public static readonly ResultSubstance instance = new ResultSubstance(); //только 1 экземпляр!
         public ResultSubstance() {
             var rand = new Random();
             RandomSubstance = substances[rand.Next(substances.Count)];
+            BuildRecipeTree(RandomSubstance);
         }
 
         public void PrintGoal()
@@ -27,7 +28,7 @@ namespace Alchemical_Laboratory
             //Console.Write(". Фантазируйте, химичьте и экспериментируйте. Удачи!");
         }
 
-        public RecipeNode BuildRecipeTree(Substance targetSubstance)
+        private RecipeNode BuildRecipeTree(CompoundSubstance targetSubstance)
         {
             Recipe recipe = allRecipes.FirstOrDefault(r => r.Result == targetSubstance);
 
@@ -38,7 +39,7 @@ namespace Alchemical_Laboratory
 
             RecipeNode node = new RecipeNode(recipe);
 
-            foreach (Substance component in recipe.Components)
+            foreach (CompoundSubstance component in recipe.Components)
             {
                 node.Children.Add(BuildRecipeTree(component));
             }

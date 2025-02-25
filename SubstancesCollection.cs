@@ -6,24 +6,34 @@ using System.Text;
 
 namespace Alchemical_Laboratory
 {
-    public class SubstancesCollection : ReadOnlyCollection<Substance>
+    public class SubstancesCollection : ReadOnlyDictionary<string, Substance>, ISubstanceCollection<Substance>
     {
 
         public SubstancesCollection() : base(GetAllSubstances())
         {
         }
 
-        private static IList<Substance> GetAllSubstances()
+        static IDictionary<string, Substance> GetAllSubstances()
         {
-            List<Substance> list = 
-            [
-                new Substance("Огонь", "-"),
-                new Substance("Вода", "-"),
-                new Substance("Ветер", "-"),
-                new Substance("Земля", "-")
+            Dictionary<string, Substance> dict = new()
+            {
+                // default
+                { "fire", new Substance("Огонь", "-") },
+                { "water", new Substance("Вода", "-") },
+                { "wind", new Substance("Ветер", "-") },
+                { "earth", new Substance("Земля", "-") },
 
-            ];
-            return list;
+                // complex
+                { "lava", new Substance("Лава", "-") }
+            };
+            return dict;
         }
+
+        IEnumerable<Substance> ISubstanceCollection<Substance>.Values => GetAllSubstances().Values;
+    }
+
+    public interface ISubstanceCollection<out T> where T : ISubstance
+    {
+        IEnumerable<T> Values { get; }
     }
 }

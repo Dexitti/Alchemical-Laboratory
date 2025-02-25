@@ -7,10 +7,10 @@ namespace Alchemical_Laboratory
 {
     public class Recipe
     {
-        public Substance Result { get; set; }
+        public CompoundSubstance Result { get; set; }
         public List<Substance> Components { get; set; }
 
-        public Recipe(Substance result, List<Substance> components)
+        public Recipe(CompoundSubstance result, List<Substance> components)
         {
             Result = result;
             Components = components;

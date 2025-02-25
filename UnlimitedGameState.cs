@@ -30,7 +30,7 @@ namespace Alchemical_Laboratory
             {
                 throw new ArgumentException("Вещество отсутсвует!");
             }
-            Recipe matchingRecipe = Game.Services.GetRequiredService<RecipesCollection>().FirstOrDefault(recipe =>
+            Recipe matchingRecipe = Game.Services.GetRequiredService<RecipesCollection>().Values.FirstOrDefault(recipe =>
             recipe.Components.Count == 2 &&
             recipe.Components.Any(s => s.Equals(sub1)) &&
             recipe.Components.Any(s => s.Equals(sub2))

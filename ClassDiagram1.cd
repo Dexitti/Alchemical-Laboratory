@@ -13,23 +13,24 @@
       <HashCode>AAAAAAAAAAAgEAAEAAAAAAQAAAAAAAAAAAAAACACAAA=</HashCode>
       <FileName>Substance.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Alchemical_Laboratory.ResultSubstance">
     <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIBAEAAAAAAAAQAAAAAAABAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIBAEAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>ResultSubstance.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Hint">
-    <Position X="21.25" Y="1.5" Width="1.5" />
+    <Position X="21.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Hint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Breach">
-    <Position X="19.25" Y="1.5" Width="1.5" />
+    <Position X="19.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Breach.cs</FileName>
@@ -37,6 +38,18 @@
   </Class>
   <Class Name="Alchemical_Laboratory.Container">
     <Position X="14.75" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Alchemical_Laboratory.Container.Types" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Container.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Alchemical_Laboratory.Container.Materials" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Container.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAA=</HashCode>
       <FileName>Container.cs</FileName>
@@ -89,9 +102,10 @@
   <Class Name="Alchemical_Laboratory.SubstancesCollection">
     <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABA=</HashCode>
       <FileName>SubstancesCollection.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Alchemical_Laboratory.KnownRecipes">
     <Position X="5.75" Y="3.5" Width="1.5" />

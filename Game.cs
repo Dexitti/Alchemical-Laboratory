@@ -12,7 +12,7 @@ namespace Alchemical_Laboratory
         readonly string[] mode = ["безграничные ресурсы", "ограниченные ресурсы (сложно)"]; // unlimited resources, limited resources (hard)
         string gameMode;
 
-        public static IServiceProvider Services { get; private set; }
+        public static IServiceProvider ?Services { get; private set; }
 
         //ResultSubstance goal = new();
         byte lifePoints = 3;
@@ -29,8 +29,9 @@ namespace Alchemical_Laboratory
                 .AddSingleton<SubstancesCollection>()
                 .AddSingleton<RecipesCollection>()
                 .AddSingleton<KnownSubstances>()
-                .AddSingleton<KnownRecipes>();
-
+                .AddSingleton<KnownRecipes>()
+                .AddSingleton<ResultSubstance>();
+            Services = services.BuildServiceProvider();
             Start();
         }
 
@@ -52,7 +53,7 @@ namespace Alchemical_Laboratory
                 }
             }
 
-            //ShowRules();
+            //ShowRules(); debug
 
             if (gameMode == "безграничные ресурсы")
             {
