@@ -107,6 +107,7 @@ namespace Alchemical_Laboratory
                     case "Выйти":
                         Quit(); break;
                 }
+
             }
         }
 

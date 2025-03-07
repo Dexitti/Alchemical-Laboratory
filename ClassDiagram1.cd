@@ -38,18 +38,6 @@
   </Class>
   <Class Name="Alchemical_Laboratory.Container">
     <Position X="14.75" Y="1.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="Alchemical_Laboratory.Container.Types" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Container.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="Alchemical_Laboratory.Container.Materials" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Container.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAA=</HashCode>
       <FileName>Container.cs</FileName>
@@ -102,7 +90,7 @@
   <Class Name="Alchemical_Laboratory.SubstancesCollection">
     <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAABA=</HashCode>
       <FileName>SubstancesCollection.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -119,6 +107,30 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>KnownSubstances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alchemical_Laboratory.EnumExtension">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Alchemical_Laboratory.EnumExtension.Types" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Alchemical_Laboratory.EnumExtension.Materials" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Alchemical_Laboratory.EnumExtension.Tools" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>EnumExtension.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Alchemical_Laboratory.IGameState">

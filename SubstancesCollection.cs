@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Alchemical_Laboratory
 {
-    public class SubstancesCollection : ReadOnlyDictionary<string, Substance>, ISubstanceCollection<Substance>
+    public class SubstancesCollection : ReadOnlyDictionary<string, Substance>, ISubstanceCollection<Substance>, ISubstanceContainer<Substance>
     {
 
         public SubstancesCollection() : base(GetAllSubstances())
@@ -29,11 +30,22 @@ namespace Alchemical_Laboratory
             return dict;
         }
 
+        public void Store(Substance substance)
+        {
+            Game.Services.GetRequiredService<SubstancesCollection>().TryAdd(substance.Name, substance);
+        }
+
         IEnumerable<Substance> ISubstanceCollection<Substance>.Values => GetAllSubstances().Values;
+    }
+
+    public interface ISubstanceContainer<in TSubstance> where TSubstance : ISubstance
+    {
+        void Store(TSubstance substance);
     }
 
     public interface ISubstanceCollection<out T> where T : ISubstance
     {
         IEnumerable<T> Values { get; }
     }
+
 }
