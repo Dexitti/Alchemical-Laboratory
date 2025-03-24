@@ -7,13 +7,18 @@ namespace Alchemical_Laboratory
 {
     public class Recipe
     {
-        public CompoundSubstance Result { get; set; }
-        public List<Substance> Components { get; set; }
+        public Substance Result { get; set; }
+        public HashSet<Substance> Components { get; set; }
+        public List<Substance> AuxiliaryResults { get; set; }
 
-        public Recipe(CompoundSubstance result, List<Substance> components)
+        public bool IsDiscovered { get; set; }
+
+        public Recipe(Substance result, HashSet<Substance> components, List<Substance>? auxiliaryResults = null)
         {
             Result = result;
             Components = components;
+            AuxiliaryResults = auxiliaryResults ?? [];
+            IsDiscovered = false;
         }
 
         public override string ToString()

@@ -1,0 +1,244 @@
+[
+  //{
+  //  "Result": null,
+  //  "Components": [ null, null ]
+  //},
+  {
+    "Result": "Steam",
+    "Components": [ "Fire", "Water" ] // from Lively Concoction
+  },
+  {
+    "Result": "Stone",
+    "Components": [ "Earth", "Earth" ]
+  },
+  {
+    "Result": "Lava",
+    "Components": [ "Earth", "Fire" ]
+  },
+  {
+    "Result": "Mud",
+    "Components": [ "Earth", "Water" ]
+  },
+  {
+    "Result": "Concentrated Mana",
+    "Components": [ "Water", "Mana" ]
+  },
+  {
+    "Result": "Freezing Vapour",
+    "Components": [ "Water", "Air" ]
+  },
+  {
+    "Result": "Iron",
+    "Components": [ "Earth", "Mana" ]
+  },
+  {
+    "Result": "Copper",
+    "Components": [ "Fire", "Mana" ]
+  },
+  {
+    "Result": "Gold",
+    "Components": [ "Fire", "Concentrated Mana" ]
+  },
+  {
+    "Result": "Lead",
+    "Components": [ "Earth", "Concentrated Mana" ]
+  },
+  {
+    "Result": "Tin",
+    "Components": [ "Air", "Mana" ]
+  },
+  {
+    "Result": "Silver",
+    "Components": [ "Air", "Concentrated Mana" ]
+  },
+  {
+    "Result": "Zinc",
+    "Components": [ "Water", "Concentrated Mana" ]
+  },
+  {
+    "Result": "Sulfur",
+    "Components": [ "Fire", "Stone" ]
+  },
+  {
+    "Result": "Mercury",
+    "Components": [ "Water", "Iron" ]
+  },
+  {
+    "Result": "Salt",
+    "Components": [ "Water", "Stone" ]
+  },
+  {
+    "Result": "Quartz",
+    "Components": [ "Lava", "Stone" ]
+  },
+  {
+    "Result": "Sand",
+    "Components": [ "Earth", "Quartz" ]
+  },
+  {
+    "Result": "Bismuth",
+    "Components": [ "Fire", "Salt" ],
+    "AuxiliaryResults": [ "Water" ]
+  },
+  {
+    "Result": "Brass",
+    "Components": [ "Copper", "Zinc" ]
+  },
+  {
+    "Result": "Bronze",
+    "Components": [ "Copper", "Tin" ]
+  },
+  {
+    "Result": "Calomel",
+    "Components": [ "Mercury", "Poison" ]
+  },
+  {
+    "Result": "Cinnabar",
+    "Components": [ "Mercury", "Sulfur" ]
+  },
+  {
+    "Result": "Gunpowder",
+    "Components": [ "Sulfur", "Sand" ]
+  },
+  {
+    "Result": "Poison",
+    "Components": [ "Steam", "Lead" ] // from Alcohol, Ambrosia
+  },
+  {
+    "Result": "Lively Concoction",
+    "Components": [ "Fire", "Mud" ],
+    "AuxiliaryResults": [ "Steam" ]
+  },
+  {
+    "Result": "Alcohol",
+    "Components": [ "Water", "Poison" ],
+    "AuxiliaryResults": [ "Poison" ]
+  },
+  {
+    "Result": "Slime",
+    "Components": [ "Mud", "Lively Concoction" ]
+  },
+  {
+    "Result": "Honey",
+    "Components": [ "Water", "Lively Concoction" ]
+  },
+  {
+    "Result": "Urine",
+    "Components": [ "Water", "Salt" ]
+  },
+  {
+    "Result": "Urine",
+    "Components": [ "Water", "Pyrite" ] // alt 1
+  },
+  {
+    "Result": "Blood",
+    "Components": [ "Lively Concoction", "Poison" ]
+  },
+  {
+    "Result": "Meat",
+    "Components": [ "Tin", "Slime" ]
+  },
+  {
+    "Result": "Meat",
+    "Components": [ "Earth", "Blood" ] // alt 1
+  },
+  {
+    "Result": "Bones",
+    "Components": [ "Stone", "Lively Concoction" ]
+  },
+  {
+    "Result": "Burnt Lime",
+    "Components": [ "Lava", "Bones" ]
+  },
+  {
+    "Result": "Pyrite",
+    "Components": [ "Iron", "Sulfur" ]
+  },
+  {
+    "Result": "Oil of Vitriol",
+    "Components": [ "Water", "Air", "Pyrite" ]
+  },
+  //{
+  //  "Result":,
+  //  "Components": []
+  //},
+  {
+    "Result": "Diamond",
+    "Components": [ "Silver", "Bismuth" ]
+  },
+  {
+    "Result": "Ruby",
+    "Components": [ "Lava", "Sulfur" ]
+  },
+  {
+    "Result": "Sapphire",
+    "Components": [ "Mana", "Stone" ]
+  },
+  {
+    "Result": "Citrine",
+    "Components": [ "Gold", "Quartz" ],
+    "AuxiliaryResults": [ "Fire" ]
+  },
+  {
+    "Result": "Amethyst",
+    "Components": [ "Quartz", "Stone" ]
+  },
+  {
+    "Result": "Emerald",
+    "Components": [ "Mana", "Cooper" ],
+    "AuxiliaryResults": [ "Mud" ]
+  },
+  {
+    "Result": "Aquamarine",
+    "Components": [ "Water", "Stone" ]
+  },
+  //{
+  //  "Result": "Master Emerald",
+  //  "Components": [ "", "" ] // Алмаз, рубин, сапфир, цитрин, изумруд, аметист, аквамарин -> Мастер изумруд
+  //},
+  {
+    "Result": "Alkahest",
+    "Components": [ "Oil of Vitriol", "Poison" ]
+  },
+  {
+    "Result": "Alkahest",
+    "Components": [ "Bones", "Alcohol" ] //alt 1
+  },
+  {
+    "Result": "Alkahest",
+    "Components": [ "Salt", "Mercury", "Urine" ] // alt 2
+  },
+  {
+    "Result": "Ambrosia",
+    "Components": [ "Silver", "Salt", "Lively Concoction" ]
+  },
+  {
+    "Result": "Ambrosia",
+    "Components": [ "Ruby", "Alcohol", "Lively Concoction" ] // alt 1
+  },
+  {
+    "Result": "Ambrosia",
+    "Components": [ "Diamond", "Honey" ], // alt 2
+    "AuxiliaryResults": [ "Poison" ]
+  },
+  {
+    "Result": "Nigredo",
+    "Components": [ "Lead", "Sulfur", "Salt" ]
+  },
+  {
+    "Result": "Albedo",
+    "Components": [ "Nigredo", "Silver", "Fire" ]
+  },
+  {
+    "Result": "Citrinitas",
+    "Components": [ "Albedo", "Gold", "Urine" ]
+  },
+  {
+    "Result": "Rubedo",
+    "Components": [ "Citrinitas", "Tin", "Mercury" ]
+  },
+  {
+    "Result": "Philosopher's Stone",
+    "Components": [ "Rubedo", "Concentrated Mana", "Diamond" ]
+  }
+]

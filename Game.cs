@@ -4,15 +4,19 @@ using System.Linq;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Sharprompt;
+using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
     public class Game
     {
-        readonly string[] mode = ["безграничные ресурсы", "ограниченные ресурсы (сложно)"]; // unlimited resources, limited resources (hard)
+        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard];
         string gameMode;
 
         public static IServiceProvider ?Services { get; private set; }
+
+        //public delegate void GetNewSubstance(Substance substance);
+        //public event GetNewSubstance NewSubstance;
 
         //ResultSubstance goal = new();
         byte lifePoints = 3;
@@ -25,12 +29,14 @@ namespace Alchemical_Laboratory
             Prompt.ColorSchema.PromptSymbol = ConsoleColor.DarkYellow;
             Prompt.ColorSchema.Select = (ConsoleColor)12;
 
+            AlchemyBook book = new AlchemyBook();
+            book.Import("Properties/Substances.json", "Properties/Recipes.json");
+
             var services = new ServiceCollection()
-                .AddSingleton<SubstancesCollection>()
-                .AddSingleton<RecipesCollection>()
-                .AddSingleton<KnownSubstances>()
-                .AddSingleton<KnownRecipes>()
-                .AddSingleton<ResultSubstance>();
+                .AddSingleton<LimitedInventory>()
+                .AddSingleton<UnlimitedInventory>()
+                .AddSingleton<AlchemyBook>();
+                //.AddSingleton<ResultSubstance>();
             Services = services.BuildServiceProvider();
             Start();
         }
@@ -39,8 +45,8 @@ namespace Alchemical_Laboratory
         {
             while (true)
             {
-                gameMode = Prompt.Select("Выберете режим", mode);
-                bool confirm = Prompt.Confirm("Вы уверены?");
+                gameMode = Prompt.Select(Resource.SelectGameMode, mode);
+                bool confirm = Prompt.Confirm(Resource.AreYouSure + "?");
                 Console.SetCursorPosition(0, Console.CursorTop - 1); // очищает 2 строки выше
                 Console.Write(new String(' ', Console.BufferWidth));
                 Console.SetCursorPosition(0, Console.CursorTop - 1);
@@ -48,20 +54,20 @@ namespace Alchemical_Laboratory
                 Console.SetCursorPosition(0, Console.CursorTop);
                 if (confirm)
                 {
-                    Console.WriteLine($"Режим игры: {gameMode}");
+                    Console.WriteLine(Resource.GameMode + ": " + gameMode);
                     break;
                 }
             }
 
-            //ShowRules(); debug
+            //ShowRules(); //debug
 
-            if (gameMode == "безграничные ресурсы")
+            if (gameMode == Resource.UnlimitedResources)
             {
                 gameState = new UnlimitedGameState();
                 //событие: получено новое вещество!
                 Options();
             }
-            else if (gameMode == "ограниченные ресурсы (сложно)")
+            else if (gameMode == Resource.LimitedResourcesHard)
             {
                 gameState = new LimitedGameState(); //!!!
                 //событие: получено новое вещество!
@@ -73,41 +79,25 @@ namespace Alchemical_Laboratory
         {
             string[] strings =
             [
-                "Инвентарь", // Inventory
-                "Смешать", // Mix
-                "Получить подсказку", //Get Hint
-                "Открыть правила", // Show Rules
-                "Сохранить", // Save
-                "Загрузить", // Load
-                "Выйти" // Quit
+                Resource.Inventory,
+                Resource.Mix,
+                Resource.GetHint,
+                Resource.ShowRules,
+                Resource.Save,
+                Resource.Load,
+                Resource.Quit
             ];
             Action[] actions = new Action[] { OpenInventory, Mix, GetHint, ShowRules, Serialize, Deserialize, Quit };
 
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine($"Режим игры: {gameMode}");
+                Console.WriteLine(Resource.GameMode + ": " + gameMode);
                 //goal.PrintGoal();
 
-                string menus = Prompt.Select("Выберите действие", strings);
-                switch (menus)
-                {
-                    case "Инвентарь":
-                        OpenInventory(); break;
-                    case "Смешать":
-                        Mix(); break;
-                    case "Получить подсказку":
-                        GetHint(); break;
-                    case "Открыть правила":
-                        ShowRules(); break;
-                    case "Сохранить":
-                        Serialize(); break;
-                    case "Загрузить":
-                        Deserialize(); break;
-                    case "Выйти":
-                        Quit(); break;
-                }
-
+                string menus = Prompt.Select(Resource.ChooseAnAction, strings);
+                int index = Array.IndexOf(strings, menus);
+                actions[index]();
             }
         }
 
@@ -119,23 +109,37 @@ namespace Alchemical_Laboratory
 
         public void Mix()
         {
-            List<string> sus = Services.GetRequiredService<KnownSubstances>().Select(s => s.Name).ToList(); // gameState.Inventory <--> List<string>
-            string su1 = Prompt.Select("Выберите вещество 1", sus);
-            string su2 = Prompt.Select("Выберите вещество 2", sus);
-            Substance sub1 = Services.GetRequiredService<KnownSubstances>().FirstOrDefault(s => s.Name == su1);
-            Substance sub2 = Services.GetRequiredService<KnownSubstances>().FirstOrDefault(s => s.Name == su2);
-            Substance resultSub = gameState.Mix2(sub1, sub2);
-            //событие: получено новое вещество!
+            IEnumerable<Substance> list = Services.GetRequiredService<IInventory>().Substances;
+            List<string> sus = list.Select(s => s.Name).ToList(); // gameState.Inventory <=> List<string>
+
+            string su1 = Prompt.Select(Resource.SelectSubstance + " 1", sus);
+            Substance? sub1 = list.FirstOrDefault(s => s.Name == su1);
+
+            string su2 = Prompt.Select(Resource.SelectSubstance + " 2", sus);
+            Substance? sub2 = list.FirstOrDefault(s => s.Name == su2);
+
+            Recipe desiredRecipe = gameState.Mix2(sub1, sub2);
+            if (desiredRecipe == null)
+            {
+                Console.WriteLine("Увы! Ничего не получилось.");
+            }
+            else
+            {
+                Substance resultSub = desiredRecipe.Result;
+                //NewSubstance.Invoke(resultSub);
+            }
         }
 
-        public void GetHint()
+        public void GetHint() // Where to delegate? - to IGameState?!
         {
-
+            // Сделать несколько подсказок, типа resultSub | show one of the ingredients | Display result or component description
+            Substance randUnknownSubstance = gameState.GetRecipeForHint().Result;
+            Console.WriteLine($"U might mix smth to get {randUnknownSubstance}"); // Example
         }
 
         public void ShowRules()
         {
-            string title = "Правила"; // Rules
+            string title = Resource.Rules;
             Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
             Console.WriteLine(title + "\n");
             string[] rules = [
@@ -161,7 +165,7 @@ namespace Alchemical_Laboratory
                     }
                 }
                 Thread.Sleep(1800);
-                Console.Write("\nНажмите, чтобы начать");
+                Console.Write("\n" + Resource.PressToStart);
             }
             else
             {
@@ -169,7 +173,7 @@ namespace Alchemical_Laboratory
                 {
                     Console.Write(rule);
                 }
-                Console.Write("\nНажмите, чтобы продолжить...");
+                Console.Write("\n" + Resource.PressToContinue + "...");
             }
             Console.ReadKey();
             showFirst = false;

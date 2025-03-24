@@ -1,0 +1,292 @@
+[
+  // Предметы (substances) - жидкости, твердые вещества, порошки и газы (плазмы) (liquids, solids, powders and gases (plasmas))
+  //{
+  //  "Name": null,
+  //  "Description": null,
+  //  "Properties": {}
+  //},
+  {
+    "Name": "Fire",
+    "Description": "The primordial force of change and destruction, but also warmth and creation. The essence of energy itself. 🜂",
+    "Properties": {
+      "temperature": 200,
+      "flammability": 1
+    },
+    "Tools": [ "Gloves", "Hood" ]
+  },
+  {
+    "Name": "Water",
+    "Description": "The source of life, adaptable and fluid. It cleanses, nurtures, and connects all things. 🜄",
+    "Properties": {}
+  },
+  {
+    "Name": "Earth",
+    "Description": "Solid, stable, and grounding. The foundation of existence, holding all things together. 🜃",
+    "Properties": {}
+  },
+  {
+    "Name": "Air",
+    "Description": "Light, expansive, and ever-moving. The breath of life, enabling communication and change. 🜁",
+    "Properties": {}
+  },
+  {
+    "Name": "Mana",
+    "Description": "The raw, unrefined magical energy that permeates all creation. The fuel of the extraordinary.",
+    "Properties": {}
+  },
+  {
+    "Name": "Steam",
+    "Description": "The heated breath of water, a transitional state between fluid and air. Represents latent power and potential.",
+    "Properties": {}
+  },
+  {
+    "Name": "Stone",
+    "Description": "Solidified earth, enduring and unyielding. A symbol of permanence and strength.",
+    "Properties": {}
+  },
+  {
+    "Name": "Lava",
+    "Description": "The molten heart of the earth, a destructive force forged from extreme heat. Potential for creation and ruin.",
+    "Properties": {}
+  },
+  {
+    "Name": "Mud",
+    "Description": "A humble mixture of earth and water, fertile and teeming with potential. From nothing, life can begin.",
+    "Properties": {}
+  },
+  {
+    "Name": "Concentrated Mana",
+    "Description": "Mana refined to its purest form, crackling with power. Handle with extreme caution, lest it consume you.",
+    "Properties": {}
+  },
+  {
+    "Name": "Freezing Vapour",
+    "Description": "A volatile cloud, colder than the deepest winter. It crystallizes all it touches, destroying organic matter.",
+    "Properties": {}
+  },
+  {
+    "Name": "Iron",
+    "Description": "Ferrum (♂) - the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons.",
+    "Properties": {}
+  },
+  {
+    "Name": "Copper",
+    "Description": "The red metal (Cuprum), known for its conductivity and malleability. A conduit for energy and a symbol of Venus (♀).",
+    "Properties": {}
+  },
+  {
+    "Name": "Gold",
+    "Description": "Aurum (☉) - the sun’s reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment.",
+    "Properties": {}
+  },
+  {
+    "Name": "Lead",
+    "Description": "Heavy, dense - Plumbum. In alchemy linked to Saturn (♄), a symbol of restriction and the initial stage of alchemical transformation.",
+    "Properties": {}
+  },
+  {
+    "Name": "Tin",
+    "Description": "Bright, silvery metal (Stannum). In alchemy is associated with Jupiter (♃) and luck, in philosophy means \"breath of life\".",
+    "Properties": {}
+  },
+  {
+    "Name": "Zinc",
+    "Description": "A resilient, bluish-white metal, known for its protective properties. In alchemy is known by the preparation of \"Philosophic wool\" by burning zinc in air, which was called \"nix alba\" (white snow)",
+    "Properties": {}
+  },
+  {
+    "Name": "Silver",
+    "Description": "The moon's mirror (☽), reflecting purity and intuition - Argentum (🜛). A symbol of feminine energy and emotional balance.",
+    "Properties": {}
+  },
+  {
+    "Name": "Sulfur",
+    "Description": "Sulfur (🜍) - Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity.",
+    "Properties": {}
+  },
+  {
+    "Name": "Mercury",
+    "Description": "Hydrargyrum (☿) - fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier.",
+    "Properties": {}
+  },
+  {
+    "Name": "Salt",
+    "Description": "Salt (🜔) - a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative).",
+    "Properties": {}
+  },
+  {
+    "Name": "Bismuth",
+    "Description": "A brittle, crystalline metal. Known for its iridescent surface, it represents beauty and transformation.", // !
+    "Properties": {}
+  },
+  {
+    "Name": "Quartz",
+    "Components": "Crystallized earth, pure and clear. It is said to amplify the magical energies and focus the mind. Often served as a basis for alchemists lanterns, sticks and amulets.",
+    "Properties": {}
+  },
+  {
+    "Name": "Sand",
+    "Components": "Most of the earth’s rocks, including sand - silica. Tiny grains of Earth, component of many rituals.",
+    "Properties": {}
+  },
+  {
+    "Name": "Lively Concoction",
+    "Description": "A strange mixture of organic and inorganic matter in liquid form.",
+    "Properties": {}
+  },
+  {
+    "Name": "Alcohol",
+    "Description": "The spirit extracted (🜉), a volatile essence. Can both liberate and destroy, revealing hidden truths.",
+    "Properties": {}
+  },
+  {
+    "Name": "Gunpowder",
+    "Description": "A volatile concoction of fire, earth, and air, capable of immense destructive power. Use with extreme caution.",
+    "Properties": {}
+  },
+  {
+    "Name": "Poison",
+    "Description": "A subtle and insidious substance born of decay and malice. It corrupts the body and weakens the spirit.",
+    "Properties": {}
+  },
+  {
+    "Name": "Slime",
+    "Description": "Viscous, often rotting substance. Symbolizes disintegration, conversion and potential for new life.",
+    "Properties": {}
+  },
+  {
+    "Name": "Honey",
+    "Description": "The golden nectar of the bee, a sweet elixir of life and a potent preservative. It holds the secrets of the hive and the essence of a thousand flowers.",
+    "Properties": {}
+  },
+  {
+    "Name": "Diamond",
+    "Description": "The purest form of carbon, unyielding and brilliant. A symbol of invincibility, enlightenment, and eternal beauty.",
+    "Properties": {}
+  },
+  {
+    "Name": "Ruby",
+    "Description": "A crimson gemstone, infused with the fire of passion and courage. Promotes vitality and strength.",
+    "Properties": {}
+  },
+  {
+    "Name": "Sapphire",
+    "Description": "A celestial gemstone, reflecting wisdom and truth. Inspires clarity, focus, and spiritual insight.",
+    "Properties": {}
+  },
+  {
+    "Name": "Citrine",
+    "Description": "A sun-kissed gem radiating warmth and abundance. It attracts prosperity, amplifies personal power, and kindles the inner flame.",
+    "Properties": {}
+  },
+  {
+    "Name": "Emerald",
+    "Description": "A verdant stone of rebirth and growth, echoing the life force of the natural world. It heals the spirit and fosters harmony.",
+    "Properties": {}
+  },
+  {
+    "Name": "Amethyst",
+    "Description": "A violet gem of tranquility and insight, warding off negative energies and sharpening the mind's eye. A stone for contemplation.",
+    "Properties": {}
+  },
+  {
+    "Name": "Aquamarine",
+    "Description": "A sea-blue jewel of courage and protection, calming turbulent emotions and ensuring safe passage. The ocean's blessing.",
+    "Properties": {}
+  },
+  {
+    "Name": "Master Emerald",
+    "Description": "The Master Emerald is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them.",
+    "Properties": {}
+  },
+  {
+    "Name": "Alkahest",
+    "Description": "A substance that is the universal solvent of everything. The ultimate tool of transformation to produce a philosopher’s stone.",
+    "Properties": {}
+  },
+  {
+    "Name": "Brass",
+    "Description": "A bright, gold-like alloy of copper and zinc. Represents resilience, creativity, and balance.",
+    "Properties": {}
+  },
+  {
+    "Name": "Bronze",
+    "Description": "An enduring alloy of Copper and Tin, famed for its strength and corrosion resistance. A metal of heroes and greatful legacies.",
+    "Properties": {}
+  },
+  {
+    "Name": "Calomel",
+    "Description": "The heavy, white mineral mercury chloride. Used by alchemists for purification and cure, although is very toxic in excess.",
+    "Properties": {}
+  },
+  {
+    "Name": "Cinnabar",
+    "Description": "A brilliant red ore of Mercury Sulfide. The source of the mercury - symbol of transformation, but also a deadly poison.",
+    "Properties": {}
+  },
+  {
+    "Name": "Urine",
+    "Description": "A humble waste product, yet containing the seeds of new life. A source of alchemical secrets and potential transformations.",
+    "Properties": {}
+  },
+  {
+    "Name": "Blood",
+    "Description": "The river of life, a concentration of magic in the human body. It carries within itself the essence of the individual, associated with heat and fire, as well as cruelty and anger.",
+    "Properties": {}
+  },
+  {
+    "Name": "Meat",
+    "Description": "Flesh, the building block of living beings. Source of primary power and earthly content. Eternal reminder of mortality.",
+    "Properties": {}
+  },
+  {
+    "Name": "Bones",
+    "Description": "The framework of bodies, strong and enduring.", // !
+    "Properties": {}
+  },
+  {
+    "Name": "Burnt Lime",
+    "Description": "The excension of the earth can be calm as a monumental mountain or active and impulsive, revealing its hidden power.",
+    "Properties": {}
+  },
+  {
+    "Name": "Pyrite",
+    "Description": "Fool's Gold, a glittering mineral that deceives the eye. A reminder that not all that glitters is true gold, a lesson in discernment.",
+    "Properties": {}
+  },
+  {
+    "Name": "Oil of Vitriol",
+    "Description": "Also known as sulfuric acid, which is one of the strongest acids.",
+    "Properties": {}
+  },
+  {
+    "Name": "Ambrosia",
+    "Description": "The food of the gods, granting immortality and eternal youth. A symbol of divine grace and ultimate reward.",
+    "Properties": {}
+  },
+  {
+    "Name": "Nigredo",
+    "Description": "The blackening, the first stage of the alchemical Great Work. Represents decomposition, purification, and confronting one's shadow.",
+    "Properties": {}
+  },
+  {
+    "Name": "Albedo",
+    "Description": "The whitening, the second stage of the alchemical Great Work. Symbolizes purification, cleansing, and the emergence of clarity.",
+    "Properties": {}
+  },
+  {
+    "Name": "Citrinitas",
+    "Description": "The yellowing, the third stage of the alchemical Great Work. Represents the dawning of solar consciousness, intuition, and self-discovery.",
+    "Properties": {}
+  },
+  {
+    "Name": "Rubedo",
+    "Description": "The reddening, the final stage of the alchemical Great Work. Represents the union of spirit and matter, achieving spiritual wholeness, and illumination.",
+    "Properties": {}
+  },
+  {
+    "Name": "Philosopher's Stone",
+    "Description": "The ultimate goal of alchemy, a substance capable of transmuting base metals into gold and granting immortality. The key to all secrets.",
+    "Properties": {}
+  }
+]

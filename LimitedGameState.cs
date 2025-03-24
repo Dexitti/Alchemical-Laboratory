@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
@@ -26,7 +27,7 @@ namespace Alchemical_Laboratory
             }
         }
 
-        public Substance Mix2(Substance sub1, Substance sub2)
+        public Recipe Mix2(Substance sub1, Substance sub2)
         {
             throw new NotImplementedException();
         }

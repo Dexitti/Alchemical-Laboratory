@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
+using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
     public class Substance : ISubstance
     {
         public string Name { get; set; }
-        public string Description { get; set; } // bla-bla - цвет?!, запах
-        public Dictionary<string, double> Properties { get; set; } // температура, давление?!/твердость, летучесть, вязкость, токсичность, горючесть, радиоактивность
+        public string Description { get; set; } // bla-bla - цвет, запах
+        public Dictionary<Property, double> Characteristics { get; set; }
         //В событии: совместить свойства вещества с емкостью (как: обертка над enum или метод проверок)
-        public EnumExtension.Tools[] RequiredTools { get; set; }
+        public Tools[] RequiredTools { get; set; }
+        // Событие: выбор необходимых инструментов
 
-        public Substance(string name, string description = "описание...", Dictionary<string, double> properties = null, EnumExtension.Tools[] tools = null)
+        [JsonIgnore]
+        public bool IsDiscovered { get; set; }
+
+        public Substance(string name, string description = "описание...", Dictionary<Property, double>? properties = null, Tools[]? tools = null)
         {
             Name = name;
             Description = description;
-            Properties = new Dictionary<string, double>();
-            Properties = properties;
-            RequiredTools = tools;
+            Characteristics = properties ?? [];
+            RequiredTools = tools ?? [];
+            IsDiscovered = false;
         }
 
 
@@ -27,10 +33,10 @@ namespace Alchemical_Laboratory
         {
             Console.WriteLine($"Название: {Name}");
             Console.WriteLine($"Описание: {Description}");
-            if (Properties.Count > 0)
+            if (Characteristics.Count > 0)
             {
                 Console.WriteLine("Свойства:");
-                foreach (var property in Properties)
+                foreach (var property in Characteristics)
                 {
                     Console.WriteLine($"  - {property.Key}: {property.Value}");
                 }
@@ -47,12 +53,34 @@ namespace Alchemical_Laboratory
         }
     }
 
+    [Flags]
+    public enum Property
+    {
+        temperature = 1,
+        hardness = 2,
+        volatility = 4,
+        viscosity = 8,
+        toxicity = 16,
+        flammability = 32,
+        explosiveness = 64,
+        radioactivity = 128
+    }
+
+    [Flags]
+    public enum Tools
+    {
+        gloves = 1,
+        hood = 2,
+        glasses = 4,
+        respirator = 8
+    }
+
     public interface ISubstance
     {
         public string Name { get; }
         public string Description { get; }
-        public Dictionary<string, double> Properties { get; }
-        public EnumExtension.Tools[] RequiredTools { get; }
+        public Dictionary<Property, double> Characteristics { get; }
+        public Tools[] RequiredTools { get; }
 
         public void DisplayInfo();
     }

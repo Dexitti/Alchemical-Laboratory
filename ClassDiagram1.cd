@@ -8,46 +8,32 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Substance">
-    <Position X="13" Y="1.5" Width="1.5" />
+    <Position X="14.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgEAAEAAAAAAQAAAAAAAAAAAAAACACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgEAAECAAAAAQAAAAAAAAAQAAAACAAAAA=</HashCode>
       <FileName>Substance.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Alchemical_Laboratory.ResultSubstance">
-    <Position X="9.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIBAEAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
-      <FileName>ResultSubstance.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Alchemical_Laboratory.Hint">
-    <Position X="21.5" Y="1.5" Width="1.5" />
+    <Position X="20" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Hint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Breach">
-    <Position X="19.5" Y="1.5" Width="1.5" />
+    <Position X="20" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Breach.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Container">
-    <Position X="14.75" Y="1.5" Width="1.5" />
+    <Position X="16.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAA=</HashCode>
       <FileName>Container.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Alchemical_Laboratory.CompoundSubstance">
-    <Position X="13" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CompoundSubstance.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Game">
@@ -55,6 +41,7 @@
     <TypeIdentifier>
       <HashCode>gAABAAAAACAACACAECAgAAAAACBAgAAAAAAgAAJAAQA=</HashCode>
       <FileName>Game.cs</FileName>
+      <NewMemberFileName>Game - Копировать.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.LimitedGameState" Collapsed="true">
@@ -66,9 +53,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Alchemical_Laboratory.Recipe">
-    <Position X="17.25" Y="1.5" Width="1.5" />
+    <Position X="18.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAIAMAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Recipe.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -80,64 +67,49 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Alchemical_Laboratory.RecipesCollection">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+  <Class Name="Alchemical_Laboratory.Extensions">
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RecipesCollection.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Extensions.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Alchemical_Laboratory.SubstancesCollection">
-    <Position X="7.5" Y="3.5" Width="1.5" />
+  <Class Name="Alchemical_Laboratory.LimitedInventory">
+    <Position X="7.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAABA=</HashCode>
-      <FileName>SubstancesCollection.cs</FileName>
+      <HashCode>AAIAAAAAAABAAAABAAAABQAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>LimitedInventory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Alchemical_Laboratory.KnownRecipes">
-    <Position X="5.75" Y="3.5" Width="1.5" />
+  <Class Name="Alchemical_Laboratory.UnlimitedInventory">
+    <Position X="9.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KnownRecipes.cs</FileName>
+      <HashCode>AAIAAAAAAABAAAAAAAAABQAAAAAAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>UnlimitedInventory.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Alchemical_Laboratory.KnownSubstances">
-    <Position X="5.75" Y="4.75" Width="1.5" />
+  <Class Name="Alchemical_Laboratory.AlchemyBook">
+    <Position X="7.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KnownSubstances.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAAAAIAQAIAAAAAAAAAAAAAAAECAABAA=</HashCode>
+      <FileName>AlchemyBook.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="Alchemical_Laboratory.EnumExtension">
-    <Position X="0.5" Y="2.75" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="Alchemical_Laboratory.EnumExtension.Types" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="Alchemical_Laboratory.EnumExtension.Materials" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="Alchemical_Laboratory.EnumExtension.Tools" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>EnumExtension.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>EnumExtension.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Alchemical_Laboratory.IGameState">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQBAgAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IGameState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Alchemical_Laboratory.IInventory">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABAAAAAAAAABQAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>IInventory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
