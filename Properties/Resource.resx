@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Fire" xml:space="preserve">
-    <value>fire</value>
+    <value>Fire</value>
   </data>
   <data name="GameMode" xml:space="preserve">
     <value>Game mode</value>
@@ -127,13 +127,13 @@
     <value>limited inventory</value>
   </data>
   <data name="Properties" xml:space="preserve">
-    <value>properties</value>
+    <value>Properties</value>
   </data>
   <data name="UnlimitedInventory" xml:space="preserve">
     <value>unlimited inventory</value>
   </data>
   <data name="Water" xml:space="preserve">
-    <value>water</value>
+    <value>Water</value>
   </data>
   <data name="Temperature" xml:space="preserve">
     <value>temperature</value>
@@ -206,5 +206,422 @@
   </data>
   <data name="Explosiveness" xml:space="preserve">
     <value>explosiveness</value>
+  </data>
+  <data name="Fire_Description" xml:space="preserve">
+    <value>The primordial force of change and destruction, but also warmth and creation. The essence of energy itself. 🜂</value>
+  </data>
+  <data name="Water_Description" xml:space="preserve">
+    <value>The source of life, adaptable and fluid. It cleanses, nurtures, and connects all things. 🜄</value>
+  </data>
+  <data name="Earth" xml:space="preserve">
+    <value>Earth</value>
+  </data>
+  <data name="Earth_Description" xml:space="preserve">
+    <value>Solid, stable, and grounding. The foundation of existence, holding all things together. 🜃</value>
+  </data>
+  <data name="Air" xml:space="preserve">
+    <value>Air</value>
+  </data>
+  <data name="Air_Description" xml:space="preserve">
+    <value>Light, expansive, and ever-moving. The breath of life, enabling communication and change. 🜁</value>
+  </data>
+  <data name="Mana" xml:space="preserve">
+    <value>Mana</value>
+  </data>
+  <data name="Mana_Description" xml:space="preserve">
+    <value>The raw, unrefined magical energy that permeates all creation. The fuel of the extraordinary.</value>
+  </data>
+  <data name="Steam" xml:space="preserve">
+    <value>Steam</value>
+  </data>
+  <data name="Steam_Description" xml:space="preserve">
+    <value>The heated breath of water, a transitional state between fluid and air. Represents latent power and potential.</value>
+  </data>
+  <data name="Stone" xml:space="preserve">
+    <value>Stone</value>
+  </data>
+  <data name="Stone_Description" xml:space="preserve">
+    <value>Solidified earth, enduring and unyielding. A symbol of permanence and strength.</value>
+  </data>
+  <data name="Lava" xml:space="preserve">
+    <value>Lava</value>
+  </data>
+  <data name="Lava_Description" xml:space="preserve">
+    <value>The molten heart of the earth, a destructive force forged from extreme heat. Potential for creation and ruin.</value>
+  </data>
+  <data name="Mud" xml:space="preserve">
+    <value>Mud</value>
+  </data>
+  <data name="Mud_Description" xml:space="preserve">
+    <value>A humble mixture of earth and water, fertile and teeming with potential. From nothing, life can begin.</value>
+  </data>
+  <data name="Concentrated_Mana" xml:space="preserve">
+    <value>Concentrated mana</value>
+  </data>
+  <data name="ConcentratedMana_Description" xml:space="preserve">
+    <value>Mana refined to its purest form, crackling with power. Handle with extreme caution, lest it consume you.</value>
+  </data>
+  <data name="Freezing_Vapour" xml:space="preserve">
+    <value>Freezing vapour</value>
+  </data>
+  <data name="FreezingVapour_Description" xml:space="preserve">
+    <value>A volatile cloud, colder than the deepest winter. It crystallizes all it touches, destroying organic matter.</value>
+  </data>
+  <data name="Iron" xml:space="preserve">
+    <value>Iron</value>
+  </data>
+  <data name="Iron_Description" xml:space="preserve">
+    <value>Ferrum (♂) - the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons.</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>Copper</value>
+  </data>
+  <data name="Copper_Description" xml:space="preserve">
+    <value>The red metal (Cuprum), known for its conductivity and malleability. A conduit for energy and a symbol of Venus (♀).</value>
+  </data>
+  <data name="Gold" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="Gold_Description" xml:space="preserve">
+    <value>Aurum (☉) - the sun's reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment.</value>
+  </data>
+  <data name="Lead" xml:space="preserve">
+    <value>Lead</value>
+  </data>
+  <data name="Lead_Description" xml:space="preserve">
+    <value>Heavy, dense - Plumbum. In alchemy linked to Saturn (♄), a symbol of restriction and the initial stage of alchemical transformation.</value>
+  </data>
+  <data name="Tin" xml:space="preserve">
+    <value>Tin</value>
+  </data>
+  <data name="Tin_Description" xml:space="preserve">
+    <value>Bright, silvery metal (Stannum). In alchemy is associated with Jupiter (♃) and luck, in philosophy means "breath of life".</value>
+  </data>
+  <data name="Zinc" xml:space="preserve">
+    <value>Zinc</value>
+  </data>
+  <data name="Zinc_Description" xml:space="preserve">
+    <value>A resilient, bluish-white metal, known for its protective properties. In alchemy is known by the preparation of "Philosophic wool" by burning zinc in air, which was called "nix alba" (white snow)</value>
+  </data>
+  <data name="Silver" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="Silver_Description" xml:space="preserve">
+    <value>The moon's mirror (☽), reflecting purity and intuition - Argentum (🜛). A symbol of feminine energy and emotional balance.</value>
+  </data>
+  <data name="Sulfur" xml:space="preserve">
+    <value>Sulfur</value>
+  </data>
+  <data name="Sulfur_Description" xml:space="preserve">
+    <value>Sulfur (🜍) - Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity.</value>
+  </data>
+  <data name="Mercury" xml:space="preserve">
+    <value>Mercury</value>
+  </data>
+  <data name="Mercury_Description" xml:space="preserve">
+    <value>Hydrargyrum (☿) - fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier.</value>
+  </data>
+  <data name="Salt" xml:space="preserve">
+    <value>Salt</value>
+  </data>
+  <data name="Salt_Description" xml:space="preserve">
+    <value>Salt (🜔) - a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative).</value>
+  </data>
+  <data name="Bismuth" xml:space="preserve">
+    <value>Bismuth</value>
+  </data>
+  <data name="Bismuth_Description" xml:space="preserve">
+    <value>A brittle, crystalline metal. Known for its iridescent surface, it represents beauty and transformation.</value>
+  </data>
+  <data name="Quartz" xml:space="preserve">
+    <value>Quartz</value>
+  </data>
+  <data name="Quartz_Description" xml:space="preserve">
+    <value>Crystallized earth, pure and clear. It is said to amplify the magical energies and focus the mind. Often served as a basis for alchemists lanterns, sticks and amulets.</value>
+  </data>
+  <data name="Sand" xml:space="preserve">
+    <value>Sand</value>
+  </data>
+  <data name="Sand_Description" xml:space="preserve">
+    <value>Most of the earth's rocks, including sand - silica. Tiny grains of Earth, component of many rituals.</value>
+  </data>
+  <data name="Lively_Concoction" xml:space="preserve">
+    <value>Lively concoction</value>
+  </data>
+  <data name="LivelyConcoction_Description" xml:space="preserve">
+    <value>A strange mixture of organic and inorganic matter in liquid form.</value>
+  </data>
+  <data name="Alcohol" xml:space="preserve">
+    <value>Alcohol</value>
+  </data>
+  <data name="Alcohol_Description" xml:space="preserve">
+    <value>The spirit extracted (🜉), a volatile essence. Can both liberate and destroy, revealing hidden truths.</value>
+  </data>
+  <data name="Gunpowder" xml:space="preserve">
+    <value>Gunpowder</value>
+  </data>
+  <data name="Gunpowder_Description" xml:space="preserve">
+    <value>A volatile concoction of fire, earth, and air, capable of immense destructive power. Use with extreme caution.</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Poison</value>
+  </data>
+  <data name="Poison_Description" xml:space="preserve">
+    <value>A subtle and insidious substance born of decay and malice. It corrupts the body and weakens the spirit.</value>
+  </data>
+  <data name="Slime" xml:space="preserve">
+    <value>Slime</value>
+  </data>
+  <data name="Slime_Description" xml:space="preserve">
+    <value>Viscous, often rotting substance. Symbolizes disintegration, conversion and potential for new life.</value>
+  </data>
+  <data name="Honey" xml:space="preserve">
+    <value>Honey</value>
+  </data>
+  <data name="Honey_Description" xml:space="preserve">
+    <value>The golden nectar of the bee, a sweet elixir of life and a potent preservative. It holds the secrets of the hive and the essence of a thousand flowers.</value>
+  </data>
+  <data name="Diamond" xml:space="preserve">
+    <value>Diamond</value>
+  </data>
+  <data name="Diamond_Description" xml:space="preserve">
+    <value>The purest form of carbon, unyielding and brilliant. A symbol of invincibility, enlightenment, and eternal beauty.</value>
+  </data>
+  <data name="Ruby" xml:space="preserve">
+    <value>Ruby</value>
+  </data>
+  <data name="Ruby_Description" xml:space="preserve">
+    <value>A crimson gemstone, infused with the fire of passion and courage. Promotes vitality and strength.</value>
+  </data>
+  <data name="Sapphire" xml:space="preserve">
+    <value>Sapphire</value>
+  </data>
+  <data name="Sapphire_Description" xml:space="preserve">
+    <value>A celestial gemstone, reflecting wisdom and truth. Inspires clarity, focus, and spiritual insight.</value>
+  </data>
+  <data name="Citrine" xml:space="preserve">
+    <value>Citrine</value>
+  </data>
+  <data name="Citrine_Description" xml:space="preserve">
+    <value>A sun-kissed gem radiating warmth and abundance. It attracts prosperity, amplifies personal power, and kindles the inner flame.</value>
+  </data>
+  <data name="Emerald" xml:space="preserve">
+    <value>Emerald</value>
+  </data>
+  <data name="Emerald_Description" xml:space="preserve">
+    <value>A verdant stone of rebirth and growth, echoing the life force of the natural world. It heals the spirit and fosters harmony.</value>
+  </data>
+  <data name="Amethyst" xml:space="preserve">
+    <value>Amethyst</value>
+  </data>
+  <data name="Amethyst_Description" xml:space="preserve">
+    <value>A violet gem of tranquility and insight, warding off negative energies and sharpening the mind's eye. A stone for contemplation.</value>
+  </data>
+  <data name="Aquamarine" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="Aquamarine_Description" xml:space="preserve">
+    <value>A sea-blue jewel of courage and protection, calming turbulent emotions and ensuring safe passage. The ocean's blessing.</value>
+  </data>
+  <data name="Master_Emerald" xml:space="preserve">
+    <value>Master Emerald</value>
+  </data>
+  <data name="MasterEmerald_Description" xml:space="preserve">
+    <value>The Master Emerald is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them.</value>
+  </data>
+  <data name="Alkahest" xml:space="preserve">
+    <value>Alkahest</value>
+  </data>
+  <data name="Alkahest_Description" xml:space="preserve">
+    <value>A substance that is the universal solvent of everything. The ultimate tool of transformation to produce a philosopher's stone.</value>
+  </data>
+  <data name="Brass" xml:space="preserve">
+    <value>Brass</value>
+  </data>
+  <data name="Brass_Description" xml:space="preserve">
+    <value>A bright, gold-like alloy of copper and zinc. Represents resilience, creativity, and balance.</value>
+  </data>
+  <data name="Bronze" xml:space="preserve">
+    <value>Bronze</value>
+  </data>
+  <data name="Bronze_Description" xml:space="preserve">
+    <value>An enduring alloy of Copper and Tin, famed for its strength and corrosion resistance. A metal of heroes and greatful legacies.</value>
+  </data>
+  <data name="Calomel" xml:space="preserve">
+    <value>Calomel</value>
+  </data>
+  <data name="Calomel_Description" xml:space="preserve">
+    <value>The heavy, white mineral mercury chloride. Used by alchemists for purification and cure, although is very toxic in excess.</value>
+  </data>
+  <data name="Cinnabar" xml:space="preserve">
+    <value>Cinnabar</value>
+  </data>
+  <data name="Cinnabar_Description" xml:space="preserve">
+    <value>A brilliant red ore of Mercury Sulfide. The source of the mercury - symbol of transformation, but also a deadly poison.</value>
+  </data>
+  <data name="Urine" xml:space="preserve">
+    <value>Urine</value>
+  </data>
+  <data name="Urine_Description" xml:space="preserve">
+    <value>A humble waste product, yet containing the seeds of new life. A source of alchemical secrets and potential transformations.</value>
+  </data>
+  <data name="Blood" xml:space="preserve">
+    <value>Blood</value>
+  </data>
+  <data name="Blood_Description" xml:space="preserve">
+    <value>The river of life, a concentration of magic in the human body. It carries within itself the essence of the individual, associated with heat and fire, as well as cruelty and anger.</value>
+  </data>
+  <data name="Meat" xml:space="preserve">
+    <value>Meat</value>
+  </data>
+  <data name="Meat_Description" xml:space="preserve">
+    <value>Flesh, the building block of living beings. Source of primary power and earthly content. Eternal reminder of mortality.</value>
+  </data>
+  <data name="Bones" xml:space="preserve">
+    <value>Bones</value>
+  </data>
+  <data name="Bones_Description" xml:space="preserve">
+    <value>The framework of bodies, strong and enduring.</value>
+  </data>
+  <data name="Burnt_Lime" xml:space="preserve">
+    <value>Burnt lime</value>
+  </data>
+  <data name="BurntLime_Description" xml:space="preserve">
+    <value>The excension of the earth can be calm as a monumental mountain or active and impulsive, revealing its hidden power.</value>
+  </data>
+  <data name="Pyrite" xml:space="preserve">
+    <value>Pyrite</value>
+  </data>
+  <data name="Pyrite_Description" xml:space="preserve">
+    <value>Fool's Gold, a glittering mineral that deceives the eye. A reminder that not all that glitters is true gold, a lesson in discernment.</value>
+  </data>
+  <data name="Oil_of_Vitriol" xml:space="preserve">
+    <value>Oil of vitriol</value>
+  </data>
+  <data name="OilOfVitriol_Description" xml:space="preserve">
+    <value>Also known as sulfuric acid, which is one of the strongest acids.</value>
+  </data>
+  <data name="Ambrosia" xml:space="preserve">
+    <value>Ambrosia</value>
+  </data>
+  <data name="Ambrosia_Description" xml:space="preserve">
+    <value>The food of the gods, granting immortality and eternal youth. A symbol of divine grace and ultimate reward.</value>
+  </data>
+  <data name="Nigredo" xml:space="preserve">
+    <value>Nigredo</value>
+  </data>
+  <data name="Nigredo_Description" xml:space="preserve">
+    <value>The blackening, the first stage of the alchemical Great Work. Represents decomposition, purification, and confronting one's shadow.</value>
+  </data>
+  <data name="Albedo" xml:space="preserve">
+    <value>Albedo</value>
+  </data>
+  <data name="Albedo_Description" xml:space="preserve">
+    <value>The whitening, the second stage of the alchemical Great Work. Symbolizes purification, cleansing, and the emergence of clarity.</value>
+  </data>
+  <data name="Citrinitas" xml:space="preserve">
+    <value>Citrinitas</value>
+  </data>
+  <data name="Citrinitas_Description" xml:space="preserve">
+    <value>The yellowing, the third stage of the alchemical Great Work. Represents the dawning of solar consciousness, intuition, and self-discovery.</value>
+  </data>
+  <data name="Rubedo" xml:space="preserve">
+    <value>Rubedo</value>
+  </data>
+  <data name="Rubedo_Description" xml:space="preserve">
+    <value>The reddening, the final stage of the alchemical Great Work. Represents the union of spirit and matter, achieving spiritual wholeness, and illumination.</value>
+  </data>
+  <data name="Philosophers_Stone" xml:space="preserve">
+    <value>Philosopher's stone</value>
+  </data>
+  <data name="PhilosophersStone_Description" xml:space="preserve">
+    <value>The ultimate goal of alchemy, a substance capable of transmuting base metals into gold and granting immortality. The key to all secrets.</value>
+  </data>
+  <data name="Substance_Earth" xml:space="preserve">
+    <value>Earth</value>
+  </data>
+  <data name="InventoryEmpty" xml:space="preserve">
+    <value>Inventory is empty!</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="RequiredTools" xml:space="preserve">
+    <value>Required tools</value>
+  </data>
+  <data name="ChooseRequiredTools" xml:space="preserve">
+    <value>Choose required tools</value>
+  </data>
+  <data name="NewSubstanceObtained" xml:space="preserve">
+    <value>New substance obtained!</value>
+  </data>
+  <data name="YourToolsAreRight" xml:space="preserve">
+    <value>Your tools are right</value>
+  </data>
+  <data name="YourToolsArePartlyRight" xml:space="preserve">
+    <value>Your tools are partly right</value>
+  </data>
+  <data name="YourToolsAreWrong" xml:space="preserve">
+    <value>Your tools are wrong</value>
+  </data>
+  <data name="RepeatChoice" xml:space="preserve">
+    <value>Repeat choice</value>
+  </data>
+  <data name="EndCongratulations" xml:space="preserve">
+    <value>Congratulations on your victory!</value>
+  </data>
+  <data name="ResourceSub" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="NotEnoughChooseAnother" xml:space="preserve">
+    <value>is not enough. Choose another</value>
+  </data>
+  <data name="HighRiskLevel" xml:space="preserve">
+    <value>The risk level has reached a critical mark!</value>
+  </data>
+  <data name="Defeat" xml:space="preserve">
+    <value>Defeat. You are a unfortunate alchemist</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try again?</value>
+  </data>
+  <data name="YourGoal" xml:space="preserve">
+    <value>Your goal</value>
+  </data>
+  <data name="MixFailed" xml:space="preserve">
+    <value>Sadly! It didn’t work out.</value>
+  </data>
+  <data name="YouMayGet" xml:space="preserve">
+    <value>You may mix something to get </value>
+  </data>
+  <data name="AmountOfHints" xml:space="preserve">
+    <value>Hints</value>
+  </data>
+  <data name="ShowIngredient" xml:space="preserve">
+    <value>Show one of the ingredients</value>
+  </data>
+  <data name="DisplayResult" xml:space="preserve">
+    <value>Display result</value>
+  </data>
+  <data name="YouMayMix_With" xml:space="preserve">
+    <value>You may mix ? with something</value>
+  </data>
+  <data name="NotEnoughHints" xml:space="preserve">
+    <value>You don’t have enough hints!</value>
+  </data>
+  <data name="RulesThemselves" xml:space="preserve">
+    <value>0. You are an amateur alchemist, eager to improve your skills and understand the alchemical truth.?1. Your current goal is to get the purposed substance (its recipe).?2. Mix two components to get new substances (later you can mix three).?3. When mixing, you must take into account the substance's properties and external factors.?4. Don't forget about precautions - you are still an amateur!?5. If you break them, you will lose part of your reputation and increase  "RL" (Risk Level).?6. Environment in different modes are similar, but due to restrictions you will have to act differently.?                      Good luck and exciting alchemy!?</value>
+  </data>
+  <data name="DisplayDescription" xml:space="preserve">
+    <value>Display ingredient and result description</value>
+  </data>
+  <data name="DoYouRememberSub" xml:space="preserve">
+    <value>Do you remember this substance?</value>
+  </data>
+  <data name="SomehowRelatedTo" xml:space="preserve">
+    <value>It is somehow related to</value>
   </data>
 </root>

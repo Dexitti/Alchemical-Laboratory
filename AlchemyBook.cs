@@ -21,31 +21,46 @@ namespace Alchemical_Laboratory
 
         void ImportSubstances(string path)
         {
-            string data = File.ReadAllText(path);
-            Substances = JsonConvert.DeserializeObject<List<Substance>>(data) ?? [];
+            try
+            {
+                string data = File.ReadAllText(path);
+                Substances = JsonConvert.DeserializeObject<List<Substance>>(data);
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine(ex.Message);
+            }
+            
         }
 
         void ImportRecipes(string path)
         {
-            string data = File.ReadAllText(path);
-            dynamic recipes = JToken.Parse(data);
-            foreach (dynamic recipe in recipes)
+            try
             {
-                HashSet<Substance> components = [];
-                foreach (string name in recipe.Components)
+                string data = File.ReadAllText(path);
+                dynamic recipes = JToken.Parse(data);
+                foreach (dynamic recipe in recipes)
                 {
-                    components.Add(GetSubstance(name));
+                    HashSet<Substance> components = [];
+                    foreach (string name in recipe.Components)
+                    {
+                        components.Add(GetSubstance(name));
+                    }
+                    List<Substance> aux = [];
+                    JArray? names = recipe.AuxiliaryResults;
+                    foreach (dynamic name in names ?? [])
+                    {
+                        aux.Add(GetSubstance(name));
+                    }
+                    Recipes.Add(new(GetSubstance(recipe.Result), components, aux));
                 }
-                List<Substance> aux = [];
-                List<string>? names = recipe.AuxiliaryResults;
-                foreach (string name in names ?? [])
-                {
-                    aux.Add(GetSubstance(name));
-                }
-                Recipes.Add(new(GetSubstance(recipe.Result), components, aux));
-            }
             
-            Substance GetSubstance(dynamic name) => Substances.First(x => x.Name == name.ToString());
+                Substance GetSubstance(dynamic name) => Substances.First(x => x.Name == name.ToString());
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine(ex.Message);
+            }
         }
 
         IEnumerable<Substance> IAlchemyBook<Substance>.Substances => Substances;

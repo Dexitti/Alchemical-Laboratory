@@ -3,39 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Alchemical_Laboratory.Properties;
+using Sharprompt;
+using static Alchemical_Laboratory.Game;
 
 namespace Alchemical_Laboratory
 {
-    public class LimitedGameState : IGameState
+    public class LimitedGameState : GameState
     {
-        public List<KeyValuePair<Substance, int>> Inventory { get; set; } = new List<KeyValuePair<Substance, int>>();
-        public double RiskLevel { get; set; } = 0;
-        public bool RecipeDiscovered { get; set; } = false; // End flag
-
-        public void DisplayInventory()
+        public LimitedGameState(AlchemyBook book, IInventory inventory) : base(book, inventory)
         {
-            if (Inventory.Count == 0)
-            {
-                Console.WriteLine("Инвентарь пуст.");
-                return;
-            }
-
-            Console.WriteLine("Инвентарь:");
-            for (int i = 0; i < Inventory.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {Inventory[i].Key.Name}: {Inventory[i].Value}");
-            }
         }
-
-        public Recipe Mix2(Substance sub1, Substance sub2)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void IsSuccess()
-        {
-            if (RecipeDiscovered) { }
-        }
-
     }
 }

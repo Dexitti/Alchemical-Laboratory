@@ -6,23 +6,36 @@ using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
-    class UnlimitedInventory : IInventory
+    public class UnlimitedInventory : IInventory
     {
         private readonly HashSet<Substance> substances = [];
         public IEnumerable<Substance> Substances => substances;
 
-        public void Add(Substance sub) => substances.Add(sub);
+        public event Action<Substance>? NewSubstance;
+
+        public void Add(Substance sub)
+        {
+            if (substances.Add(sub))
+                NewSubstance?.Invoke(sub);
+        }
 
         public void Display()
         {
-            Console.WriteLine(Resource.UnlimitedInventory);
-            foreach (var sub in substances)
+            if (substances.Count == 0)
+                Console.WriteLine(Resource.InventoryEmpty);
+            else
             {
-                Console.WriteLine(Resource.ResourceManager.GetString(sub.Name));
+                Console.WriteLine(Resource.Inventory + ":");
+                int c = 1;
+                foreach (var sub in substances)
+                {
+                    Console.WriteLine($"{c}. {sub}");
+                    c++;
+                }
             }
         }
 
-        public bool IsEnough(Substance sub, int number) => substances.Contains(sub);
+        public bool IsEnough(Substance sub) => substances.Contains(sub);
 
         public bool Remove(Substance sub) => substances.Contains(sub);
     }

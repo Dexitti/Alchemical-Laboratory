@@ -1,6 +1,4 @@
 ﻿
-
-
 namespace Alchemical_Laboratory
 {
     class Program

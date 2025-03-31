@@ -26,6 +26,7 @@ namespace Alchemical_Laboratory
     [Flags]
     public enum Types
     {
+        none = 0,
         roundBottomFlask = 1,
         erlenmeyerFlask = 2,
         mortar = 4,
@@ -40,6 +41,7 @@ namespace Alchemical_Laboratory
     [Flags]
     public enum Materials
     {
+        none = 0,
         thinGlass = 1,
         temperedGlass = 2,
         heatResistantGlass = 4,

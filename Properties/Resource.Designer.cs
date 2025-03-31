@@ -61,11 +61,272 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Air.
+        /// </summary>
+        internal static string Air {
+            get {
+                return ResourceManager.GetString("Air", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Light, expansive, and ever-moving. The breath of life, enabling communication and change. 🜁.
+        /// </summary>
+        internal static string Air_Description {
+            get {
+                return ResourceManager.GetString("Air_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Albedo.
+        /// </summary>
+        internal static string Albedo {
+            get {
+                return ResourceManager.GetString("Albedo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The whitening, the second stage of the alchemical Great Work. Symbolizes purification, cleansing, and the emergence of clarity..
+        /// </summary>
+        internal static string Albedo_Description {
+            get {
+                return ResourceManager.GetString("Albedo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Alcohol.
+        /// </summary>
+        internal static string Alcohol {
+            get {
+                return ResourceManager.GetString("Alcohol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The spirit extracted (🜉), a volatile essence. Can both liberate and destroy, revealing hidden truths..
+        /// </summary>
+        internal static string Alcohol_Description {
+            get {
+                return ResourceManager.GetString("Alcohol_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Alkahest.
+        /// </summary>
+        internal static string Alkahest {
+            get {
+                return ResourceManager.GetString("Alkahest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A substance that is the universal solvent of everything. The ultimate tool of transformation to produce a philosopher&apos;s stone..
+        /// </summary>
+        internal static string Alkahest_Description {
+            get {
+                return ResourceManager.GetString("Alkahest_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ambrosia.
+        /// </summary>
+        internal static string Ambrosia {
+            get {
+                return ResourceManager.GetString("Ambrosia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The food of the gods, granting immortality and eternal youth. A symbol of divine grace and ultimate reward..
+        /// </summary>
+        internal static string Ambrosia_Description {
+            get {
+                return ResourceManager.GetString("Ambrosia_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Amethyst.
+        /// </summary>
+        internal static string Amethyst {
+            get {
+                return ResourceManager.GetString("Amethyst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A violet gem of tranquility and insight, warding off negative energies and sharpening the mind&apos;s eye. A stone for contemplation..
+        /// </summary>
+        internal static string Amethyst_Description {
+            get {
+                return ResourceManager.GetString("Amethyst_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hints.
+        /// </summary>
+        internal static string AmountOfHints {
+            get {
+                return ResourceManager.GetString("AmountOfHints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Aquamarine.
+        /// </summary>
+        internal static string Aquamarine {
+            get {
+                return ResourceManager.GetString("Aquamarine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A sea-blue jewel of courage and protection, calming turbulent emotions and ensuring safe passage. The ocean&apos;s blessing..
+        /// </summary>
+        internal static string Aquamarine_Description {
+            get {
+                return ResourceManager.GetString("Aquamarine_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Are you sure.
         /// </summary>
         internal static string AreYouSure {
             get {
                 return ResourceManager.GetString("AreYouSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bismuth.
+        /// </summary>
+        internal static string Bismuth {
+            get {
+                return ResourceManager.GetString("Bismuth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A brittle, crystalline metal. Known for its iridescent surface, it represents beauty and transformation..
+        /// </summary>
+        internal static string Bismuth_Description {
+            get {
+                return ResourceManager.GetString("Bismuth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Blood.
+        /// </summary>
+        internal static string Blood {
+            get {
+                return ResourceManager.GetString("Blood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The river of life, a concentration of magic in the human body. It carries within itself the essence of the individual, associated with heat and fire, as well as cruelty and anger..
+        /// </summary>
+        internal static string Blood_Description {
+            get {
+                return ResourceManager.GetString("Blood_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bones.
+        /// </summary>
+        internal static string Bones {
+            get {
+                return ResourceManager.GetString("Bones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The framework of bodies, strong and enduring..
+        /// </summary>
+        internal static string Bones_Description {
+            get {
+                return ResourceManager.GetString("Bones_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Brass.
+        /// </summary>
+        internal static string Brass {
+            get {
+                return ResourceManager.GetString("Brass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A bright, gold-like alloy of copper and zinc. Represents resilience, creativity, and balance..
+        /// </summary>
+        internal static string Brass_Description {
+            get {
+                return ResourceManager.GetString("Brass_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bronze.
+        /// </summary>
+        internal static string Bronze {
+            get {
+                return ResourceManager.GetString("Bronze", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на An enduring alloy of Copper and Tin, famed for its strength and corrosion resistance. A metal of heroes and greatful legacies..
+        /// </summary>
+        internal static string Bronze_Description {
+            get {
+                return ResourceManager.GetString("Bronze_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Burnt lime.
+        /// </summary>
+        internal static string Burnt_Lime {
+            get {
+                return ResourceManager.GetString("Burnt_Lime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The excension of the earth can be calm as a monumental mountain or active and impulsive, revealing its hidden power..
+        /// </summary>
+        internal static string BurntLime_Description {
+            get {
+                return ResourceManager.GetString("BurntLime_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Calomel.
+        /// </summary>
+        internal static string Calomel {
+            get {
+                return ResourceManager.GetString("Calomel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The heavy, white mineral mercury chloride. Used by alchemists for purification and cure, although is very toxic in excess..
+        /// </summary>
+        internal static string Calomel_Description {
+            get {
+                return ResourceManager.GetString("Calomel_Description", resourceCulture);
             }
         }
         
@@ -79,6 +340,213 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Choose required tools.
+        /// </summary>
+        internal static string ChooseRequiredTools {
+            get {
+                return ResourceManager.GetString("ChooseRequiredTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cinnabar.
+        /// </summary>
+        internal static string Cinnabar {
+            get {
+                return ResourceManager.GetString("Cinnabar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A brilliant red ore of Mercury Sulfide. The source of the mercury - symbol of transformation, but also a deadly poison..
+        /// </summary>
+        internal static string Cinnabar_Description {
+            get {
+                return ResourceManager.GetString("Cinnabar_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Citrine.
+        /// </summary>
+        internal static string Citrine {
+            get {
+                return ResourceManager.GetString("Citrine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A sun-kissed gem radiating warmth and abundance. It attracts prosperity, amplifies personal power, and kindles the inner flame..
+        /// </summary>
+        internal static string Citrine_Description {
+            get {
+                return ResourceManager.GetString("Citrine_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Citrinitas.
+        /// </summary>
+        internal static string Citrinitas {
+            get {
+                return ResourceManager.GetString("Citrinitas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The yellowing, the third stage of the alchemical Great Work. Represents the dawning of solar consciousness, intuition, and self-discovery..
+        /// </summary>
+        internal static string Citrinitas_Description {
+            get {
+                return ResourceManager.GetString("Citrinitas_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Concentrated mana.
+        /// </summary>
+        internal static string Concentrated_Mana {
+            get {
+                return ResourceManager.GetString("Concentrated_Mana", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Mana refined to its purest form, crackling with power. Handle with extreme caution, lest it consume you..
+        /// </summary>
+        internal static string ConcentratedMana_Description {
+            get {
+                return ResourceManager.GetString("ConcentratedMana_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Copper.
+        /// </summary>
+        internal static string Copper {
+            get {
+                return ResourceManager.GetString("Copper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The red metal (Cuprum), known for its conductivity and malleability. A conduit for energy and a symbol of Venus (♀)..
+        /// </summary>
+        internal static string Copper_Description {
+            get {
+                return ResourceManager.GetString("Copper_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Defeat. You are a unfortunate alchemist.
+        /// </summary>
+        internal static string Defeat {
+            get {
+                return ResourceManager.GetString("Defeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Description.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Diamond.
+        /// </summary>
+        internal static string Diamond {
+            get {
+                return ResourceManager.GetString("Diamond", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The purest form of carbon, unyielding and brilliant. A symbol of invincibility, enlightenment, and eternal beauty..
+        /// </summary>
+        internal static string Diamond_Description {
+            get {
+                return ResourceManager.GetString("Diamond_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Display ingredient and result description.
+        /// </summary>
+        internal static string DisplayDescription {
+            get {
+                return ResourceManager.GetString("DisplayDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Display result.
+        /// </summary>
+        internal static string DisplayResult {
+            get {
+                return ResourceManager.GetString("DisplayResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Do you remember this substance?.
+        /// </summary>
+        internal static string DoYouRememberSub {
+            get {
+                return ResourceManager.GetString("DoYouRememberSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Earth.
+        /// </summary>
+        internal static string Earth {
+            get {
+                return ResourceManager.GetString("Earth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Solid, stable, and grounding. The foundation of existence, holding all things together. 🜃.
+        /// </summary>
+        internal static string Earth_Description {
+            get {
+                return ResourceManager.GetString("Earth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Emerald.
+        /// </summary>
+        internal static string Emerald {
+            get {
+                return ResourceManager.GetString("Emerald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A verdant stone of rebirth and growth, echoing the life force of the natural world. It heals the spirit and fosters harmony..
+        /// </summary>
+        internal static string Emerald_Description {
+            get {
+                return ResourceManager.GetString("Emerald_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Congratulations on your victory!.
+        /// </summary>
+        internal static string EndCongratulations {
+            get {
+                return ResourceManager.GetString("EndCongratulations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на explosiveness.
         /// </summary>
         internal static string Explosiveness {
@@ -88,11 +556,20 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на fire.
+        ///   Ищет локализованную строку, похожую на Fire.
         /// </summary>
         internal static string Fire {
             get {
                 return ResourceManager.GetString("Fire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The primordial force of change and destruction, but also warmth and creation. The essence of energy itself. 🜂.
+        /// </summary>
+        internal static string Fire_Description {
+            get {
+                return ResourceManager.GetString("Fire_Description", resourceCulture);
             }
         }
         
@@ -102,6 +579,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Flammability {
             get {
                 return ResourceManager.GetString("Flammability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Freezing vapour.
+        /// </summary>
+        internal static string Freezing_Vapour {
+            get {
+                return ResourceManager.GetString("Freezing_Vapour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A volatile cloud, colder than the deepest winter. It crystallizes all it touches, destroying organic matter..
+        /// </summary>
+        internal static string FreezingVapour_Description {
+            get {
+                return ResourceManager.GetString("FreezingVapour_Description", resourceCulture);
             }
         }
         
@@ -124,6 +619,42 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Gold.
+        /// </summary>
+        internal static string Gold {
+            get {
+                return ResourceManager.GetString("Gold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Aurum (☉) - the sun&apos;s reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment..
+        /// </summary>
+        internal static string Gold_Description {
+            get {
+                return ResourceManager.GetString("Gold_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Gunpowder.
+        /// </summary>
+        internal static string Gunpowder {
+            get {
+                return ResourceManager.GetString("Gunpowder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A volatile concoction of fire, earth, and air, capable of immense destructive power. Use with extreme caution..
+        /// </summary>
+        internal static string Gunpowder_Description {
+            get {
+                return ResourceManager.GetString("Gunpowder_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на hardness.
         /// </summary>
         internal static string Hardness {
@@ -133,11 +664,101 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The risk level has reached a critical mark!.
+        /// </summary>
+        internal static string HighRiskLevel {
+            get {
+                return ResourceManager.GetString("HighRiskLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Honey.
+        /// </summary>
+        internal static string Honey {
+            get {
+                return ResourceManager.GetString("Honey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The golden nectar of the bee, a sweet elixir of life and a potent preservative. It holds the secrets of the hive and the essence of a thousand flowers..
+        /// </summary>
+        internal static string Honey_Description {
+            get {
+                return ResourceManager.GetString("Honey_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Inventory.
         /// </summary>
         internal static string Inventory {
             get {
                 return ResourceManager.GetString("Inventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Inventory is empty!.
+        /// </summary>
+        internal static string InventoryEmpty {
+            get {
+                return ResourceManager.GetString("InventoryEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Iron.
+        /// </summary>
+        internal static string Iron {
+            get {
+                return ResourceManager.GetString("Iron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ferrum (♂) - the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons..
+        /// </summary>
+        internal static string Iron_Description {
+            get {
+                return ResourceManager.GetString("Iron_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Lava.
+        /// </summary>
+        internal static string Lava {
+            get {
+                return ResourceManager.GetString("Lava", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The molten heart of the earth, a destructive force forged from extreme heat. Potential for creation and ruin..
+        /// </summary>
+        internal static string Lava_Description {
+            get {
+                return ResourceManager.GetString("Lava_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Lead.
+        /// </summary>
+        internal static string Lead {
+            get {
+                return ResourceManager.GetString("Lead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Heavy, dense - Plumbum. In alchemy linked to Saturn (♄), a symbol of restriction and the initial stage of alchemical transformation..
+        /// </summary>
+        internal static string Lead_Description {
+            get {
+                return ResourceManager.GetString("Lead_Description", resourceCulture);
             }
         }
         
@@ -160,6 +781,24 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Lively concoction.
+        /// </summary>
+        internal static string Lively_Concoction {
+            get {
+                return ResourceManager.GetString("Lively_Concoction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A strange mixture of organic and inorganic matter in liquid form..
+        /// </summary>
+        internal static string LivelyConcoction_Description {
+            get {
+                return ResourceManager.GetString("LivelyConcoction_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Load.
         /// </summary>
         internal static string Load {
@@ -169,11 +808,218 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Mana.
+        /// </summary>
+        internal static string Mana {
+            get {
+                return ResourceManager.GetString("Mana", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The raw, unrefined magical energy that permeates all creation. The fuel of the extraordinary..
+        /// </summary>
+        internal static string Mana_Description {
+            get {
+                return ResourceManager.GetString("Mana_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Master Emerald.
+        /// </summary>
+        internal static string Master_Emerald {
+            get {
+                return ResourceManager.GetString("Master_Emerald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The Master Emerald is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them..
+        /// </summary>
+        internal static string MasterEmerald_Description {
+            get {
+                return ResourceManager.GetString("MasterEmerald_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Meat.
+        /// </summary>
+        internal static string Meat {
+            get {
+                return ResourceManager.GetString("Meat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Flesh, the building block of living beings. Source of primary power and earthly content. Eternal reminder of mortality..
+        /// </summary>
+        internal static string Meat_Description {
+            get {
+                return ResourceManager.GetString("Meat_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Mercury.
+        /// </summary>
+        internal static string Mercury {
+            get {
+                return ResourceManager.GetString("Mercury", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hydrargyrum (☿) - fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier..
+        /// </summary>
+        internal static string Mercury_Description {
+            get {
+                return ResourceManager.GetString("Mercury_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Mix.
         /// </summary>
         internal static string Mix {
             get {
                 return ResourceManager.GetString("Mix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sadly! It didn’t work out..
+        /// </summary>
+        internal static string MixFailed {
+            get {
+                return ResourceManager.GetString("MixFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Mud.
+        /// </summary>
+        internal static string Mud {
+            get {
+                return ResourceManager.GetString("Mud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A humble mixture of earth and water, fertile and teeming with potential. From nothing, life can begin..
+        /// </summary>
+        internal static string Mud_Description {
+            get {
+                return ResourceManager.GetString("Mud_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на New substance obtained!.
+        /// </summary>
+        internal static string NewSubstanceObtained {
+            get {
+                return ResourceManager.GetString("NewSubstanceObtained", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Nigredo.
+        /// </summary>
+        internal static string Nigredo {
+            get {
+                return ResourceManager.GetString("Nigredo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The blackening, the first stage of the alchemical Great Work. Represents decomposition, purification, and confronting one&apos;s shadow..
+        /// </summary>
+        internal static string Nigredo_Description {
+            get {
+                return ResourceManager.GetString("Nigredo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на is not enough. Choose another.
+        /// </summary>
+        internal static string NotEnoughChooseAnother {
+            get {
+                return ResourceManager.GetString("NotEnoughChooseAnother", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You don’t have enough hints!.
+        /// </summary>
+        internal static string NotEnoughHints {
+            get {
+                return ResourceManager.GetString("NotEnoughHints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Oil of vitriol.
+        /// </summary>
+        internal static string Oil_of_Vitriol {
+            get {
+                return ResourceManager.GetString("Oil_of_Vitriol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Also known as sulfuric acid, which is one of the strongest acids..
+        /// </summary>
+        internal static string OilOfVitriol_Description {
+            get {
+                return ResourceManager.GetString("OilOfVitriol_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Philosopher&apos;s stone.
+        /// </summary>
+        internal static string Philosophers_Stone {
+            get {
+                return ResourceManager.GetString("Philosophers_Stone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The ultimate goal of alchemy, a substance capable of transmuting base metals into gold and granting immortality. The key to all secrets..
+        /// </summary>
+        internal static string PhilosophersStone_Description {
+            get {
+                return ResourceManager.GetString("PhilosophersStone_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Poison.
+        /// </summary>
+        internal static string Poison {
+            get {
+                return ResourceManager.GetString("Poison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A subtle and insidious substance born of decay and malice. It corrupts the body and weakens the spirit..
+        /// </summary>
+        internal static string Poison_Description {
+            get {
+                return ResourceManager.GetString("Poison_Description", resourceCulture);
             }
         }
         
@@ -196,11 +1042,47 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на properties.
+        ///   Ищет локализованную строку, похожую на Properties.
         /// </summary>
         internal static string Properties {
             get {
                 return ResourceManager.GetString("Properties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pyrite.
+        /// </summary>
+        internal static string Pyrite {
+            get {
+                return ResourceManager.GetString("Pyrite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Fool&apos;s Gold, a glittering mineral that deceives the eye. A reminder that not all that glitters is true gold, a lesson in discernment..
+        /// </summary>
+        internal static string Pyrite_Description {
+            get {
+                return ResourceManager.GetString("Pyrite_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Quartz.
+        /// </summary>
+        internal static string Quartz {
+            get {
+                return ResourceManager.GetString("Quartz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Crystallized earth, pure and clear. It is said to amplify the magical energies and focus the mind. Often served as a basis for alchemists lanterns, sticks and amulets..
+        /// </summary>
+        internal static string Quartz_Description {
+            get {
+                return ResourceManager.GetString("Quartz_Description", resourceCulture);
             }
         }
         
@@ -223,11 +1105,137 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Repeat choice.
+        /// </summary>
+        internal static string RepeatChoice {
+            get {
+                return ResourceManager.GetString("RepeatChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Required tools.
+        /// </summary>
+        internal static string RequiredTools {
+            get {
+                return ResourceManager.GetString("RequiredTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Resource.
+        /// </summary>
+        internal static string ResourceSub {
+            get {
+                return ResourceManager.GetString("ResourceSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Rubedo.
+        /// </summary>
+        internal static string Rubedo {
+            get {
+                return ResourceManager.GetString("Rubedo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The reddening, the final stage of the alchemical Great Work. Represents the union of spirit and matter, achieving spiritual wholeness, and illumination..
+        /// </summary>
+        internal static string Rubedo_Description {
+            get {
+                return ResourceManager.GetString("Rubedo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ruby.
+        /// </summary>
+        internal static string Ruby {
+            get {
+                return ResourceManager.GetString("Ruby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A crimson gemstone, infused with the fire of passion and courage. Promotes vitality and strength..
+        /// </summary>
+        internal static string Ruby_Description {
+            get {
+                return ResourceManager.GetString("Ruby_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Rules.
         /// </summary>
         internal static string Rules {
             get {
                 return ResourceManager.GetString("Rules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 0. You are an amateur alchemist, eager to improve your skills and understand the alchemical truth.?1. Your current goal is to get the purposed substance (its recipe).?2. Mix two components to get new substances (later you can mix three).?3. When mixing, you must take into account the substance&apos;s properties and external factors.?4. Don&apos;t forget about precautions - you are still an amateur!?5. If you break them, you will lose part of your reputation and increase  &quot;RL&quot; (Risk Level).?6. Environment in different [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string RulesThemselves {
+            get {
+                return ResourceManager.GetString("RulesThemselves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Salt.
+        /// </summary>
+        internal static string Salt {
+            get {
+                return ResourceManager.GetString("Salt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Salt (🜔) - a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative)..
+        /// </summary>
+        internal static string Salt_Description {
+            get {
+                return ResourceManager.GetString("Salt_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sand.
+        /// </summary>
+        internal static string Sand {
+            get {
+                return ResourceManager.GetString("Sand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Most of the earth&apos;s rocks, including sand - silica. Tiny grains of Earth, component of many rituals..
+        /// </summary>
+        internal static string Sand_Description {
+            get {
+                return ResourceManager.GetString("Sand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sapphire.
+        /// </summary>
+        internal static string Sapphire {
+            get {
+                return ResourceManager.GetString("Sapphire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A celestial gemstone, reflecting wisdom and truth. Inspires clarity, focus, and spiritual insight..
+        /// </summary>
+        internal static string Sapphire_Description {
+            get {
+                return ResourceManager.GetString("Sapphire_Description", resourceCulture);
             }
         }
         
@@ -259,11 +1267,128 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Show one of the ingredients.
+        /// </summary>
+        internal static string ShowIngredient {
+            get {
+                return ResourceManager.GetString("ShowIngredient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Show rules.
         /// </summary>
         internal static string ShowRules {
             get {
                 return ResourceManager.GetString("ShowRules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Silver.
+        /// </summary>
+        internal static string Silver {
+            get {
+                return ResourceManager.GetString("Silver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The moon&apos;s mirror (☽), reflecting purity and intuition - Argentum (🜛). A symbol of feminine energy and emotional balance..
+        /// </summary>
+        internal static string Silver_Description {
+            get {
+                return ResourceManager.GetString("Silver_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Slime.
+        /// </summary>
+        internal static string Slime {
+            get {
+                return ResourceManager.GetString("Slime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Viscous, often rotting substance. Symbolizes disintegration, conversion and potential for new life..
+        /// </summary>
+        internal static string Slime_Description {
+            get {
+                return ResourceManager.GetString("Slime_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на It is somehow related to.
+        /// </summary>
+        internal static string SomehowRelatedTo {
+            get {
+                return ResourceManager.GetString("SomehowRelatedTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Steam.
+        /// </summary>
+        internal static string Steam {
+            get {
+                return ResourceManager.GetString("Steam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The heated breath of water, a transitional state between fluid and air. Represents latent power and potential..
+        /// </summary>
+        internal static string Steam_Description {
+            get {
+                return ResourceManager.GetString("Steam_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stone.
+        /// </summary>
+        internal static string Stone {
+            get {
+                return ResourceManager.GetString("Stone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Solidified earth, enduring and unyielding. A symbol of permanence and strength..
+        /// </summary>
+        internal static string Stone_Description {
+            get {
+                return ResourceManager.GetString("Stone_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Earth.
+        /// </summary>
+        internal static string Substance_Earth {
+            get {
+                return ResourceManager.GetString("Substance_Earth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sulfur.
+        /// </summary>
+        internal static string Sulfur {
+            get {
+                return ResourceManager.GetString("Sulfur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sulfur (🜍) - Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity..
+        /// </summary>
+        internal static string Sulfur_Description {
+            get {
+                return ResourceManager.GetString("Sulfur_Description", resourceCulture);
             }
         }
         
@@ -277,11 +1402,38 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Tin.
+        /// </summary>
+        internal static string Tin {
+            get {
+                return ResourceManager.GetString("Tin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bright, silvery metal (Stannum). In alchemy is associated with Jupiter (♃) and luck, in philosophy means &quot;breath of life&quot;..
+        /// </summary>
+        internal static string Tin_Description {
+            get {
+                return ResourceManager.GetString("Tin_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на toxicity.
         /// </summary>
         internal static string Toxicity {
             get {
                 return ResourceManager.GetString("Toxicity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Try again?.
+        /// </summary>
+        internal static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
             }
         }
         
@@ -304,6 +1456,24 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Urine.
+        /// </summary>
+        internal static string Urine {
+            get {
+                return ResourceManager.GetString("Urine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A humble waste product, yet containing the seeds of new life. A source of alchemical secrets and potential transformations..
+        /// </summary>
+        internal static string Urine_Description {
+            get {
+                return ResourceManager.GetString("Urine_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на viscosity.
         /// </summary>
         internal static string Viscosity {
@@ -322,11 +1492,92 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на water.
+        ///   Ищет локализованную строку, похожую на Water.
         /// </summary>
         internal static string Water {
             get {
                 return ResourceManager.GetString("Water", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The source of life, adaptable and fluid. It cleanses, nurtures, and connects all things. 🜄.
+        /// </summary>
+        internal static string Water_Description {
+            get {
+                return ResourceManager.GetString("Water_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You may mix something to get .
+        /// </summary>
+        internal static string YouMayGet {
+            get {
+                return ResourceManager.GetString("YouMayGet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You may mix ? with something.
+        /// </summary>
+        internal static string YouMayMix_With {
+            get {
+                return ResourceManager.GetString("YouMayMix_With", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your goal.
+        /// </summary>
+        internal static string YourGoal {
+            get {
+                return ResourceManager.GetString("YourGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your tools are partly right.
+        /// </summary>
+        internal static string YourToolsArePartlyRight {
+            get {
+                return ResourceManager.GetString("YourToolsArePartlyRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your tools are right.
+        /// </summary>
+        internal static string YourToolsAreRight {
+            get {
+                return ResourceManager.GetString("YourToolsAreRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your tools are wrong.
+        /// </summary>
+        internal static string YourToolsAreWrong {
+            get {
+                return ResourceManager.GetString("YourToolsAreWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Zinc.
+        /// </summary>
+        internal static string Zinc {
+            get {
+                return ResourceManager.GetString("Zinc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на A resilient, bluish-white metal, known for its protective properties. In alchemy is known by the preparation of &quot;Philosophic wool&quot; by burning zinc in air, which was called &quot;nix alba&quot; (white snow).
+        /// </summary>
+        internal static string Zinc_Description {
+            get {
+                return ResourceManager.GetString("Zinc_Description", resourceCulture);
             }
         }
     }

@@ -5,13 +5,15 @@ using System.Text;
 
 namespace Alchemical_Laboratory
 {
-    interface IInventory
+    public interface IInventory
     {
         IEnumerable<Substance> Substances { get; }
 
+        public event Action<Substance> NewSubstance;
+
         void Add(Substance sub);
 
-        bool IsEnough(Substance sub, int number);
+        bool IsEnough(Substance sub);
 
         bool Remove(Substance sub);
 

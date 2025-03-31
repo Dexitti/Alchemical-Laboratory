@@ -6,37 +6,46 @@ using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
-    class LimitedInventory : IInventory
+    public class LimitedInventory : IInventory
     {
         readonly Dictionary<Substance, int> buckets = [];
 
         public IEnumerable<Substance> Substances => buckets.Keys;
 
+        public event Action<Substance>? NewSubstance;
+
         public void Add(Substance sub)
         {
             if (!buckets.TryGetValue(sub, out int count))
             {
-                count = 0;
+                count = 2;
+                NewSubstance?.Invoke(sub);
             }
             buckets[sub] = count + 1;
         }
 
         public void Display()
         {
-            Console.WriteLine(Resource.LimitedInventory);
-            foreach (var pair in buckets)
+            if (buckets.Count == 0)
+                Console.WriteLine(Resource.InventoryEmpty);
+            else
             {
-                if (pair.Value <= 0)
-                    continue;
-                Console.WriteLine(Resource.ResourceManager.GetString(pair.Key.Name) + ": " + pair.Value);
+                Console.WriteLine(Resource.Inventory + ":");
+                int c = 1;
+                foreach (var pair in buckets)
+                {
+                    if (pair.Value < 0) continue;
+                    Console.WriteLine($"{c}. {Resource.ResourceManager.GetString(pair.Key.Name)}: {pair.Value}");
+                    c++;
+                }
             }
         }
 
-        public bool IsEnough(Substance sub, int number) => buckets.TryGetValue(sub, out int count) && count >= number;
+        public bool IsEnough(Substance sub) => buckets.TryGetValue(sub, out int count) && count > 0;
 
         public bool Remove(Substance sub)
         {
-            if (buckets.TryGetValue(sub, out int count) && count > 1)
+            if (buckets.TryGetValue(sub, out int count) && count > 0)
             {
                 buckets[sub] = count - 1;
                 return true;

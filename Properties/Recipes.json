@@ -20,11 +20,11 @@
     "Components": [ "Earth", "Water" ]
   },
   {
-    "Result": "Concentrated Mana",
+    "Result": "Concentrated_Mana",
     "Components": [ "Water", "Mana" ]
   },
   {
-    "Result": "Freezing Vapour",
+    "Result": "Freezing_Vapour",
     "Components": [ "Water", "Air" ]
   },
   {
@@ -105,7 +105,7 @@
     "Components": [ "Steam", "Lead" ] // from Alcohol, Ambrosia
   },
   {
-    "Result": "Lively Concoction",
+    "Result": "Lively_Concoction",
     "Components": [ "Fire", "Mud" ],
     "AuxiliaryResults": [ "Steam" ]
   },
@@ -147,7 +147,7 @@
     "Components": [ "Stone", "Lively Concoction" ]
   },
   {
-    "Result": "Burnt Lime",
+    "Result": "Burnt_Lime",
     "Components": [ "Lava", "Bones" ]
   },
   {
@@ -155,7 +155,7 @@
     "Components": [ "Iron", "Sulfur" ]
   },
   {
-    "Result": "Oil of Vitriol",
+    "Result": "Oil_of_Vitriol",
     "Components": [ "Water", "Air", "Pyrite" ]
   },
   //{
@@ -185,7 +185,7 @@
   },
   {
     "Result": "Emerald",
-    "Components": [ "Mana", "Cooper" ],
+    "Components": [ "Mana", "Copper" ],
     "AuxiliaryResults": [ "Mud" ]
   },
   {
@@ -238,7 +238,7 @@
     "Components": [ "Citrinitas", "Tin", "Mercury" ]
   },
   {
-    "Result": "Philosopher's Stone",
+    "Result": "Philosophers_Stone",
     "Components": [ "Rubedo", "Concentrated Mana", "Diamond" ]
   }
 ]
