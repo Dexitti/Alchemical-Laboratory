@@ -44,7 +44,7 @@ namespace Alchemical_Laboratory
             while (true)
             {
                 gameMode = Prompt.Select(Resource.SelectGameMode, mode);
-                bool confirm = Prompt.Confirm(Resource.AreYouSure + "?");
+                bool confirm = Prompt.Confirm(Resource.AreYouSure + "?", true);
                 Extensions.CleanStrings(2);
                 if (confirm)
                 {
@@ -73,7 +73,7 @@ namespace Alchemical_Laboratory
 
         void Options() // Game menu
         {
-            string[] strings =
+            List<string> strings =
             [
                 Resource.Inventory, // menu: показать параметры (HP, Risk Level, Прогресс...)
                 Resource.Mix,
@@ -83,7 +83,7 @@ namespace Alchemical_Laboratory
                 Resource.Load,
                 Resource.Quit
             ];
-            Action[] actions = [ OpenInventory, Mix, GetHint, ShowRules, Serialize, Deserialize, Quit ];
+            List<Action> actions = [ OpenInventory, Mix, GetHint, ShowRules, Serialize, Deserialize, Quit ];
 
             while (true)
             {
@@ -91,8 +91,17 @@ namespace Alchemical_Laboratory
                 Console.WriteLine(Resource.GameMode + ": " + gameMode);
                 Services.GetRequiredService<AlchemyManager>().PrintGoal();
 
+                if (gameState.ReadinessToMagisterium())
+                {
+                    Console.WriteLine(Resource.Congratulations + " " + Resource.AAA);
+                    Extensions.MakeDelay(3000);
+                    Extensions.CleanStrings(1);
+                    strings.Insert(2, Resource.Synthesize);
+                    actions.Insert(2, Synthesize);
+                }
+
                 string menus = Prompt.Select(Resource.ChooseAnAction, strings);
-                int index = Array.IndexOf(strings, menus);
+                int index = strings.IndexOf(menus);
                 actions[index]();
             }
         }
@@ -100,6 +109,10 @@ namespace Alchemical_Laboratory
         void OpenInventory()
         {
             Extensions.CleanStrings(1);
+            // [█████░░░░░░]
+            Console.WriteLine($"{Resource.RiskLevel}: {gameState.RiskLevel}/{100}\n");
+            int[] pr = gameState.Progress();
+            Console.WriteLine($"{Resource.AlchemyBookProgress}: {pr[0]+"/"+pr[1]} ({Math.Round((double)pr[0] / (double)pr[1] * 100, 2)}%)");
             gameState.DisplayInventory();
             Console.ReadKey();
         }
@@ -108,13 +121,13 @@ namespace Alchemical_Laboratory
         {
             var inventory = Services.GetRequiredService<IInventory>();
             IEnumerable<Substance> list = inventory.Substances;
-            List<string> sus = list.Select(s => s.Name).ToList(); // gameState.Inventory <=> List<string>
+            List<string> sus = list.Select(s => s.ToString()).Order().ToList(); // gameState.Inventory <=> List<string>
 
             string su1, su2;
             Substance? sub1, sub2;
             while (true)
             {
-                su1 = Prompt.Select(Resource.SelectSubstance + " 1", sus);
+                su1 = Prompt.Select(Resource.SelectSubstance + " 1", sus, 4);
                 sub1 = list.First(s => s.Name == su1);
                 if (!inventory.IsEnough(sub1))
                 {
@@ -129,7 +142,7 @@ namespace Alchemical_Laboratory
 
             while (true)
             {
-                su2 = Prompt.Select(Resource.SelectSubstance + " 2", sus);
+                su2 = Prompt.Select(Resource.SelectSubstance + " 2", sus, 4);
                 sub2 = list.First(s => s.Name == su2);
                 if (!inventory.IsEnough(sub2))
                 {
@@ -142,19 +155,88 @@ namespace Alchemical_Laboratory
             }
             inventory.Remove(sub2);
 
-            Substance? result = gameState.Mix2(sub1, sub2);
-            if (result == null)
+            Recipe? outcome = gameState.Mix(sub1, sub2);
+            if (outcome == null)
             {
                 Console.WriteLine(Resource.MixFailed); // Идея: сохранять список несуществующих рецептов | историю попыток
                 Extensions.MakeDelay(1700);
             }
-            else if (result.IsDiscovered)
+            else if (outcome.IsDiscovered)
             {
                 Console.WriteLine(Resource.FamiliarRecipe);
                 Extensions.MakeDelay(1700);
             }
             else
-                inventory.Add(result);
+            {
+                outcome.IsDiscovered = true;
+                if (outcome.AuxiliaryResults.Count > 0)
+                {
+                    Extensions.CleanStrings(3);
+                    Console.WriteLine($"\n{Resource.NewSubstanceObtained} – {outcome.Result}!");
+                    string auxList = string.Join(", ", outcome.AuxiliaryResults);
+                    Console.WriteLine($"{ Resource.FoundAuxilary} {{{auxList}}} ...");
+                    Console.ReadKey();
+                    inventory.Add(outcome.Result);
+                    foreach (var aux in outcome.AuxiliaryResults.Where(s => !s.IsDiscovered))
+                        inventory.Add(aux);
+                }
+                else
+                    inventory.Add(outcome.Result);
+            }
+        }
+
+        void Synthesize()
+        {
+            var inventory = Services.GetRequiredService<IInventory>();
+            IEnumerable<Substance> list = inventory.Substances;
+            List<string> sus = list.Select(s => s.ToString()).Order().ToList();
+            Substance[] subs = new Substance[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                while (true)
+                {
+                    string su = Prompt.Select($"{Resource.SelectSubstance} {i+1}", sus, 4);
+                    subs[i] = list.First(s => s.Name == su);
+                    if (!inventory.IsEnough(subs[i]))
+                    {
+                        Console.Write($"{Resource.ResourceSub} {su} {Resource.NotEnoughChooseAnother}");
+                        Thread.Sleep(500);
+                        Extensions.CleanStrings(2);
+                        continue;
+                    }
+                    break;
+                }
+                inventory.Remove(subs[i]);
+            }
+
+            Recipe? outcome = gameState.Mix(subs);
+            if (outcome == null)
+            {
+                Console.WriteLine(Resource.MixFailed);
+                Extensions.MakeDelay(1700);
+            }
+            else if (outcome.IsDiscovered)
+            {
+                Console.WriteLine(Resource.FamiliarRecipe);
+                Extensions.MakeDelay(1700);
+            }
+            else
+            {
+                if (outcome.AuxiliaryResults.Count > 0)
+                {
+                    Extensions.CleanStrings(3);
+                    Console.WriteLine($"\n{Resource.NewSubstanceObtained} – {outcome.Result}!");
+                    string auxList = string.Join(", ", outcome.AuxiliaryResults);
+                    Console.WriteLine($"{Resource.FoundAuxilary} {{{auxList}}} ...");
+                    Console.ReadKey();
+                    inventory.Add(outcome.Result);
+                    foreach (var aux in outcome.AuxiliaryResults.Where(s => !s.IsDiscovered))
+                        inventory.Add(aux);
+                }
+                else
+                    inventory.Add(outcome.Result);
+            }
         }
 
         void GetHint()

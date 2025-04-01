@@ -34,7 +34,7 @@ namespace Alchemical_Laboratory
 
         public static void CleanStrings(int c)
         {
-            for (int i = 0; i < c; i++) // Очищает c строк выше
+            for (int i = 0; i < c; i++) // Очищает "c" строк выше
             {
                 Console.SetCursorPosition(0, Console.CursorTop - 1);
                 Console.Write(new String(' ', Console.BufferWidth));

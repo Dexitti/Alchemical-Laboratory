@@ -136,25 +136,25 @@
     <value>Water</value>
   </data>
   <data name="Temperature" xml:space="preserve">
-    <value>temperature</value>
+    <value>Temperature</value>
   </data>
   <data name="Hardness" xml:space="preserve">
-    <value>hardness</value>
+    <value>Hardness</value>
   </data>
   <data name="Volatility" xml:space="preserve">
-    <value>volatility</value>
+    <value>Volatility</value>
   </data>
   <data name="Viscosity" xml:space="preserve">
-    <value>viscosity</value>
+    <value>Viscosity</value>
   </data>
   <data name="Toxicity" xml:space="preserve">
-    <value>toxicity</value>
+    <value>Toxicity</value>
   </data>
   <data name="Flammability" xml:space="preserve">
-    <value>flammability</value>
+    <value>Flammability</value>
   </data>
   <data name="Radioactivity" xml:space="preserve">
-    <value>radioactivity</value>
+    <value>Radioactivity</value>
   </data>
   <data name="UnlimitedResources" xml:space="preserve">
     <value>unlimited resources</value>
@@ -205,7 +205,7 @@
     <value>Press any key to continue</value>
   </data>
   <data name="Explosiveness" xml:space="preserve">
-    <value>explosiveness</value>
+    <value>Explosiveness</value>
   </data>
   <data name="Fire_Description" xml:space="preserve">
     <value>The primordial force of change and destruction, but also warmth and creation. The essence of energy itself. 🜂</value>
@@ -271,7 +271,7 @@
     <value>Iron</value>
   </data>
   <data name="Iron_Description" xml:space="preserve">
-    <value>Ferrum (♂) - the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons.</value>
+    <value>Ferrum (♂) the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons.</value>
   </data>
   <data name="Copper" xml:space="preserve">
     <value>Copper</value>
@@ -283,7 +283,7 @@
     <value>Gold</value>
   </data>
   <data name="Gold_Description" xml:space="preserve">
-    <value>Aurum (☉) - the sun's reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment.</value>
+    <value>Aurum (☉) the sun's reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment.</value>
   </data>
   <data name="Lead" xml:space="preserve">
     <value>Lead</value>
@@ -313,19 +313,19 @@
     <value>Sulfur</value>
   </data>
   <data name="Sulfur_Description" xml:space="preserve">
-    <value>Sulfur (🜍) - Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity.</value>
+    <value>(🜍) Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity.</value>
   </data>
   <data name="Mercury" xml:space="preserve">
     <value>Mercury</value>
   </data>
   <data name="Mercury_Description" xml:space="preserve">
-    <value>Hydrargyrum (☿) - fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier.</value>
+    <value>Hydrargyrum (☿) fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier.</value>
   </data>
   <data name="Salt" xml:space="preserve">
     <value>Salt</value>
   </data>
   <data name="Salt_Description" xml:space="preserve">
-    <value>Salt (🜔) - a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative).</value>
+    <value>(🜔) a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative).</value>
   </data>
   <data name="Bismuth" xml:space="preserve">
     <value>Bismuth</value>
@@ -556,7 +556,7 @@
     <value>Choose required tools</value>
   </data>
   <data name="NewSubstanceObtained" xml:space="preserve">
-    <value>New substance obtained!</value>
+    <value>New substance obtained</value>
   </data>
   <data name="YourToolsAreRight" xml:space="preserve">
     <value>Your tools are right</value>
@@ -626,5 +626,38 @@
   </data>
   <data name="FamiliarRecipe" xml:space="preserve">
     <value>This recipe seems familiar to you.</value>
+  </data>
+  <data name="Synthesize" xml:space="preserve">
+    <value>Synthesize</value>
+  </data>
+  <data name="AAA" xml:space="preserve">
+    <value>Alchemical Ascension available</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
+  </data>
+  <data name="RiskLevel" xml:space="preserve">
+    <value>Level of danger</value>
+  </data>
+  <data name="AlchemyBookProgress" xml:space="preserve">
+    <value>Alchemy book progress</value>
+  </data>
+  <data name="FoundAuxilary" xml:space="preserve">
+    <value>You have notice some substances nearby</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Gloves" xml:space="preserve">
+    <value>Gloves</value>
+  </data>
+  <data name="Hood" xml:space="preserve">
+    <value>Hood</value>
+  </data>
+  <data name="Glasses" xml:space="preserve">
+    <value>Glasses</value>
+  </data>
+  <data name="Respirator" xml:space="preserve">
+    <value>Respirator</value>
   </data>
 </root>

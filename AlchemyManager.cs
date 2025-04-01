@@ -27,9 +27,7 @@ namespace Alchemical_Laboratory
         public void GetFirstSubs()
         {
             foreach (var el in substances.Where(s => s.IsPrimary))
-            {
                 inventory.Add(el);
-            }
         }
 
         public void PrintGoal()

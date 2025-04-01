@@ -52,14 +52,15 @@ namespace Alchemical_Laboratory
                     {
                         aux.Add(GetSubstance(name));
                     }
-                    Recipes.Add(new(GetSubstance(recipe.Result), components, aux));
+                    bool advanced = recipe.Advanced ?? false;
+                    Recipes.Add(new(GetSubstance(recipe.Result), components, aux, advanced));
                 }
             
                 Substance GetSubstance(dynamic name) => Substances.First(x => x.Name == name.ToString());
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                // Console.WriteLine(ex.Message);
             }
         }
 

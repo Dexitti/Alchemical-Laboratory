@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -27,7 +28,7 @@ namespace Alchemical_Laboratory
             get => riskLevel;
             set
             {
-                riskLevel = value;
+                riskLevel = Math.Clamp(value, 0, 100);
                 if (riskLevel >= 100)
                     CheckEnd();
             }
@@ -57,19 +58,25 @@ namespace Alchemical_Laboratory
 
         public void DisplayInventory() => Inventory.Display();
         
+        public int[] Progress()
+        {
+            int opened = Book.Substances.Count(s => s.IsDiscovered);
+            int total = Book.Substances.Count();
+            return [opened, total];
+        }
+
         public void OnGetNewSubstance(Substance sub) // событие: получено новое вещество (interface+functional)
         {
             sub.IsDiscovered = true;
 
             Console.Clear();
-            Console.WriteLine(Resource.NewSubstanceObtained);
+            Console.WriteLine(Resource.NewSubstanceObtained + "!");
             Console.WriteLine($"{sub} – {Resource.ResourceManager.GetString(sub.Description)}\n");
 
             // совмещение свойств вещества с емкостью
 
             for (int r = 0; r < 2; r++) // выбор рекомендуемых инструментов
             {
-                // string?[] tools = Prompt.MultiSelect(Resource.ChooseRequiredTools, Enum.GetValues<Tools>().Select(Extensions.Translate)).ToArray();
                 Tools[] tools = (Tools[])Prompt.MultiSelect(Resource.ChooseRequiredTools, Enum.GetValues<Tools>());
                 Tools toolsEntered = default;
                 for (int i = 0; i < tools.Length; i++)
@@ -82,6 +89,7 @@ namespace Alchemical_Laboratory
                     Console.WriteLine(Resource.YourToolsAreRight);
                     Extensions.MakeDelay(1700);
                     AmountOfHints++;
+                    RiskLevel -= 1;
                     break;
                 }
                 else if ((toolsEntered & toolsValid) == 0)
@@ -110,25 +118,35 @@ namespace Alchemical_Laboratory
             }
         }
 
-        public Substance? Mix2(Substance sub1, Substance sub2)
+        public Recipe? Mix(params Substance[] subs)
         {
-            HashSet<Substance> mixedSubs = [sub1, sub2];
+            HashSet<Substance> mixedSubs = new HashSet<Substance>(subs);
             Recipe? desiredRecipe = Book.Recipes.FirstOrDefault(r => r.Components.SetEquals(mixedSubs));
-            if (desiredRecipe != null) desiredRecipe.IsDiscovered = true;
-            return desiredRecipe?.Result; // NullConditionalOperator
+            return desiredRecipe; // NullConditionalOperator
+        }
+
+        public List<Recipe> GetAvailableRecipe()
+        {
+            List<Recipe> allRecipes = Book.Recipes;
+            return allRecipes.Where(r => 
+                r.Components.All(sub => sub.IsDiscovered && Inventory.IsEnough(sub)) && !r.IsDiscovered).ToList();
         }
 
         public Recipe GetRecipeForHint()
         {
-            IEnumerable<Substance> subsList = Inventory.Substances;
-            List<Recipe> allRecipes = Book.Recipes;
-
-            List<Recipe> accessibleRecipes = allRecipes
-                .Where(r => r.Components.Any(sub => subsList.Contains(sub)) && !r.IsDiscovered).ToList();
+            List<Recipe> accessibleRecipes = GetAvailableRecipe();
 
             Random rand = new Random();
             int randSubIndex = rand.Next(accessibleRecipes.Count);
             return accessibleRecipes[randSubIndex];
+        }
+
+        public bool ReadinessToMagisterium()
+        {
+            List<Recipe> advancedRecipes = GetAvailableRecipe().Where(r => r.Advanced).ToList();
+
+            if (advancedRecipes.Count > 0) return true;
+            return false;
         }
 
         public static void CheckEnd()
@@ -138,25 +156,29 @@ namespace Alchemical_Laboratory
 
         void OnRiskLevelHigh()
         {
-            Console.Clear();
-            Console.WriteLine(Resource.HighRiskLevel);
-            Console.WriteLine(Resource.Defeat);
-            bool again = Prompt.Confirm(Resource.TryAgain);
-            if (again)
+            if (riskLevel >= 100)
             {
-                Process.Start(Assembly.GetExecutingAssembly().Location);
-                Environment.Exit(0);
+                Console.Clear();
+                Console.WriteLine(Resource.HighRiskLevel);
+                Console.WriteLine(Resource.Defeat);
+                bool again = Prompt.Confirm(Resource.TryAgain);
+                if (again)
+                {
+                    Process.Start(Environment.ProcessPath);
+                    Console.Clear();
+                    Environment.Exit(0);
+                }
+                else
+                    Environment.Exit(0);
             }
-            else
-                Environment.Exit(0);
         }
 
         void CheckMasterEmerald()
         {
             IEnumerable<Substance> gems = Game.Services.GetRequiredService<AlchemyBook>().Substances.Where(s => s.IsGem);
-            if (gems.All(g => g.IsGem))
+            if (gems.All(g => g.IsDiscovered))
             {
-                Substance masterGem = Book.Substances.First(s => s.Name.Equals(Resource.Master_Emerald));
+                Substance masterGem = Book.Substances.First(s => s.ToString() == Resource.Master_Emerald);
                 Inventory.Add(masterGem);
             }
         }

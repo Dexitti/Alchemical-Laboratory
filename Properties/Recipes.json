@@ -156,7 +156,8 @@
   },
   {
     "Result": "Oil_of_Vitriol",
-    "Components": [ "Water", "Air", "Pyrite" ]
+    "Components": [ "Water", "Air", "Pyrite" ],
+    "Advanced": true
   },
   //{
   //  "Result":,
@@ -190,7 +191,7 @@
   },
   {
     "Result": "Aquamarine",
-    "Components": [ "Water", "Stone" ]
+    "Components": [ "Water", "Sapphire" ]
   },
   //{
   //  "Result": "Master Emerald",
@@ -206,15 +207,18 @@
   },
   {
     "Result": "Alkahest",
-    "Components": [ "Salt", "Mercury", "Urine" ] // alt 2
+    "Components": [ "Salt", "Mercury", "Urine" ], // alt 2
+    "Advanced": true
   },
   {
     "Result": "Ambrosia",
-    "Components": [ "Silver", "Salt", "Lively_Concoction" ]
+    "Components": [ "Silver", "Salt", "Lively_Concoction" ],
+    "Advanced": true
   },
   {
     "Result": "Ambrosia",
-    "Components": [ "Ruby", "Alcohol", "Lively_Concoction" ] // alt 1
+    "Components": [ "Ruby", "Alcohol", "Lively_Concoction" ], // alt 1,
+    "Advanced": true
   },
   {
     "Result": "Ambrosia",
@@ -223,22 +227,27 @@
   },
   {
     "Result": "Nigredo",
-    "Components": [ "Lead", "Sulfur", "Salt" ]
+    "Components": [ "Lead", "Sulfur", "Salt" ],
+    "Advanced": true
   },
   {
     "Result": "Albedo",
-    "Components": [ "Nigredo", "Silver", "Fire" ]
+    "Components": [ "Nigredo", "Silver", "Fire" ],
+    "Advanced": true
   },
   {
     "Result": "Citrinitas",
-    "Components": [ "Albedo", "Gold", "Urine" ]
+    "Components": [ "Albedo", "Gold", "Urine" ],
+    "Advanced": true
   },
   {
     "Result": "Rubedo",
-    "Components": [ "Citrinitas", "Tin", "Mercury" ]
+    "Components": [ "Citrinitas", "Tin", "Mercury" ],
+    "Advanced": true
   },
   {
     "Result": "Philosophers_Stone",
-    "Components": [ "Rubedo", "Concentrated_Mana", "Diamond" ]
+    "Components": [ "Rubedo", "Concentrated_Mana", "Diamond" ],
+    "Advanced": true
   }
 ]

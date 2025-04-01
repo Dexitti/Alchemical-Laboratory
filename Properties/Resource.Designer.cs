@@ -61,6 +61,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Alchemical Ascension available.
+        /// </summary>
+        internal static string AAA {
+            get {
+                return ResourceManager.GetString("AAA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Air.
         /// </summary>
         internal static string Air {
@@ -93,6 +102,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Albedo_Description {
             get {
                 return ResourceManager.GetString("Albedo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Alchemy book progress.
+        /// </summary>
+        internal static string AlchemyBookProgress {
+            get {
+                return ResourceManager.GetString("AlchemyBookProgress", resourceCulture);
             }
         }
         
@@ -421,6 +439,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Congratulations!.
+        /// </summary>
+        internal static string Congratulations {
+            get {
+                return ResourceManager.GetString("Congratulations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Copper.
         /// </summary>
         internal static string Copper {
@@ -547,7 +574,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на explosiveness.
+        ///   Ищет локализованную строку, похожую на Explosiveness.
         /// </summary>
         internal static string Explosiveness {
             get {
@@ -583,11 +610,20 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на flammability.
+        ///   Ищет локализованную строку, похожую на Flammability.
         /// </summary>
         internal static string Flammability {
             get {
                 return ResourceManager.GetString("Flammability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You have notice some substances nearby.
+        /// </summary>
+        internal static string FoundAuxilary {
+            get {
+                return ResourceManager.GetString("FoundAuxilary", resourceCulture);
             }
         }
         
@@ -628,6 +664,24 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Glasses.
+        /// </summary>
+        internal static string Glasses {
+            get {
+                return ResourceManager.GetString("Glasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Gloves.
+        /// </summary>
+        internal static string Gloves {
+            get {
+                return ResourceManager.GetString("Gloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Gold.
         /// </summary>
         internal static string Gold {
@@ -637,7 +691,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Aurum (☉) - the sun&apos;s reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment..
+        ///   Ищет локализованную строку, похожую на Aurum (☉) the sun&apos;s reflection on earth, the most perfect and honorable metal. Represents wealth, power and spiritual enlightenment..
         /// </summary>
         internal static string Gold_Description {
             get {
@@ -664,7 +718,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на hardness.
+        ///   Ищет локализованную строку, похожую на Hardness.
         /// </summary>
         internal static string Hardness {
             get {
@@ -700,6 +754,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Hood.
+        /// </summary>
+        internal static string Hood {
+            get {
+                return ResourceManager.GetString("Hood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Inventory.
         /// </summary>
         internal static string Inventory {
@@ -727,7 +790,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ferrum (♂) - the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons..
+        ///   Ищет локализованную строку, похожую на Ferrum (♂) the blood of the earth, the backbone of modern civilization. Forged into all tools and weapons..
         /// </summary>
         internal static string Iron_Description {
             get {
@@ -880,7 +943,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Hydrargyrum (☿) - fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier..
+        ///   Ищет локализованную строку, похожую на Hydrargyrum (☿) fluid and elusive. Messenger of the gods, symbolizing communication, adaptability, union of masculinity and feminine. In alchemy embodies the «principle of metal and the spirit» and is used to separate soul from metals and its carrier..
         /// </summary>
         internal static string Mercury_Description {
             get {
@@ -934,7 +997,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на New substance obtained!.
+        ///   Ищет локализованную строку, похожую на New substance obtained.
         /// </summary>
         internal static string NewSubstanceObtained {
             get {
@@ -957,6 +1020,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Nigredo_Description {
             get {
                 return ResourceManager.GetString("Nigredo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на None.
+        /// </summary>
+        internal static string None {
+            get {
+                return ResourceManager.GetString("None", resourceCulture);
             }
         }
         
@@ -1105,7 +1177,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на radioactivity.
+        ///   Ищет локализованную строку, похожую на Radioactivity.
         /// </summary>
         internal static string Radioactivity {
             get {
@@ -1137,6 +1209,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string ResourceSub {
             get {
                 return ResourceManager.GetString("ResourceSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Respirator.
+        /// </summary>
+        internal static string Respirator {
+            get {
+                return ResourceManager.GetString("Respirator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Level of danger.
+        /// </summary>
+        internal static string RiskLevel {
+            get {
+                return ResourceManager.GetString("RiskLevel", resourceCulture);
             }
         }
         
@@ -1204,7 +1294,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Salt (🜔) - a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative)..
+        ///   Ищет локализованную строку, похожую на (🜔) a reflection of feminine, the «principle of fixity and the body». Associated with paradox (bitterness), deep mind and finding immortality (preservative)..
         /// </summary>
         internal static string Salt_Description {
             get {
@@ -1393,7 +1483,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Sulfur (🜍) - Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity..
+        ///   Ищет локализованную строку, похожую на (🜍) Considered the father of all metals. Has the «principle of combustible and the soul», organic and flying. Embodiment of passion and masculinity..
         /// </summary>
         internal static string Sulfur_Description {
             get {
@@ -1402,7 +1492,16 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на temperature.
+        ///   Ищет локализованную строку, похожую на Synthesize.
+        /// </summary>
+        internal static string Synthesize {
+            get {
+                return ResourceManager.GetString("Synthesize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Temperature.
         /// </summary>
         internal static string Temperature {
             get {
@@ -1429,7 +1528,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на toxicity.
+        ///   Ищет локализованную строку, похожую на Toxicity.
         /// </summary>
         internal static string Toxicity {
             get {
@@ -1483,7 +1582,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на viscosity.
+        ///   Ищет локализованную строку, похожую на Viscosity.
         /// </summary>
         internal static string Viscosity {
             get {
@@ -1492,7 +1591,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на volatility.
+        ///   Ищет локализованную строку, похожую на Volatility.
         /// </summary>
         internal static string Volatility {
             get {
