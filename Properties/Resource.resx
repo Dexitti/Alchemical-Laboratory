@@ -256,7 +256,7 @@
     <value>A humble mixture of earth and water, fertile and teeming with potential. From nothing, life can begin.</value>
   </data>
   <data name="Concentrated_Mana" xml:space="preserve">
-    <value>Concentrated mana</value>
+    <value>Concentrated_Mana</value>
   </data>
   <data name="ConcentratedMana_Description" xml:space="preserve">
     <value>Mana refined to its purest form, crackling with power. Handle with extreme caution, lest it consume you.</value>
@@ -346,7 +346,7 @@
     <value>Most of the earth's rocks, including sand - silica. Tiny grains of Earth, component of many rituals.</value>
   </data>
   <data name="Lively_Concoction" xml:space="preserve">
-    <value>Lively concoction</value>
+    <value>Lively_Concoction</value>
   </data>
   <data name="LivelyConcoction_Description" xml:space="preserve">
     <value>A strange mixture of organic and inorganic matter in liquid form.</value>
@@ -496,7 +496,7 @@
     <value>Fool's Gold, a glittering mineral that deceives the eye. A reminder that not all that glitters is true gold, a lesson in discernment.</value>
   </data>
   <data name="Oil_of_Vitriol" xml:space="preserve">
-    <value>Oil of vitriol</value>
+    <value>Oil_of_Vitriol</value>
   </data>
   <data name="OilOfVitriol_Description" xml:space="preserve">
     <value>Also known as sulfuric acid, which is one of the strongest acids.</value>
@@ -623,5 +623,8 @@
   </data>
   <data name="SomehowRelatedTo" xml:space="preserve">
     <value>It is somehow related to</value>
+  </data>
+  <data name="FamiliarRecipe" xml:space="preserve">
+    <value>This recipe seems familiar to you.</value>
   </data>
 </root>

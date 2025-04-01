@@ -27,7 +27,7 @@ namespace Alchemical_Laboratory
                     return;
                 isDiscovered = value;
                 var result = Game.Services.GetRequiredService<AlchemyManager>().ResultSubstance;
-                if (isDiscovered && this == result)
+                if (isDiscovered && (this == result || IsGem))
                 {
                     GameState.CheckEnd();
                 }

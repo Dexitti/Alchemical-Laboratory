@@ -39,7 +39,7 @@ namespace Alchemical_Laboratory
         void Start() //Preprocessing
         {
             // Show Logo, Downloading menu or Preview
-            ShowRules(); //debug
+            // ShowRules(); //debug
 
             while (true)
             {
@@ -75,7 +75,7 @@ namespace Alchemical_Laboratory
         {
             string[] strings =
             [
-                Resource.Inventory,
+                Resource.Inventory, // menu: показать параметры (HP, Risk Level, Прогресс...)
                 Resource.Mix,
                 Resource.GetHint,
                 Resource.ShowRules,
@@ -120,11 +120,7 @@ namespace Alchemical_Laboratory
                 {
                     Console.Write($"{Resource.ResourceSub} {su1} {Resource.NotEnoughChooseAnother}");
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    Console.Write(new String(' ', Console.BufferWidth));
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    Console.Write(new String(' ', Console.BufferWidth));
-                    Console.SetCursorPosition(0, Console.CursorTop); // Очищает 2 строки выше
+                    Extensions.CleanStrings(2);
                     continue;
                 }
                 break;
@@ -139,11 +135,7 @@ namespace Alchemical_Laboratory
                 {
                     Console.Write($"{Resource.ResourceSub} {su2} {Resource.NotEnoughChooseAnother}");
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    Console.Write(new String(' ', Console.BufferWidth));
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    Console.Write(new String(' ', Console.BufferWidth));
-                    Console.SetCursorPosition(0, Console.CursorTop);
+                    Extensions.CleanStrings(2);
                     continue;
                 }
                 break;
@@ -154,6 +146,11 @@ namespace Alchemical_Laboratory
             if (result == null)
             {
                 Console.WriteLine(Resource.MixFailed); // Идея: сохранять список несуществующих рецептов | историю попыток
+                Extensions.MakeDelay(1700);
+            }
+            else if (result.IsDiscovered)
+            {
+                Console.WriteLine(Resource.FamiliarRecipe);
                 Extensions.MakeDelay(1700);
             }
             else
@@ -193,11 +190,11 @@ namespace Alchemical_Laboratory
                     Recipe randUnknownRecipe = gameState.GetRecipeForHint();
                     Substance randIngredient = rand.Select(randUnknownRecipe.Components);
                     Substance randResult = randUnknownRecipe.Result;
-                    Console.WriteLine($"{Resource.DoYouRememberSub}\n   {randIngredient}");
-                    Console.WriteLine($"{Resource.SomehowRelatedTo}\n   {randResult}");
+                    Console.WriteLine($"{Resource.DoYouRememberSub}\n   {Resource.ResourceManager.GetString(randIngredient.Description)}");
+                    Console.WriteLine($"{Resource.SomehowRelatedTo}\n   {Resource.ResourceManager.GetString(randResult.Description)}");
                 }
             }
-            Extensions.MakeDelay(2500);
+            Console.ReadKey();
         }
 
         void ShowRules()
@@ -225,6 +222,7 @@ namespace Alchemical_Laboratory
             {
                 foreach (string rule in rules)
                 {
+                    Console.WriteLine();
                     Console.Write(rule);
                 }
                 Console.Write("\n" + Resource.PressToContinue + "...");

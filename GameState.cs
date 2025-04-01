@@ -17,7 +17,6 @@ namespace Alchemical_Laboratory
         // public event Func<bool> IsRiskLevelHigh;
 
         private int riskLevel = 0;
-        private int amountOfHints = 0;
         private bool isTargetReached = false;
 
         public AlchemyBook Book { get; }
@@ -29,11 +28,11 @@ namespace Alchemical_Laboratory
             set
             {
                 riskLevel = value;
-                if (riskLevel > 100)
+                if (riskLevel >= 100)
                     CheckEnd();
             }
         }
-        public int AmountOfHints { get => amountOfHints; set => amountOfHints = value; }
+        public int AmountOfHints { get; set; } = 0;
         public bool IsTargetReached
         {
             get => isTargetReached;
@@ -52,6 +51,7 @@ namespace Alchemical_Laboratory
 
             inventory.NewSubstance += OnGetNewSubstance;
             IsGameEnd += OnRiskLevelHigh;
+            IsGameEnd += CheckMasterEmerald;
             IsGameEnd += OnSuccess;
         }
 
@@ -114,6 +114,7 @@ namespace Alchemical_Laboratory
         {
             HashSet<Substance> mixedSubs = [sub1, sub2];
             Recipe? desiredRecipe = Book.Recipes.FirstOrDefault(r => r.Components.SetEquals(mixedSubs));
+            if (desiredRecipe != null) desiredRecipe.IsDiscovered = true;
             return desiredRecipe?.Result; // NullConditionalOperator
         }
 
@@ -135,7 +136,7 @@ namespace Alchemical_Laboratory
             IsGameEnd?.Invoke();
         }
 
-        public void OnRiskLevelHigh()
+        void OnRiskLevelHigh()
         {
             Console.Clear();
             Console.WriteLine(Resource.HighRiskLevel);
@@ -150,7 +151,17 @@ namespace Alchemical_Laboratory
                 Environment.Exit(0);
         }
 
-        public void OnSuccess()
+        void CheckMasterEmerald()
+        {
+            IEnumerable<Substance> gems = Game.Services.GetRequiredService<AlchemyBook>().Substances.Where(s => s.IsGem);
+            if (gems.All(g => g.IsGem))
+            {
+                Substance masterGem = Book.Substances.First(s => s.Name.Equals(Resource.Master_Emerald));
+                Inventory.Add(masterGem);
+            }
+        }
+
+        void OnSuccess()
         {
 
             Console.WriteLine(Resource.EndCongratulations);

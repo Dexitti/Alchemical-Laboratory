@@ -59,7 +59,7 @@ namespace Alchemical_Laboratory
             }
             catch (Exception ex)
             {
-                // Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 

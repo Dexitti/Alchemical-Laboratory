@@ -5,7 +5,7 @@
   //},
   {
     "Result": "Steam",
-    "Components": [ "Fire", "Water" ] // from Lively Concoction
+    "Components": [ "Fire", "Water" ] // from Lively_Concoction
   },
   {
     "Result": "Stone",
@@ -37,11 +37,11 @@
   },
   {
     "Result": "Gold",
-    "Components": [ "Fire", "Concentrated Mana" ]
+    "Components": [ "Fire", "Concentrated_Mana" ]
   },
   {
     "Result": "Lead",
-    "Components": [ "Earth", "Concentrated Mana" ]
+    "Components": [ "Earth", "Concentrated_Mana" ]
   },
   {
     "Result": "Tin",
@@ -49,11 +49,11 @@
   },
   {
     "Result": "Silver",
-    "Components": [ "Air", "Concentrated Mana" ]
+    "Components": [ "Air", "Concentrated_Mana" ]
   },
   {
     "Result": "Zinc",
-    "Components": [ "Water", "Concentrated Mana" ]
+    "Components": [ "Water", "Concentrated_Mana" ]
   },
   {
     "Result": "Sulfur",
@@ -116,11 +116,11 @@
   },
   {
     "Result": "Slime",
-    "Components": [ "Mud", "Lively Concoction" ]
+    "Components": [ "Mud", "Lively_Concoction" ]
   },
   {
     "Result": "Honey",
-    "Components": [ "Water", "Lively Concoction" ]
+    "Components": [ "Water", "Lively_Concoction" ]
   },
   {
     "Result": "Urine",
@@ -132,7 +132,7 @@
   },
   {
     "Result": "Blood",
-    "Components": [ "Lively Concoction", "Poison" ]
+    "Components": [ "Lively_Concoction", "Poison" ]
   },
   {
     "Result": "Meat",
@@ -144,7 +144,7 @@
   },
   {
     "Result": "Bones",
-    "Components": [ "Stone", "Lively Concoction" ]
+    "Components": [ "Stone", "Lively_Concoction" ]
   },
   {
     "Result": "Burnt_Lime",
@@ -198,7 +198,7 @@
   //},
   {
     "Result": "Alkahest",
-    "Components": [ "Oil of Vitriol", "Poison" ]
+    "Components": [ "Oil_of_Vitriol", "Poison" ]
   },
   {
     "Result": "Alkahest",
@@ -210,11 +210,11 @@
   },
   {
     "Result": "Ambrosia",
-    "Components": [ "Silver", "Salt", "Lively Concoction" ]
+    "Components": [ "Silver", "Salt", "Lively_Concoction" ]
   },
   {
     "Result": "Ambrosia",
-    "Components": [ "Ruby", "Alcohol", "Lively Concoction" ] // alt 1
+    "Components": [ "Ruby", "Alcohol", "Lively_Concoction" ] // alt 1
   },
   {
     "Result": "Ambrosia",
@@ -239,6 +239,6 @@
   },
   {
     "Result": "Philosophers_Stone",
-    "Components": [ "Rubedo", "Concentrated Mana", "Diamond" ]
+    "Components": [ "Rubedo", "Concentrated_Mana", "Diamond" ]
   }
 ]

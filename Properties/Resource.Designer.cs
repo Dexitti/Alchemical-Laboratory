@@ -403,7 +403,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Concentrated mana.
+        ///   Ищет локализованную строку, похожую на Concentrated_Mana.
         /// </summary>
         internal static string Concentrated_Mana {
             get {
@@ -552,6 +552,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Explosiveness {
             get {
                 return ResourceManager.GetString("Explosiveness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на This recipe seems familiar to you..
+        /// </summary>
+        internal static string FamiliarRecipe {
+            get {
+                return ResourceManager.GetString("FamiliarRecipe", resourceCulture);
             }
         }
         
@@ -781,7 +790,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Lively concoction.
+        ///   Ищет локализованную строку, похожую на Lively_Concoction.
         /// </summary>
         internal static string Lively_Concoction {
             get {
@@ -970,7 +979,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Oil of vitriol.
+        ///   Ищет локализованную строку, похожую на Oil_of_Vitriol.
         /// </summary>
         internal static string Oil_of_Vitriol {
             get {
