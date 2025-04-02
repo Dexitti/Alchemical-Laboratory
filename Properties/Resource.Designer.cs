@@ -151,6 +151,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на All recipes are discovered!.
+        /// </summary>
+        internal static string AllRecipesDiscovered {
+            get {
+                return ResourceManager.GetString("AllRecipesDiscovered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ambrosia.
         /// </summary>
         internal static string Ambrosia {
@@ -444,6 +453,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Congratulations {
             get {
                 return ResourceManager.GetString("Congratulations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Continue?.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
             }
         }
         

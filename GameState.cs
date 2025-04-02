@@ -18,7 +18,6 @@ namespace Alchemical_Laboratory
         // public event Func<bool> IsRiskLevelHigh;
 
         private int riskLevel = 0;
-        private bool isTargetReached = false;
 
         public AlchemyBook Book { get; }
         public IInventory Inventory { get; }
@@ -28,22 +27,13 @@ namespace Alchemical_Laboratory
             get => riskLevel;
             set
             {
+                bool f = false;
+                if (value > riskLevel) f = true;
                 riskLevel = Math.Clamp(value, 0, 100);
-                if (riskLevel >= 100)
-                    CheckEnd();
+                if (f) CheckHighRiskLevel(); //  Возможно изменить систему: сделать, чтобы токсичные и опасные вещества Risk++ ?
             }
         }
         public int AmountOfHints { get; set; } = 0;
-        public bool IsTargetReached
-        {
-            get => isTargetReached;
-            set
-            {
-                isTargetReached = value;
-                if (isTargetReached)
-                    CheckEnd();
-            }
-        }
 
         public GameState(AlchemyBook book, IInventory inventory)
         {
@@ -51,9 +41,8 @@ namespace Alchemical_Laboratory
             Inventory = inventory;
 
             inventory.NewSubstance += OnGetNewSubstance;
-            IsGameEnd += OnRiskLevelHigh;
             IsGameEnd += CheckMasterEmerald;
-            IsGameEnd += OnSuccess;
+            Substance.IsTargetReached += OnSuccess;
         }
 
         public void DisplayInventory() => Inventory.Display();
@@ -67,8 +56,6 @@ namespace Alchemical_Laboratory
 
         public void OnGetNewSubstance(Substance sub) // событие: получено новое вещество (interface+functional)
         {
-            sub.IsDiscovered = true;
-
             Console.Clear();
             Console.WriteLine(Resource.NewSubstanceObtained + "!");
             Console.WriteLine($"{sub} – {Resource.ResourceManager.GetString(sub.Description)}\n");
@@ -116,6 +103,7 @@ namespace Alchemical_Laboratory
                     continue;
                 }
             }
+            sub.IsDiscovered = true;
         }
 
         public Recipe? Mix(params Substance[] subs)
@@ -125,17 +113,17 @@ namespace Alchemical_Laboratory
             return desiredRecipe; // NullConditionalOperator
         }
 
-        public List<Recipe> GetAvailableRecipe()
+        List<Recipe> GetAvailableRecipe()
         {
             List<Recipe> allRecipes = Book.Recipes;
             return allRecipes.Where(r => 
                 r.Components.All(sub => sub.IsDiscovered && Inventory.IsEnough(sub)) && !r.IsDiscovered).ToList();
         }
 
-        public Recipe GetRecipeForHint()
+        public Recipe? GetRecipeForHint()
         {
             List<Recipe> accessibleRecipes = GetAvailableRecipe();
-
+            if (accessibleRecipes.Count <= 0) return null;
             Random rand = new Random();
             int randSubIndex = rand.Next(accessibleRecipes.Count);
             return accessibleRecipes[randSubIndex];
@@ -144,7 +132,6 @@ namespace Alchemical_Laboratory
         public bool ReadinessToMagisterium()
         {
             List<Recipe> advancedRecipes = GetAvailableRecipe().Where(r => r.Advanced).ToList();
-
             if (advancedRecipes.Count > 0) return true;
             return false;
         }
@@ -154,15 +141,14 @@ namespace Alchemical_Laboratory
             IsGameEnd?.Invoke();
         }
 
-        void OnRiskLevelHigh()
+        void CheckHighRiskLevel()
         {
             if (riskLevel >= 100)
             {
                 Console.Clear();
                 Console.WriteLine(Resource.HighRiskLevel);
                 Console.WriteLine(Resource.Defeat);
-                bool again = Prompt.Confirm(Resource.TryAgain);
-                if (again)
+                if (Prompt.Confirm(Resource.TryAgain))
                 {
                     Process.Start(Environment.ProcessPath);
                     Console.Clear();
@@ -183,10 +169,26 @@ namespace Alchemical_Laboratory
             }
         }
 
-        void OnSuccess()
+        void OnSuccess(Substance sub)
         {
-
+            var result = Game.Services.GetRequiredService<AlchemyManager>().ResultSubstance;
+            if (sub != result) return;
+            Console.Clear();
             Console.WriteLine(Resource.EndCongratulations);
+            if (Prompt.Confirm(Resource.Continue)) return;
+            else
+            {
+                Extensions.CleanStrings(1);
+                if (Prompt.Confirm(Resource.TryAgain))
+                {
+                    Process.Start(Environment.ProcessPath);
+                    Console.Clear();
+                    Environment.Exit(0);
+                }
+                else
+                    Environment.Exit(0);
+            }
         }
+
     }
 }

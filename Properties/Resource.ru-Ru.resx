@@ -660,4 +660,10 @@
   <data name="Respirator" xml:space="preserve">
     <value>Респиратор</value>
   </data>
+  <data name="AllRecipesDiscovered" xml:space="preserve">
+    <value>Все рецепты открыты!</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Продолжить?</value>
+  </data>
 </root>

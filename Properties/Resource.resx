@@ -660,4 +660,10 @@
   <data name="Respirator" xml:space="preserve">
     <value>Respirator</value>
   </data>
+  <data name="AllRecipesDiscovered" xml:space="preserve">
+    <value>All recipes are discovered!</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue?</value>
+  </data>
 </root>

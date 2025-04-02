@@ -11,6 +11,7 @@ namespace Alchemical_Laboratory
 {
     public class Substance : ISubstance
     {
+        public static event Action<Substance> IsTargetReached;
         private bool isDiscovered = false;
 
         public string Name { get; set; }
@@ -23,14 +24,10 @@ namespace Alchemical_Laboratory
             get => isDiscovered;
             set
             {
-                if (isDiscovered == value)
-                    return;
+                if (isDiscovered == value) return;
                 isDiscovered = value;
-                var result = Game.Services.GetRequiredService<AlchemyManager>().ResultSubstance;
-                if (isDiscovered && (this == result || IsGem))
-                {
-                    GameState.CheckEnd();
-                }
+                if (isDiscovered &&  IsGem) GameState.CheckEnd();
+                if (isDiscovered && IsFinal) IsTargetReached.Invoke(this);
             }
         }
 

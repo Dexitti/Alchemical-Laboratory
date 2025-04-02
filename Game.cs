@@ -14,7 +14,8 @@ namespace Alchemical_Laboratory
         string gameMode;
 
         byte lifePoints = 3;
-        bool showFirst = true;
+        bool showRulesFirst = true;
+        bool synthesisLocked = true;
         GameState gameState;
         IServiceCollection services;
 
@@ -91,13 +92,14 @@ namespace Alchemical_Laboratory
                 Console.WriteLine(Resource.GameMode + ": " + gameMode);
                 Services.GetRequiredService<AlchemyManager>().PrintGoal();
 
-                if (gameState.ReadinessToMagisterium())
+                if (synthesisLocked && gameState.ReadinessToMagisterium())
                 {
                     Console.WriteLine(Resource.Congratulations + " " + Resource.AAA);
                     Extensions.MakeDelay(3000);
                     Extensions.CleanStrings(1);
                     strings.Insert(2, Resource.Synthesize);
                     actions.Insert(2, Synthesize);
+                    synthesisLocked = false;
                 }
 
                 string menus = Prompt.Select(Resource.ChooseAnAction, strings);
@@ -122,40 +124,27 @@ namespace Alchemical_Laboratory
             var inventory = Services.GetRequiredService<IInventory>();
             IEnumerable<Substance> list = inventory.Substances;
             List<string> sus = list.Select(s => s.ToString()).Order().ToList(); // gameState.Inventory <=> List<string>
+            Substance[] subs = new Substance[2];
 
-            string su1, su2;
-            Substance? sub1, sub2;
-            while (true)
+            for (int i = 0; i < 2; i++)
             {
-                su1 = Prompt.Select(Resource.SelectSubstance + " 1", sus, 4);
-                sub1 = list.First(s => s.Name == su1);
-                if (!inventory.IsEnough(sub1))
+                while (true)
                 {
-                    Console.Write($"{Resource.ResourceSub} {su1} {Resource.NotEnoughChooseAnother}");
-                    Thread.Sleep(500);
-                    Extensions.CleanStrings(2);
-                    continue;
+                    string su = Prompt.Select($"{Resource.SelectSubstance} {i + 1}", sus, 20);
+                    subs[i] = list.First(s => s.ToString() == su);
+                    if (!inventory.IsEnough(subs[i]))
+                    {
+                        Console.Write($"{Resource.ResourceSub} {su} {Resource.NotEnoughChooseAnother}");
+                        Thread.Sleep(500);
+                        Extensions.CleanStrings(2);
+                        continue;
+                    }
+                    break;
                 }
-                break;
+                inventory.Remove(subs[i]);
             }
-            inventory.Remove(sub1);
 
-            while (true)
-            {
-                su2 = Prompt.Select(Resource.SelectSubstance + " 2", sus, 4);
-                sub2 = list.First(s => s.Name == su2);
-                if (!inventory.IsEnough(sub2))
-                {
-                    Console.Write($"{Resource.ResourceSub} {su2} {Resource.NotEnoughChooseAnother}");
-                    Thread.Sleep(500);
-                    Extensions.CleanStrings(2);
-                    continue;
-                }
-                break;
-            }
-            inventory.Remove(sub2);
-
-            Recipe? outcome = gameState.Mix(sub1, sub2);
+            Recipe? outcome = gameState.Mix(subs);
             if (outcome == null)
             {
                 Console.WriteLine(Resource.MixFailed); // Идея: сохранять список несуществующих рецептов | историю попыток
@@ -196,8 +185,8 @@ namespace Alchemical_Laboratory
             {
                 while (true)
                 {
-                    string su = Prompt.Select($"{Resource.SelectSubstance} {i+1}", sus, 4);
-                    subs[i] = list.First(s => s.Name == su);
+                    string su = Prompt.Select($"{Resource.SelectSubstance} {i+1}", sus, 20);
+                    subs[i] = list.First(s => s.ToString() == su);
                     if (!inventory.IsEnough(subs[i]))
                     {
                         Console.Write($"{Resource.ResourceSub} {su} {Resource.NotEnoughChooseAnother}");
@@ -247,6 +236,11 @@ namespace Alchemical_Laboratory
             else
             {
                 Console.WriteLine($"{Resource.AmountOfHints}: {gameState.AmountOfHints}");
+                if (gameState.GetRecipeForHint() == null)
+                {
+                    Console.WriteLine(Resource.AllRecipesDiscovered);
+                    return;
+                }
                 // Сделать несколько подсказок, типа resultSub | Show one of the ingredients | Display ingredient and result description
                 string[] hints = [Resource.ShowIngredient, Resource.DisplayResult, Resource.DisplayDescription];
                 string hintType = Prompt.Select(Resource.GetHint, hints);
@@ -285,7 +279,7 @@ namespace Alchemical_Laboratory
             Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
             Console.WriteLine(title);
             string[] rules = Resource.RulesThemselves.Split('?');
-            if (showFirst)
+            if (showRulesFirst)
             {
                 foreach (string rule in rules)
                 {
@@ -311,7 +305,7 @@ namespace Alchemical_Laboratory
             }
             Console.ReadKey();
             Console.Clear();
-            showFirst = false;
+            showRulesFirst = false;
         }
 
         void Serialize()
