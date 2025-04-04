@@ -10,13 +10,13 @@
   <Class Name="Alchemical_Laboratory.Substance">
     <Position X="12.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAgEACECAAAAAQAAAAAAAAAQAAAAGAAAQA=</HashCode>
+      <HashCode>AQAAAAAAAAAgEACECAAAAAQAgAAAAAAAQAAAAGAAAQA=</HashCode>
       <FileName>Substance.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Alchemical_Laboratory.Container">
-    <Position X="14.25" Y="1.5" Width="1.5" />
+    <Position X="16" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAA=</HashCode>
       <FileName>Container.cs</FileName>
@@ -25,7 +25,7 @@
   <Class Name="Alchemical_Laboratory.Game">
     <Position X="2.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAABACAAACAACACAECAgAAAAACBAgAAAAAAgAIJAAQA=</HashCode>
+      <HashCode>gAABACAAACAAAACCECIgAAAAACBAgAAAAAAgCIJAAQA=</HashCode>
       <FileName>Game.cs</FileName>
       <NewMemberFileName>Game - Копировать.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -38,7 +38,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Recipe">
-    <Position X="16" Y="1.5" Width="1.5" />
+    <Position X="14.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAMAAAAAAQAAAAAAAAAQAAAAAACAAA=</HashCode>
       <FileName>Recipe.cs</FileName>
@@ -47,7 +47,7 @@
   <Class Name="Alchemical_Laboratory.UnlimitedGameState">
     <Position X="5.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>UnlimitedGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,7 +77,7 @@
   <Class Name="Alchemical_Laboratory.AlchemyBook">
     <Position X="7.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAAIAQAIAAAAAAAAAAAAAAAECAABAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAACIAQAIAAAAAAAAAAAAAAAECAABAA=</HashCode>
       <FileName>AlchemyBook.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -85,14 +85,14 @@
   <Class Name="Alchemical_Laboratory.GameState">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAwgAABEAEDAEAAAAAQAgAAAgIAAAAACAgDAIAA=</HashCode>
+      <HashCode>CAAAAAwgEABUAEDCEAAAAAQAAAEgAAQBAAACAgDAIAE=</HashCode>
       <FileName>GameState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.AlchemyManager">
     <Position X="0.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAEAAAAAAAAAAAAAAAAAAAAACIAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAEAAAAACAAAAAAAAAAAAAAACIAAEAAAAAAA=</HashCode>
       <FileName>AlchemyManager.cs</FileName>
     </TypeIdentifier>
   </Class>

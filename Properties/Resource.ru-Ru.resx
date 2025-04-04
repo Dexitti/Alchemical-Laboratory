@@ -427,7 +427,7 @@
     <value>Мастер Изумруд</value>
   </data>
   <data name="MasterEmerald_Description" xml:space="preserve">
-    <value>Мастер Изумруд - это массивный зеленый изумруд, мистическая реликвия неисчислимой силы из забытого прошлого. Действует как противовес Изумрудному Хаосу, может нейтрализовать или контролировать их.</value>
+    <value> это массивный зеленый изумруд, мистическая реликвия неисчислимой силы из забытого прошлого. Действует как противовес Изумрудному Хаосу, может нейтрализовать или контролировать их.</value>
   </data>
   <data name="Alkahest" xml:space="preserve">
     <value>Алкагест</value>
@@ -665,5 +665,14 @@
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Продолжить?</value>
+  </data>
+  <data name="SaveLoaded" xml:space="preserve">
+    <value>Сохранение успешно загружено</value>
+  </data>
+  <data name="SuccessfullySaving" xml:space="preserve">
+    <value>Сохранение успешно</value>
+  </data>
+  <data name="AllSubstances" xml:space="preserve">
+    <value>Вы открыли все вещества!</value>
   </data>
 </root>

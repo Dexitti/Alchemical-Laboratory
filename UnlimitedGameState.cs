@@ -13,5 +13,10 @@ namespace Alchemical_Laboratory
         public UnlimitedGameState(AlchemyBook book, IInventory inventory) : base(book, inventory)
         {
         }
+
+        public void OnGetNewSubstance(Substance sub)
+        {
+
+        }
     }
 }

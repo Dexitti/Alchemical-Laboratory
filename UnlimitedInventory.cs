@@ -8,7 +8,7 @@ namespace Alchemical_Laboratory
 {
     public class UnlimitedInventory : IInventory
     {
-        private readonly HashSet<Substance> substances = [];
+        readonly HashSet<Substance> substances = [];
         public IEnumerable<Substance> Substances => substances;
 
         public event Action<Substance>? NewSubstance;

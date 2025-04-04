@@ -5,18 +5,22 @@ using System.Text;
 using System.Text.Json.Nodes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NLog;
 
 namespace Alchemical_Laboratory
 {
     public class AlchemyBook : IAlchemyBook<Substance>, IDiscoverer<Substance>
     {
-        public List<Substance> Substances { get; private set; } = [];
+        static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
+        public List<Substance> Substances { get; set; } = [];
         public List<Recipe> Recipes { get; private set; } = [];
 
         public void Import(string substancesPath, string recipesPath)
         {
             ImportSubstances(substancesPath);
             ImportRecipes(recipesPath);
+            logger.Error("Recipes and subs have loaded.");
         }
 
         void ImportSubstances(string path)
@@ -28,7 +32,7 @@ namespace Alchemical_Laboratory
             }
             catch (Exception ex)
             {
-                // Console.WriteLine(ex.Message);
+                logger.Fatal(ex.Message);
             }
             
         }
@@ -60,7 +64,7 @@ namespace Alchemical_Laboratory
             }
             catch (Exception ex)
             {
-                // Console.WriteLine(ex.Message);
+                logger.Fatal(ex.Message);
             }
         }
 

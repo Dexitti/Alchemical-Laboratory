@@ -160,6 +160,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на You’ve discovered all substances!.
+        /// </summary>
+        internal static string AllSubstances {
+            get {
+                return ResourceManager.GetString("AllSubstances", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ambrosia.
         /// </summary>
         internal static string Ambrosia {
@@ -925,7 +934,7 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на The Master Emerald is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them..
+        ///   Ищет локализованную строку, похожую на  is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them..
         /// </summary>
         internal static string MasterEmerald_Description {
             get {
@@ -1366,6 +1375,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Save successfully loaded.
+        /// </summary>
+        internal static string SaveLoaded {
+            get {
+                return ResourceManager.GetString("SaveLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Select game mode.
         /// </summary>
         internal static string SelectGameMode {
@@ -1488,6 +1506,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Substance_Earth {
             get {
                 return ResourceManager.GetString("Substance_Earth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Successfully saving.
+        /// </summary>
+        internal static string SuccessfullySaving {
+            get {
+                return ResourceManager.GetString("SuccessfullySaving", resourceCulture);
             }
         }
         

@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Sharprompt;
 using Alchemical_Laboratory.Properties;
+using NLog;
+using System.Drawing;
 
 namespace Alchemical_Laboratory
 {
@@ -18,14 +20,17 @@ namespace Alchemical_Laboratory
         bool synthesisLocked = true;
         GameState gameState;
         IServiceCollection services;
-
+        
         public static IServiceProvider Services { get; private set; } = null!;
+        static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         public Game()
         {
             Console.Title = "Alchemical Laboratory";
             Prompt.ColorSchema.PromptSymbol = ConsoleColor.DarkYellow;
             Prompt.ColorSchema.Select = (ConsoleColor)12;
+
+            LogManager.Setup().LoadConfigurationFromFile("Properties/Nlog.config");
 
             AlchemyBook book = new AlchemyBook();
             book.Import("Properties/Substances.json", "Properties/Recipes.json");
@@ -39,6 +44,7 @@ namespace Alchemical_Laboratory
 
         void Start() //Preprocessing
         {
+            logger.Info("Starting Game.");
             // Show Logo, Downloading menu or Preview
             // ShowRules(); //debug
 
@@ -53,6 +59,7 @@ namespace Alchemical_Laboratory
                     break;
                 }
             }
+            logger.Info("Selected game mode: {mode}.", gameMode);
 
             if (gameMode == Resource.UnlimitedResources)
             {
@@ -65,10 +72,10 @@ namespace Alchemical_Laboratory
                         .AddSingleton<GameState, LimitedGameState>();
             }
             Services = services.BuildServiceProvider();
+            logger.Debug("Services have been initialized successfully.");
             gameState = Services.GetRequiredService<GameState>();
 
             Services.GetRequiredService<AlchemyManager>().GetFirstSubs();
-
             Options();
         }
 
@@ -76,7 +83,7 @@ namespace Alchemical_Laboratory
         {
             List<string> strings =
             [
-                Resource.Inventory, // menu: показать параметры (HP, Risk Level, Прогресс...)
+                Resource.Inventory, // menu: показать параметры (HP, Risk Level, Прогресс...) и сделать auto-save (напр. каждые 5 subs)
                 Resource.Mix,
                 Resource.GetHint,
                 Resource.ShowRules,
@@ -100,9 +107,11 @@ namespace Alchemical_Laboratory
                     strings.Insert(2, Resource.Synthesize);
                     actions.Insert(2, Synthesize);
                     synthesisLocked = false;
+                    logger.Info("The synthesis option is unlocked ({openedSubs} substances had been discovered).", gameState.Progress()[0]);
                 }
 
                 string menus = Prompt.Select(Resource.ChooseAnAction, strings);
+                logger.Debug("User selected {menu} button.", menus);
                 int index = strings.IndexOf(menus);
                 actions[index]();
             }
@@ -112,7 +121,7 @@ namespace Alchemical_Laboratory
         {
             Extensions.CleanStrings(1);
             // [█████░░░░░░]
-            Console.WriteLine($"{Resource.RiskLevel}: {gameState.RiskLevel}/{100}\n");
+            Console.WriteLine($"{Resource.RiskLevel}: {gameState.PrintRiskLevel()}\n");
             int[] pr = gameState.Progress();
             Console.WriteLine($"{Resource.AlchemyBookProgress}: {pr[0]+"/"+pr[1]} ({Math.Round((double)pr[0] / (double)pr[1] * 100, 2)}%)");
             gameState.DisplayInventory();
@@ -145,19 +154,19 @@ namespace Alchemical_Laboratory
             }
 
             Recipe? outcome = gameState.Mix(subs);
+            logger.Info("Mix result: {res}: IsDiscovered: {dis}", outcome, outcome?.Result.IsDiscovered);
             if (outcome == null)
             {
-                Console.WriteLine(Resource.MixFailed); // Идея: сохранять список несуществующих рецептов | историю попыток
+                Console.WriteLine(Resource.MixFailed); // Идея: сохранять список несуществующих рецептов | историю попыток -
                 Extensions.MakeDelay(1700);
             }
-            else if (outcome.IsDiscovered)
+            else if (outcome.Result.IsDiscovered)
             {
                 Console.WriteLine(Resource.FamiliarRecipe);
                 Extensions.MakeDelay(1700);
             }
             else
             {
-                outcome.IsDiscovered = true;
                 if (outcome.AuxiliaryResults.Count > 0)
                 {
                     Extensions.CleanStrings(3);
@@ -200,12 +209,13 @@ namespace Alchemical_Laboratory
             }
 
             Recipe? outcome = gameState.Mix(subs);
+            logger.Info("Mix result: {res}: IsDiscovered: {dis}", outcome, outcome?.Result.IsDiscovered);
             if (outcome == null)
             {
                 Console.WriteLine(Resource.MixFailed);
                 Extensions.MakeDelay(1700);
             }
-            else if (outcome.IsDiscovered)
+            else if (outcome.Result.IsDiscovered)
             {
                 Console.WriteLine(Resource.FamiliarRecipe);
                 Extensions.MakeDelay(1700);
@@ -239,12 +249,13 @@ namespace Alchemical_Laboratory
                 if (gameState.GetRecipeForHint() == null)
                 {
                     Console.WriteLine(Resource.AllRecipesDiscovered);
+                    Extensions.MakeDelay(1700);
                     return;
                 }
                 // Сделать несколько подсказок, типа resultSub | Show one of the ingredients | Display ingredient and result description
-                string[] hints = [Resource.ShowIngredient, Resource.DisplayResult, Resource.DisplayDescription];
-                string hintType = Prompt.Select(Resource.GetHint, hints);
-            
+                string[] hints = [Resource.ShowIngredient, Resource.DisplayResult, Resource.DisplayDescription/*, ""*/];
+                string hintType = Prompt.Select(Resource.GetHint, hints/*, defaultValue: ""*/);
+                logger.Info("Hint selected: {type}", hintType);
                 gameState.AmountOfHints--; // Можно сделать разную цену подсказок
 
                 Extensions.CleanStrings(2);
@@ -269,6 +280,7 @@ namespace Alchemical_Laboratory
                     Console.WriteLine($"{Resource.DoYouRememberSub}\n   {Resource.ResourceManager.GetString(randIngredient.Description)}");
                     Console.WriteLine($"{Resource.SomehowRelatedTo}\n   {Resource.ResourceManager.GetString(randResult.Description)}");
                 }
+                else return;
             }
             Console.ReadKey();
         }
@@ -276,8 +288,7 @@ namespace Alchemical_Laboratory
         void ShowRules()
         {
             string title = Resource.Rules;
-            Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
-            Console.WriteLine(title);
+            Console.WriteLine(string.Concat(Enumerable.Repeat(' ', 46)) + title);
             string[] rules = Resource.RulesThemselves.Split('?');
             if (showRulesFirst)
             {
@@ -293,6 +304,7 @@ namespace Alchemical_Laboratory
                 }
                 Extensions.MakeDelay(1800);
                 Console.Write("\n" + Resource.PressToStart);
+                logger.Debug("Rules shown.");
             }
             else
             {
@@ -309,54 +321,22 @@ namespace Alchemical_Laboratory
         }
 
         void Serialize()
-        { }
-        //    string fl = Prompt.Select<string>("Choose format", new[] { "To xml", "To json" });
-        //    if (fl == "To xml")
-        //    {
-        //        const string path = @"C:\Working folder of Dima\Univer Sem_3\CSharp OOP\LW_3\Graphic.xml";
-        //        string file = Prompt.Input<string>("Path to save", defaultValue: path);
-
-        //        editor.ToXml(file);
-        //    }
-        //    else if (fl == "To json")
-        //    {
-        //        const string path = @"C:\Working folder of Dima\Univer Sem_3\CSharp OOP\LW_3\Graphic.json";
-        //        string file = Prompt.Input<string>("Path to save", defaultValue: path);
-        //        editor.ToJson(file);
-        //    }
-        //    Console.WriteLine("Serialization successful");
-        //    Console.ForegroundColor = ConsoleColor.DarkGray;
-        //    Console.Write("Press any key to continue...");
-        //    Console.ResetColor();
-        //    Console.ReadKey();
-        //}
+        {
+            // Идея: сделать несколько (3) ячеек сейвов и показывать прогресс
+            gameState.SaveGame();
+            Console.WriteLine(Resource.SuccessfullySaving);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(Resource.PressToContinue + "...");
+            Console.ResetColor();
+            Extensions.MakeDelay(1700);
+        }
 
         void Deserialize()
-        { }
-        //    string fl = Prompt.Select<string>("Choose format", new[] { "From xml", "From json" });
-        //    if (fl == "From xml")
-        //    {
-        //        try
-        //        {
-        //            const string path = @"C:\Working folder of Dima\Univer Sem_3\CSharp OOP\LW_3\Graphic.xml";
-        //            string file = Prompt.Input<string>("Import path", defaultValue: path);
-        //            var retmyEditor = GraphicsEditor.FromXml(file);
-        //            editor = retmyEditor;
-        //        }
-        //        catch (Exception ex) { Console.WriteLine($"Error! {ex.Message}"); Console.ReadKey(); }
-        //    }
-        //    else if (fl == "From json")
-        //    {
-        //        try
-        //        {
-        //            const string path = @"C:\Working folder of Dima\Univer Sem_3\CSharp OOP\LW_3\Graphic.json";
-        //            string file = Prompt.Input<string>("Import path", defaultValue: path);
-        //            var retmyEditor = GraphicsEditor.FromJson(file);
-        //            editor = retmyEditor;
-        //        }
-        //        catch (Exception ex) { Console.WriteLine($"Error! {ex.Message}"); Console.ReadKey(); }
-        //    }
-        //}
+        {
+            gameState.LoadGame();
+            Console.WriteLine(Resource.SaveLoaded);
+            Extensions.MakeDelay(1700);
+        }
 
         void Quit() { Environment.Exit(0); }
     }

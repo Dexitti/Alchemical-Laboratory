@@ -427,7 +427,7 @@
     <value>Master Emerald</value>
   </data>
   <data name="MasterEmerald_Description" xml:space="preserve">
-    <value>The Master Emerald is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them.</value>
+    <value> is a massive green emerald, a mystical relic of immeasurable power from the forgotten past. It acts as a counterweight to the Emerald Chaos, can nullify or control them.</value>
   </data>
   <data name="Alkahest" xml:space="preserve">
     <value>Alkahest</value>
@@ -665,5 +665,14 @@
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Continue?</value>
+  </data>
+  <data name="SaveLoaded" xml:space="preserve">
+    <value>Save successfully loaded</value>
+  </data>
+  <data name="SuccessfullySaving" xml:space="preserve">
+    <value>Successfully saving</value>
+  </data>
+  <data name="AllSubstances" xml:space="preserve">
+    <value>You’ve discovered all substances!</value>
   </data>
 </root>

@@ -12,6 +12,7 @@ namespace Alchemical_Laboratory
     public class Substance : ISubstance
     {
         public static event Action<Substance> IsTargetReached;
+        public static event Action MaxProgress;
         private bool isDiscovered = false;
 
         public string Name { get; set; }
@@ -26,6 +27,7 @@ namespace Alchemical_Laboratory
             {
                 if (isDiscovered == value) return;
                 isDiscovered = value;
+                MaxProgress.Invoke();
                 if (isDiscovered &&  IsGem) GameState.CheckEnd();
                 if (isDiscovered && IsFinal) IsTargetReached.Invoke(this);
             }
@@ -85,11 +87,11 @@ namespace Alchemical_Laboratory
     [Flags]
     public enum Tools
     {
-        none = 0,
-        gloves = 1,
-        hood = 2,
-        glasses = 4,
-        respirator = 8
+        None = 0,
+        Gloves = 1,
+        Hood = 2,
+        Glasses = 4,
+        Respirator = 8
     }
 
     public interface ISubstance

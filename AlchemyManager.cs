@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Alchemical_Laboratory.Properties;
+using NLog;
 
 namespace Alchemical_Laboratory
 {
     public sealed class AlchemyManager
     {
+        static readonly Logger logger = LogManager.GetCurrentClassLogger();
         IInventory inventory;
         List<Substance> substances;
 
@@ -22,6 +24,7 @@ namespace Alchemical_Laboratory
 
             List<Substance> results = [.. substances.Where(s => s.IsFinal)]; // Create Collection on base [.. list]
             ResultSubstance = results[rand.Next(results.Count)];
+            logger.Info("Result sub — {resSub}", ResultSubstance);
         }
 
         public void GetFirstSubs()
