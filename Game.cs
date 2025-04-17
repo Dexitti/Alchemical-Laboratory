@@ -7,15 +7,18 @@ using Sharprompt;
 using Alchemical_Laboratory.Properties;
 using NLog;
 using System.Drawing;
+using System.Diagnostics;
+using Kurukuru;
+using System.Data;
 
 namespace Alchemical_Laboratory
 {
     public class Game
     {
-        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard];
+        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard+" "+Resource.ComingSoon+"..."];
         string gameMode;
 
-        byte lifePoints = 3;
+        //byte lifePoints = 3;
         bool showRulesFirst = true;
         bool synthesisLocked = true;
         GameState gameState;
@@ -30,7 +33,11 @@ namespace Alchemical_Laboratory
             Prompt.ColorSchema.PromptSymbol = ConsoleColor.DarkYellow;
             Prompt.ColorSchema.Select = (ConsoleColor)12;
 
-            LogManager.Setup().LoadConfigurationFromFile("Properties/Nlog.config");
+            try
+            {
+                LogManager.Setup().LoadConfigurationFromFile("Properties/Nlog.config");
+            }
+            catch (UserException ex) { logger.Error(ex); }
 
             AlchemyBook book = new AlchemyBook();
             book.Import("Properties/Substances.json", "Properties/Recipes.json");
@@ -45,8 +52,17 @@ namespace Alchemical_Laboratory
         void Start() //Preprocessing
         {
             logger.Info("Starting Game.");
+            Console.CursorVisible = false;
+            Console.Write(string.Concat(Enumerable.Repeat(' ', 18)));
+            foreach (char c in Resource.AlchemicalLaboratory)
+            {
+                Console.Write(c);
+                Thread.Sleep(40);
+            }
+            Extensions.MakeDelay(800);
+            Console.WriteLine();
+            Console.CursorVisible = true;
             // Show Logo, Downloading menu or Preview
-            // ShowRules(); //debug
 
             while (true)
             {
@@ -66,7 +82,7 @@ namespace Alchemical_Laboratory
                 services.AddSingleton<IInventory, UnlimitedInventory>() // ковариантность
                         .AddSingleton<GameState, UnlimitedGameState>();
             }
-            else if (gameMode == Resource.LimitedResourcesHard)
+            else if (gameMode == Resource.LimitedResourcesHard+" "+Resource.ComingSoon+"...")
             {
                 services.AddSingleton<IInventory, LimitedInventory>()
                         .AddSingleton<GameState, LimitedGameState>();
@@ -74,6 +90,24 @@ namespace Alchemical_Laboratory
             Services = services.BuildServiceProvider();
             logger.Debug("Services have been initialized successfully.");
             gameState = Services.GetRequiredService<GameState>();
+
+            if (File.Exists("State.json"))
+            {
+                bool confirm = Prompt.Confirm(Resource.YouAlreadyHaveProgressDownload);
+                if (confirm)
+                {
+                    Deserialize();
+                    showRulesFirst = false;
+                }
+                else
+                {
+                    Extensions.CleanStrings(2);
+                    Console.Write($"  {Resource.StartNewGame}");
+                    Extensions.MakeDelay(2000);
+                }
+            }
+            Console.Clear();
+            ShowRules();
 
             Services.GetRequiredService<AlchemyManager>().GetFirstSubs();
             Options();
@@ -101,13 +135,10 @@ namespace Alchemical_Laboratory
 
                 if (synthesisLocked && gameState.ReadinessToMagisterium())
                 {
-                    Console.WriteLine(Resource.Congratulations + " " + Resource.AAA);
-                    Extensions.MakeDelay(3000);
-                    Extensions.CleanStrings(1);
+                    gameState.synthesisUnlocked();
                     strings.Insert(2, Resource.Synthesize);
                     actions.Insert(2, Synthesize);
                     synthesisLocked = false;
-                    logger.Info("The synthesis option is unlocked ({openedSubs} substances had been discovered).", gameState.Progress()[0]);
                 }
 
                 string menus = Prompt.Select(Resource.ChooseAnAction, strings);
@@ -334,8 +365,7 @@ namespace Alchemical_Laboratory
         void Deserialize()
         {
             gameState.LoadGame();
-            Console.WriteLine(Resource.SaveLoaded);
-            Extensions.MakeDelay(1700);
+            Extensions.MakeDelay(1500);
         }
 
         void Quit() { Environment.Exit(0); }

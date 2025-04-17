@@ -675,4 +675,22 @@
   <data name="AllSubstances" xml:space="preserve">
     <value>You’ve discovered all substances!</value>
   </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>Coming soon</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Save file not found.</value>
+  </data>
+  <data name="YouAlreadyHaveProgressDownload" xml:space="preserve">
+    <value>You already seem to have progress. Download?</value>
+  </data>
+  <data name="StartNewGame" xml:space="preserve">
+    <value>Start new game</value>
+  </data>
+  <data name="AlchemicalLaboratory" xml:space="preserve">
+    <value>Alchemical Laboratory</value>
+  </data>
 </root>

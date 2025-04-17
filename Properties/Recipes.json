@@ -182,7 +182,8 @@
   },
   {
     "Result": "Amethyst",
-    "Components": [ "Quartz", "Stone" ]
+    "Components": [ "Quartz", "Stone" ],
+    "AuxiliaryResults": [ "Sand" ]
   },
   {
     "Result": "Emerald",

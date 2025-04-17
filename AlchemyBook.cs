@@ -13,8 +13,25 @@ namespace Alchemical_Laboratory
     {
         static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
+        [JsonIgnore]
         public List<Substance> Substances { get; set; } = [];
+        [JsonIgnore]
         public List<Recipe> Recipes { get; private set; } = [];
+
+        public IEnumerable<(string Sub, bool IsDiscovered)> SubsJson
+        {
+            get
+            {
+                return Substances.Select(x => (x.Name, x.IsDiscovered)).ToList();
+            }
+            set
+            {
+                foreach (var t in value)
+                {
+                    Substances.First(s => s.Name == t.Sub).IsDiscovered = t.IsDiscovered;
+                }
+            }
+        } 
 
         public void Import(string substancesPath, string recipesPath)
         {
@@ -30,7 +47,7 @@ namespace Alchemical_Laboratory
                 string data = File.ReadAllText(path);
                 Substances = JsonConvert.DeserializeObject<List<Substance>>(data);
             }
-            catch (Exception ex)
+            catch (FileLoadException ex)
             {
                 logger.Fatal(ex.Message);
             }

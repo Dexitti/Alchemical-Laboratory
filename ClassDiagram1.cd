@@ -10,7 +10,7 @@
   <Class Name="Alchemical_Laboratory.Substance">
     <Position X="12.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAgEACECAAAAAQAgAAAAAAAQAAAAGAAAQA=</HashCode>
+      <HashCode>AQAAAAAAAAAgEACECAAAAAQAgAAAAACAQAAAAGAAAQA=</HashCode>
       <FileName>Substance.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -31,16 +31,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.LimitedGameState">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>LimitedGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alchemical_Laboratory.Recipe">
     <Position X="14.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAMAAAAAAQAAAAAAAAAQAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAIAMAAAAAAQAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Recipe.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,7 +61,7 @@
   <Class Name="Alchemical_Laboratory.LimitedInventory">
     <Position X="7.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIIAAAAAAABAAAABAAAABQAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AIIAAAAAAABAAAABAAAABQAAAAACAAAAAAAAACAQAAA=</HashCode>
       <FileName>LimitedInventory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -69,7 +69,7 @@
   <Class Name="Alchemical_Laboratory.UnlimitedInventory">
     <Position X="9.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIIAAAAAAABAAAAAAAAABQAAAAAAAAAAIAAAACAAAAA=</HashCode>
+      <HashCode>AIIAAAAAAABAAAAAAAAABQAAAAAAAAAAIAAAACAQAAA=</HashCode>
       <FileName>UnlimitedInventory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -77,7 +77,7 @@
   <Class Name="Alchemical_Laboratory.AlchemyBook">
     <Position X="7.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAACIAQAIAAAAAAAAAAAAAAAECAABAA=</HashCode>
+      <HashCode>AEAAAAAAQAAAAAACIAQAIAAAAAAAAAAAAAAAECAABAA=</HashCode>
       <FileName>AlchemyBook.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -85,7 +85,7 @@
   <Class Name="Alchemical_Laboratory.GameState">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAwgEABUAEDCEAAAAAQAAAEgAAQBAAACAgDAIAE=</HashCode>
+      <HashCode>CAAAAAwgEABUAEDCEIAAAAQAAAEABAQBAAACAgDAIAE=</HashCode>
       <FileName>GameState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,7 +99,7 @@
   <Interface Name="Alchemical_Laboratory.IInventory">
     <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIIAAAAAAABAAAAAAAAABQAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AIIAAAAAAABAAAAAAAAABQAAAAAAAAAAAAAAACAQAAA=</HashCode>
       <FileName>IInventory.cs</FileName>
     </TypeIdentifier>
   </Interface>

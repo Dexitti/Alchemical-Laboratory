@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,22 @@ using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
-    public class UnlimitedInventory : IInventory
+    public class UnlimitedInventory(AlchemyBook book) : IInventory
     {
         readonly HashSet<Substance> substances = [];
         public IEnumerable<Substance> Substances => substances;
+
+        public IEnumerable JsonData
+        {
+            get => substances.Select(s => s.Name).ToList();
+            set
+            {
+                foreach (dynamic name in value)
+                {
+                    substances.Add(book.Substances.First(s => s.Name == name.ToString()));
+                }
+            }
+        }
 
         public event Action<Substance>? NewSubstance;
 

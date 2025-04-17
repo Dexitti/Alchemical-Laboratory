@@ -23,7 +23,7 @@ namespace Alchemical_Laboratory
             var rand = new Random();
 
             List<Substance> results = [.. substances.Where(s => s.IsFinal)]; // Create Collection on base [.. list]
-            ResultSubstance = results[rand.Next(results.Count)];
+            ResultSubstance = rand.Choice(results);
             logger.Info("Result sub — {resSub}", ResultSubstance);
         }
 

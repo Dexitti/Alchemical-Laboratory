@@ -675,4 +675,19 @@
   <data name="AllSubstances" xml:space="preserve">
     <value>Вы открыли все вещества!</value>
   </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>Скоро</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>В процессе разработки</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Файл сохранения не найден.</value>
+  </data>
+  <data name="YouAlreadyHaveProgressDownload" xml:space="preserve">
+    <value>Кажется, у вас уже есть прогресс. Загрузить?</value>
+  </data>
+  <data name="StartNewGame" xml:space="preserve">
+    <value>Начало новой игры</value>
+  </data>
 </root>

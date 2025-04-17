@@ -10,7 +10,7 @@ namespace Alchemical_Laboratory
 {
     public class UnlimitedGameState : GameState
     {
-        public UnlimitedGameState(AlchemyBook book, IInventory inventory) : base(book, inventory)
+        public UnlimitedGameState(AlchemyBook book, IInventory inventory, AlchemyManager manager) : base(book, inventory, manager)
         {
         }
 

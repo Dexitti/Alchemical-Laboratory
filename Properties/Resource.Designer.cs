@@ -106,6 +106,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Alchemical Laboratory.
+        /// </summary>
+        internal static string AlchemicalLaboratory {
+            get {
+                return ResourceManager.GetString("AlchemicalLaboratory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Alchemy book progress.
         /// </summary>
         internal static string AlchemyBookProgress {
@@ -439,6 +448,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Coming soon.
+        /// </summary>
+        internal static string ComingSoon {
+            get {
+                return ResourceManager.GetString("ComingSoon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Concentrated_Mana.
         /// </summary>
         internal static string Concentrated_Mana {
@@ -619,6 +637,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Save file not found..
+        /// </summary>
+        internal static string FileNotFound {
+            get {
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Fire.
         /// </summary>
         internal static string Fire {
@@ -786,6 +813,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Hood {
             get {
                 return ResourceManager.GetString("Hood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на In progress.
+        /// </summary>
+        internal static string InProgress {
+            get {
+                return ResourceManager.GetString("InProgress", resourceCulture);
             }
         }
         
@@ -1465,6 +1501,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Start new game.
+        /// </summary>
+        internal static string StartNewGame {
+            get {
+                return ResourceManager.GetString("StartNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Steam.
         /// </summary>
         internal static string Steam {
@@ -1659,6 +1704,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Water_Description {
             get {
                 return ResourceManager.GetString("Water_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You already seem to have progress. Download?.
+        /// </summary>
+        internal static string YouAlreadyHaveProgressDownload {
+            get {
+                return ResourceManager.GetString("YouAlreadyHaveProgressDownload", resourceCulture);
             }
         }
         
