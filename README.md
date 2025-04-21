@@ -4,7 +4,7 @@
 Alchemical Laboratory - игра, целью которой является создание определенного сложного вещества из иерархии других веществ. В ходе производства учитываются характеристики веществ, внешние и внутренние факторы. Попробуйте комбинировать элементы и посмотреть, что получится. Удачи в ваших алхимических приключениях!
 
 ## Как играть
-- Установить [скачать Alchemical Laboratory.zip](https://github.com/user-attachments/files/19833231/Alchemical.Laboratory.zip)
+- Скачать  [Alchemical Laboratory.zip](https://github.com/user-attachments/files/19833231/Alchemical.Laboratory.zip)
 - Распаковать архив и запустить "exe" file
 - Наслаждаться игрой
 
