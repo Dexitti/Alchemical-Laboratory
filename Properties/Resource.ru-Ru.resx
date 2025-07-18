@@ -738,4 +738,97 @@
   <data name="wood" xml:space="preserve">
     <value>Дерево</value>
   </data>
+  <data name="CreateBinFor" xml:space="preserve">
+    <value>Создайте контейнер для </value>
+  </data>
+  <data name="SelectShape" xml:space="preserve">
+    <value>Выберите форму</value>
+  </data>
+  <data name="SelectMaterial" xml:space="preserve">
+    <value>Выберите материал</value>
+  </data>
+  <data name="SeeWhatYouGot" xml:space="preserve">
+    <value>Посмотрите, что у вас получилось</value>
+  </data>
+  <data name="Sub" xml:space="preserve">
+    <value>Вещество</value>
+  </data>
+  <data name="Bin" xml:space="preserve">
+    <value>Контейнер</value>
+  </data>
+  <data name="PERFECT" xml:space="preserve">
+    <value>ИДЕАЛЬНЫЙ</value>
+  </data>
+  <data name="GOOD" xml:space="preserve">
+    <value>ХОРОШИЙ</value>
+  </data>
+  <data name="ACCEPTABLE" xml:space="preserve">
+    <value>ДОПУСТИМЫЙ</value>
+  </data>
+  <data name="INAPPROPRIATE" xml:space="preserve">
+    <value>НЕПОДХОДЯЩИЙ</value>
+  </data>
+  <data name="Error 404" xml:space="preserve">
+    <value>Ошибка 404: Совместимость не найдена</value>
+  </data>
+  <data name="YouVeJustInvented" xml:space="preserve">
+    <value>Ты только что изобрел способ провалить квест</value>
+  </data>
+  <data name="AreYouFool" xml:space="preserve">
+    <value>Ты дурачок такое создавать?! Поздравляю, ты совместил несовместимое</value>
+  </data>
+  <data name="ItsExperimentalApproach" xml:space="preserve">
+    <value>Это не ошибка, это... экспериментальный подход!</value>
+  </data>
+  <data name="ShowedHowNotToDo" xml:space="preserve">
+    <value>Поздравляю! Ты только что наглядно показал "Как не надо делать"</value>
+  </data>
+  <data name="Temperature_Positive" xml:space="preserve">
+    <value>[+] Контейнер держит температуру лучше термоса</value>
+  </data>
+  <data name="Temperature_Negative" xml:space="preserve">
+    <value>[-] Температура меняется как настроение у кота</value>
+  </data>
+  <data name="Hardness_Positive" xml:space="preserve">
+    <value>[+] Твердое, как нервы разработчика этой игры</value>
+  </data>
+  <data name="Hardness_Negative" xml:space="preserve">
+    <value>[-] Хрупкое как бумажный меч</value>
+  </data>
+  <data name="Volatility_Positive" xml:space="preserve">
+    <value>[+] Утечек не обнаружено</value>
+  </data>
+  <data name="Volatility_Negative" xml:space="preserve">
+    <value>[-] Испаряется быстрее, чем терпение в длинной очереди</value>
+  </data>
+  <data name="Viscosity_Positive" xml:space="preserve">
+    <value>[+] Идеальная вязкость - прямо как у мёда</value>
+  </data>
+  <data name="Viscosity_Negative" xml:space="preserve">
+    <value>[-] Течёт медленнее бюрократических процессов</value>
+  </data>
+  <data name="Toxicity_Positive" xml:space="preserve">
+    <value>[+] Яды нейтрализованы алхимическим фильтром</value>
+  </data>
+  <data name="Toxicity_Negative" xml:space="preserve">
+    <value>[-] Токсичность зашкаливает - прям как в чате рандомов</value>
+  </data>
+  <data name="Flammability_Positive" xml:space="preserve">
+    <value>[+] Огнеупорности позавидует даже дракон</value>
+  </data>
+  <data name="Flammability_Negative" xml:space="preserve">
+    <value>[-] Разгорается быстрее спора в таверне</value>
+  </data>
+  <data name="Explosiveness_Positive" xml:space="preserve">
+    <value>[+] Зажигается от взгляда</value>
+  </data>
+  <data name="Explosiveness_Negative" xml:space="preserve">
+    <value>[-] Готов рвануть громче новогодних петард</value>
+  </data>
+  <data name="Radioactivity_Positive" xml:space="preserve">
+    <value>[+] Безопаснее, чем магический учебник для первокурсников</value>
+  </data>
+  <data name="Radioactivity_Negative" xml:space="preserve">
+    <value>[-] Светится, как новогодняя ёлка</value>
+  </data>
 </root>

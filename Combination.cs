@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Alchemical_Laboratory.Properties;
 
 namespace Alchemical_Laboratory
 {
@@ -22,43 +23,43 @@ namespace Alchemical_Laboratory
         {
             [Property.temperature] =
             (
-                "│ [+] Контейнер держит температуру лучше термоса",
-                "│ [-] Температура меняется как настроение у кота"
+                Resource.Temperature_Positive,
+                Resource.Temperature_Negative
             ),
             [Property.hardness] =
             (
-                "│ [+] Прочнее гранитного характера",
-                "│ [-] Хрупкое как бумажный меч"
+                Resource.Hardness_Positive,
+                Resource.Hardness_Negative
             ),
             [Property.volatility] =
             (
-                "│ [+] Летучесть под контролем",
-                "│ [-] Испаряется быстрее, чем интерес к трендам"
+                Resource.Volatility_Positive,
+                Resource.Volatility_Negative
             ),
             [Property.viscosity] =
             (
-                "│ [+] Идеальная вязкость - прямо как у мёда",
-                "│ [-] Токсичность зашкаливает - прям как в чате рандомов"
+                Resource.Viscosity_Positive,
+                Resource.Viscosity_Negative
             ),
             [Property.toxicity] =
             (
-                "│ [+] Яды нейтрализованы алхимическим фильтром",
-                "│ [-] Токсичность - как в комментариях под постом"
+                Resource.Toxicity_Positive,
+                Resource.Toxicity_Negative
             ),
             [Property.flammability] =
             (
-                "│ [+] Огнеупорности позавидует даже дракон",
-                "│ [-] Воспламеняется от взгляда"
+                Resource.Flammability_Positive,
+                Resource.Flammability_Negative
             ),
             [Property.explosiveness] =
             (
-                "│ [+] Взрывобезопасность: 100%",
-                "│ [-] Готов рвануть громче новогодних петард"
+                Resource.Explosiveness_Positive,
+                Resource.Explosiveness_Negative
             ),
             [Property.radioactivity] =
             (
-                "│ [+] Безопаснее, чем магический учебник для первокурсников",
-                "│ [-] Светится, как новогодняя ёлка"
+                Resource.Radioactivity_Positive,
+                Resource.Radioactivity_Negative
             )
         };
     }

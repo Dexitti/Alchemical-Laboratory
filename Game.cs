@@ -15,7 +15,7 @@ namespace Alchemical_Laboratory
 {
     public class Game
     {
-        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard]; // " "+Resource.ComingSoon+"..."
+        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard];
         string gameMode;
 
         //byte lifePoints = 3;
@@ -82,7 +82,7 @@ namespace Alchemical_Laboratory
                 services.AddSingleton<IInventory, UnlimitedInventory>() // ковариантность
                         .AddSingleton<GameState, UnlimitedGameState>();
             }
-            else if (gameMode == Resource.LimitedResourcesHard+" "+Resource.ComingSoon+"...")
+            else if (gameMode == Resource.LimitedResourcesHard)
             {
                 services.AddSingleton<IInventory, LimitedInventory>()
                         .AddSingleton<GameState, LimitedGameState>();

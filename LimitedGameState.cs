@@ -36,10 +36,10 @@ namespace Alchemical_Laboratory
 
             // Создание контейнера
             Console.Clear();
-            Console.WriteLine($"Создайте контейнер для {sub}");
-            var shape = Prompt.Select("Выберите форму", Enum.GetValues<Types>(), textSelector: Extensions.Translate);
+            Console.WriteLine(Resource.CreateBinFor + sub);
+            var shape = Prompt.Select(Resource.SelectShape, Enum.GetValues<Types>(), textSelector: Extensions.Translate);
             Types shapeEntered = Enum.GetValues<Types>().First(t => t == shape);
-            var material = Prompt.Select("Выберите материал", Enum.GetValues<Materials>(), textSelector: Extensions.Translate);
+            var material = Prompt.Select(Resource.SelectMaterial, Enum.GetValues<Materials>(), textSelector: Extensions.Translate);
             Materials materialEntered = Enum.GetValues<Materials>().First(m => m == material);
             // int amount = ((LimitedInventory)Services.GetRequiredService<IInventory>()).AmountOf(sub); // Еще не знаю сколько, так как событие обрабатывается раньше добавления в инвентарь
             Container vessel = new(shape, material);
@@ -47,9 +47,9 @@ namespace Alchemical_Laboratory
 
             // сопоставление свойств вещества с емкостью
             Console.Clear();
-            Console.WriteLine(string.Concat(Enumerable.Repeat(' ', 16)) + "Посмотрите, что у вас получилось");
+            Console.WriteLine(string.Concat(Enumerable.Repeat(' ', 16)) + Resource.SeeWhatYouGot);
             const int LEN = 50;
-            Console.WriteLine($"{"Вещество:", -LEN}{"Контейнер:"}");
+            Console.WriteLine($"{Resource.Sub + ":", -LEN}{Resource.Bin + ":"}");
             Console.WriteLine($"{sub, -LEN}{vessel}");
             string desc = Resource.ResourceManager.GetString(sub.Description);
             if (desc.Length < LEN)
@@ -87,8 +87,9 @@ namespace Alchemical_Laboratory
         string ComparisonAnalysis(Substance sub, Container bin)
         {
             Dictionary<Property, double> binProps = GetBinProperties(bin);
-            if (binProps == null || sub.Characteristics == null)
-                return "Ты дурачок такое создавать?! Поздравляю, ты совместил несовместимое)";
+            string[] phrase = [Resource.Error_404, Resource.YouVeJustInvented, Resource.AreYouFool, Resource.ItsExperimentalApproach, Resource.ShowedHowNotToDo];
+            Random rand = new Random();
+            if (binProps == null) return phrase[rand.Next(phrase.Length)];
 
             var report = new StringBuilder();
             report.AppendLine("┌".PadRight(48, '─'));
@@ -105,16 +106,16 @@ namespace Alchemical_Laboratory
                 if (!subHasProp && !binHasProp) continue; // -
 
                 string propName = prop.Translate();
-                string message;
+                string message = "│ ";
                 var (good, bad) = Combination.PropertyMessages[prop];
                 if (binHasProp && (!subHasProp || binValue >= subValue)) // ✔
                 {
-                    message = good;
+                    message += good;
                     posMes++;
                 }
                 else if (subHasProp && (!binHasProp || subValue > binValue)) // ✖
                 {
-                    message = bad;
+                    message += bad;
                 }
                 else continue;
 
@@ -123,14 +124,14 @@ namespace Alchemical_Laboratory
             }
             report.AppendLine("└".PadRight(48, '─'));
 
-            report.Insert(0, $"Контейнер:{GetReportResult(posMes, allMes)}({posMes}/{allMes})\u001b[0m\n"); // процент закрытых свойств (не тот цвет!) 
+            report.Insert(0, $"{Resource.Bin}:{GetReportResult(posMes, allMes)}({posMes}/{allMes})\u001b[0m\n"); // процент закрытых свойств
             // RiskLevel/Hints/Income ...
             return report.ToString();
         }
 
         string GetReportResult(int pos, int total)
-            => pos == total ? "\u001b[38;2;20;255;0m ИДЕАЛЬНЫЙ" :
-               pos >= total * 0.8 ? "\u001b[38;2;127;255;0m ХОРОШИЙ" :
-               pos >= total * 0.5 ? "\u001b[38;2;255;128;0m ДОПУСТИМЫЙ" : "\u001b[38;2;255;60;0m НЕПОДХОДЯЩИЙ";
+            => pos == total ? $"\u001b[38;2;20;255;0m {Resource.PERFECT}" :
+               pos >= total * 0.8 ? $"\u001b[38;2;127;255;0m {Resource.GOOD}" :
+               pos >= total * 0.5 ? $"\u001b[38;2;255;128;0m {Resource.ACCEPTABLE}" : $"\u001b[38;2;255;60;0m {Resource.INAPPROPRIATE}";
     }
 }

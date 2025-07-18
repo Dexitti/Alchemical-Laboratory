@@ -70,6 +70,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ACCEPTABLE.
+        /// </summary>
+        internal static string ACCEPTABLE {
+            get {
+                return ResourceManager.GetString("ACCEPTABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Air.
         /// </summary>
         internal static string Air {
@@ -241,6 +250,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Are you a fool to create this?! Congratulations, you combined incompatible.
+        /// </summary>
+        internal static string AreYouFool {
+            get {
+                return ResourceManager.GetString("AreYouFool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Are you sure.
         /// </summary>
         internal static string AreYouSure {
@@ -255,6 +273,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string beaker {
             get {
                 return ResourceManager.GetString("beaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Container.
+        /// </summary>
+        internal static string Bin {
+            get {
+                return ResourceManager.GetString("Bin", resourceCulture);
             }
         }
         
@@ -547,6 +574,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Create container for .
+        /// </summary>
+        internal static string CreateBinFor {
+            get {
+                return ResourceManager.GetString("CreateBinFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Defeat. You are a unfortunate alchemist.
         /// </summary>
         internal static string Defeat {
@@ -682,11 +718,38 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Error 404: Compatibility not found.
+        /// </summary>
+        internal static string Error_404 {
+            get {
+                return ResourceManager.GetString("Error 404", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на explosiveness.
         /// </summary>
         internal static string explosiveness {
             get {
                 return ResourceManager.GetString("explosiveness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Ready to blow louder than New Year&apos;s firecrackers.
+        /// </summary>
+        internal static string Explosiveness_Negative {
+            get {
+                return ResourceManager.GetString("Explosiveness_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Ignites from a mere glance.
+        /// </summary>
+        internal static string Explosiveness_Positive {
+            get {
+                return ResourceManager.GetString("Explosiveness_Positive", resourceCulture);
             }
         }
         
@@ -732,6 +795,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string flammability {
             get {
                 return ResourceManager.GetString("flammability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Ignites faster than a tavern argument.
+        /// </summary>
+        internal static string Flammability_Negative {
+            get {
+                return ResourceManager.GetString("Flammability_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Fireproof enough to impress a dragon.
+        /// </summary>
+        internal static string Flammability_Positive {
+            get {
+                return ResourceManager.GetString("Flammability_Positive", resourceCulture);
             }
         }
         
@@ -817,6 +898,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на GOOD.
+        /// </summary>
+        internal static string GOOD {
+            get {
+                return ResourceManager.GetString("GOOD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Gunpowder.
         /// </summary>
         internal static string Gunpowder {
@@ -840,6 +930,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string hardness {
             get {
                 return ResourceManager.GetString("hardness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Fragile like a paper sword.
+        /// </summary>
+        internal static string Hardness_Negative {
+            get {
+                return ResourceManager.GetString("Hardness_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Hard as this game developer&apos;s nerves.
+        /// </summary>
+        internal static string Hardness_Positive {
+            get {
+                return ResourceManager.GetString("Hardness_Positive", resourceCulture);
             }
         }
         
@@ -889,6 +997,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на INAPPROPRIATE.
+        /// </summary>
+        internal static string INAPPROPRIATE {
+            get {
+                return ResourceManager.GetString("INAPPROPRIATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на In progress.
         /// </summary>
         internal static string InProgress {
@@ -930,6 +1047,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Iron_Description {
             get {
                 return ResourceManager.GetString("Iron_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на It&apos;s not a mistake, it&apos;s... an experimental approach!.
+        /// </summary>
+        internal static string ItsExperimentalApproach {
+            get {
+                return ResourceManager.GetString("ItsExperimentalApproach", resourceCulture);
             }
         }
         
@@ -1222,6 +1348,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на PERFECT.
+        /// </summary>
+        internal static string PERFECT {
+            get {
+                return ResourceManager.GetString("PERFECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Philosopher&apos;s stone.
         /// </summary>
         internal static string Philosophers_Stone {
@@ -1344,6 +1479,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string radioactivity {
             get {
                 return ResourceManager.GetString("radioactivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Glows like a Christmas tree.
+        /// </summary>
+        internal static string Radioactivity_Negative {
+            get {
+                return ResourceManager.GetString("Radioactivity_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Safer than a freshman&apos;s magic textbook.
+        /// </summary>
+        internal static string Radioactivity_Positive {
+            get {
+                return ResourceManager.GetString("Radioactivity_Positive", resourceCulture);
             }
         }
         
@@ -1528,6 +1681,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на See what you got.
+        /// </summary>
+        internal static string SeeWhatYouGot {
+            get {
+                return ResourceManager.GetString("SeeWhatYouGot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Select game mode.
         /// </summary>
         internal static string SelectGameMode {
@@ -1537,11 +1699,38 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Select a material.
+        /// </summary>
+        internal static string SelectMaterial {
+            get {
+                return ResourceManager.GetString("SelectMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select a shape.
+        /// </summary>
+        internal static string SelectShape {
+            get {
+                return ResourceManager.GetString("SelectShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Select substance.
         /// </summary>
         internal static string SelectSubstance {
             get {
                 return ResourceManager.GetString("SelectSubstance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Congratulations! You just showed &quot;How not to do&quot;.
+        /// </summary>
+        internal static string ShowedHowNotToDo {
+            get {
+                return ResourceManager.GetString("ShowedHowNotToDo", resourceCulture);
             }
         }
         
@@ -1654,6 +1843,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Substance.
+        /// </summary>
+        internal static string Sub {
+            get {
+                return ResourceManager.GetString("Sub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Earth.
         /// </summary>
         internal static string Substance_Earth {
@@ -1704,6 +1902,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string temperature {
             get {
                 return ResourceManager.GetString("temperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Temperature changes like a cat&apos;s mood.
+        /// </summary>
+        internal static string Temperature_Negative {
+            get {
+                return ResourceManager.GetString("Temperature_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Keeps temperature better than a thermos.
+        /// </summary>
+        internal static string Temperature_Positive {
+            get {
+                return ResourceManager.GetString("Temperature_Positive", resourceCulture);
             }
         }
         
@@ -1762,6 +1978,24 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Toxicity off the charts - like random chat toxicity.
+        /// </summary>
+        internal static string Toxicity_Negative {
+            get {
+                return ResourceManager.GetString("Toxicity_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Toxins neutralized by alchemical filter.
+        /// </summary>
+        internal static string Toxicity_Positive {
+            get {
+                return ResourceManager.GetString("Toxicity_Positive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Try again?.
         /// </summary>
         internal static string TryAgain {
@@ -1816,11 +2050,47 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Flows slower than bureaucratic processes.
+        /// </summary>
+        internal static string Viscosity_Negative {
+            get {
+                return ResourceManager.GetString("Viscosity_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] Perfect viscosity - just like honey.
+        /// </summary>
+        internal static string Viscosity_Positive {
+            get {
+                return ResourceManager.GetString("Viscosity_Positive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на volatility.
         /// </summary>
         internal static string volatility {
             get {
                 return ResourceManager.GetString("volatility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [-] Evaporates faster than patience in a long queue.
+        /// </summary>
+        internal static string Volatility_Negative {
+            get {
+                return ResourceManager.GetString("Volatility_Negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [+] No leaks detected.
+        /// </summary>
+        internal static string Volatility_Positive {
+            get {
+                return ResourceManager.GetString("Volatility_Positive", resourceCulture);
             }
         }
         
@@ -1911,6 +2181,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string YourToolsAreWrong {
             get {
                 return ResourceManager.GetString("YourToolsAreWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You&apos;ve just invented a way to fail the quest.
+        /// </summary>
+        internal static string YouVeJustInvented {
+            get {
+                return ResourceManager.GetString("YouVeJustInvented", resourceCulture);
             }
         }
         
