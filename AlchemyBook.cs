@@ -17,6 +17,8 @@ namespace Alchemical_Laboratory
         public List<Substance> Substances { get; set; } = [];
         [JsonIgnore]
         public List<Recipe> Recipes { get; private set; } = [];
+        [JsonIgnore]
+        public List<Combination> Combinations { get; private set; } = [];
 
         public IEnumerable<(string Sub, bool IsDiscovered)> SubsJson
         {
@@ -33,11 +35,12 @@ namespace Alchemical_Laboratory
             }
         } 
 
-        public void Import(string substancesPath, string recipesPath)
+        public void Import(string substancesPath, string recipesPath, string combinationsPath)
         {
             ImportSubstances(substancesPath);
             ImportRecipes(recipesPath);
-            logger.Error("Recipes and subs have loaded.");
+            ImportCombinations(combinationsPath);
+            logger.Error("Recipes, subs and combines have loaded.");
         }
 
         void ImportSubstances(string path)
@@ -78,6 +81,19 @@ namespace Alchemical_Laboratory
                 }
             
                 Substance GetSubstance(dynamic name) => Substances.First(x => x.Name == name.ToString());
+            }
+            catch (Exception ex)
+            {
+                logger.Fatal(ex.Message);
+            }
+        }
+
+        void ImportCombinations(string path)
+        {
+            try
+            {
+                string data = File.ReadAllText(path);
+                Combinations = JsonConvert.DeserializeObject<List<Combination>>(data);
             }
             catch (Exception ex)
             {

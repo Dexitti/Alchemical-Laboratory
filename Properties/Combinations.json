@@ -1,0 +1,432 @@
+[
+  //{
+  //  "Type": "",
+  //  "Material": "",
+  //  "Resistances": {
+  //  }
+  //},
+  {
+    "Type": "roundBottomFlask",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 300,
+      "hardness": 0.1,
+      "volatility": 0.95,
+      "toxicity": 0.1,
+      "flammability": 0.5,
+      "explosiveness": 0.05
+    }
+  },
+  {
+    "Type": "roundBottomFlask",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.1,
+      "volatility": 0.5,
+      "toxicity": 0.1,
+      "flammability": 0.6,
+      "explosiveness": 0.1
+    }
+  },
+  {
+    "Type": "roundBottomFlask",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 800,
+      "hardness": 0.1,
+      "volatility": 0.5,
+      "toxicity": 0.1,
+      "flammability": 0.75,
+      "explosiveness": 0.1
+    }
+  },
+  {
+    "Type": "roundBottomFlask",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.1,
+      "volatility": 0.7,
+      "toxicity": 0.6,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "roundBottomFlask",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "volatility": 0.3,
+      "toxicity": 0.1
+    }
+  },
+  {
+    "Type": "erlenmeyerFlask",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 80,
+      "volatility": 0.2,
+      "toxicity": 0.1,
+      "flammability": 0.5
+    }
+  },
+  {
+    "Type": "erlenmeyerFlask",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 100,
+      "hardness": 0.2,
+      "toxicity": 0.1,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "erlenmeyerFlask",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.2,
+      "volatility": 0.05,
+      "toxicity": 0.1,
+      "flammability": 0.8,
+      "explosiveness": 0.05
+    }
+  },
+  {
+    "Type": "erlenmeyerFlask",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 100,
+      "volatility": 0.2,
+      "toxicity": 0.65,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "erlenmeyerFlask",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "toxicity": 0.1
+    }
+  },
+  {
+    "Type": "mortar",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 600,
+      "hardness": 0.65,
+      "viscosity": 0.6,
+      "flammability": 0.7,
+      "explosiveness": 0.1
+    }
+  },
+  {
+    "Type": "mortar",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.5,
+      "viscosity": 0.3,
+      "flammability": 0.7
+    }
+  },
+  {
+    "Type": "mortar",
+    "Material": "ceramic",
+    "Resistances": {
+      "temperature": 800,
+      "hardness": 1,
+      "viscosity": 0.5,
+      "toxicity": 0.3,
+      "flammability": 1,
+      "explosiveness": 0.5
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.1,
+      "viscosity": 0.2,
+      "flammability": 0.5
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.4,
+      "viscosity": 0.5,
+      "radioactivity": 0.1,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 800,
+      "hardness": 0.2,
+      "viscosity": 0.3,
+      "radioactivity": 0.25,
+      "flammability": 0.9,
+      "explosiveness": 0.15
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 200,
+      "hardness": 0.15,
+      "viscosity": 0.1,
+      "radioactivity": 0.1,
+      "flammability": 0.7
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "hardness": 0.3,
+      "viscosity": 0.8,
+      "toxicity": 0.2,
+      "radioactivity": 0.4,
+      "explosiveness": 0.2
+    }
+  },
+  {
+    "Type": "beaker",
+    "Material": "ceramic",
+    "Resistances": {
+      "temperature": 700,
+      "hardness": 0.46,
+      "viscosity": 0.4,
+      "radioactivity": 0.25,
+      "flammability": 0.99,
+      "explosiveness": 0.4
+    }
+  },
+  {
+    "Type": "bottle",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 500,
+      "volatility": 0.9,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "bottle",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 200,
+      "hardness": 0.6,
+      "volatility": 1,
+      "toxicity": 0.2,
+      "flammability": 0.7
+    }
+  },
+  {
+    "Type": "bottle",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 50,
+      "volatility": 0.5
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 500,
+      "volatility": 0.3,
+      "toxicity": 0.1,
+      "flammability": 0.5
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 500,
+      "volatility": 0.1,
+      "toxicity": 0.1,
+      "flammability": 0.6,
+      "explosiveness": 0.03
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 900,
+      "volatility": 0.15,
+      "toxicity": 0.1,
+      "radioactivity": 0.1,
+      "flammability": 0.85,
+      "explosiveness": 0.1
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 200,
+      "volatility": 0.3,
+      "toxicity": 0.5,
+      "flammability": 0.6
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "toxicity": 0.1,
+      "radioactivity": 0.3
+    }
+  },
+  {
+    "Type": "jar",
+    "Material": "ceramic",
+    "Resistances": {
+      "temperature": 800,
+      "volatility": 0.15,
+      "toxicity": 0.4,
+      "flammability": 0.2,
+      "toxicity": 0.3,
+      "flammability": 0.9,
+      "explosiveness": 0.05
+    }
+  },
+  {
+    "Type": "testTube",
+    "Material": "thinGlass",
+    "Resistances": {
+      "temperature": 200,
+      "volatility": 0.8,
+      "toxicity": 0.2,
+      "flammability": 0.7,
+      "explosiveness": 0.03
+    }
+  },
+  {
+    "Type": "testTube",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 600,
+      "hardness": 0.1,
+      "volatility": 0.4,
+      "toxicity": 0.2,
+      "radioactivity": 0.13,
+      "flammability": 0.85,
+      "explosiveness": 0.2
+    }
+  },
+  {
+    "Type": "testTube",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "volatility": 0.2,
+      "toxicity": 0.15,
+      "radioactivity": 0.33,
+      "explosiveness": 0.4
+    }
+  },
+  {
+    "Type": "dish",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 600,
+      "hardness": 0.6,
+      "viscosity": 0.6,
+      "flammability": 0.7
+    }
+  },
+  {
+    "Type": "dish",
+    "Material": "heatResistantGlass",
+    "Resistances": {
+      "temperature": 1200,
+      "hardness": 0.4,
+      "volatility": 0.5,
+      "viscosity": 0.3,
+      "toxicity": 0.2,
+      "flammability": 0.9,
+      "explosiveness": 0.15
+    }
+  },
+  {
+    "Type": "dish",
+    "Material": "enameledGlass",
+    "Resistances": {
+      "temperature": 300,
+      "hardness": 0.3,
+      "viscosity": 0.2,
+      "flammability": 0.65
+    }
+  },
+  {
+    "Type": "dish",
+    "Material": "ceramic",
+    "Resistances": {
+      "temperature": 800,
+      "hardness": 0.7,
+      "viscosity": 0.15,
+      "flammability": 0.99,
+      "explosiveness": 0.4
+    }
+  },
+  {
+    "Type": "dish",
+    "Material": "wood",
+    "Resistances": {
+      "temperature": 200,
+      "hardness": 0.5,
+      "viscosity": 0.1,
+
+    }
+  },
+  {
+    "Type": "box",
+    "Material": "temperedGlass",
+    "Resistances": {
+      "temperature": 500,
+      "hardness": 0.6,
+      "toxicity": 0.4,
+      "radioactivity": 0.2,
+      "flammability": 0.6,
+      "explosiveness": 0.1
+    }
+  },
+  {
+    "Type": "box",
+    "Material": "plastic",
+    "Resistances": {
+      "temperature": 80,
+      "hardness": 0.4,
+      "viscosity": 0.6,
+      "toxicity": 0.3,
+      "radioactivity": 0.8,
+      "explosiveness": 0.15
+    }
+  },
+  {
+    "Type": "box",
+    "Material": "wood",
+    "Resistances": {
+      "temperature": 200,
+      "hardness": 0.5,
+      "toxicity": 0.1,
+      "radioactivity": 0.1,
+      "explosiveness": 0.1
+    }
+  }
+]

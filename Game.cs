@@ -15,7 +15,7 @@ namespace Alchemical_Laboratory
 {
     public class Game
     {
-        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard+" "+Resource.ComingSoon+"..."];
+        readonly string[] mode = [Resource.UnlimitedResources, Resource.LimitedResourcesHard]; // " "+Resource.ComingSoon+"..."
         string gameMode;
 
         //byte lifePoints = 3;
@@ -40,7 +40,7 @@ namespace Alchemical_Laboratory
             catch (UserException ex) { logger.Error(ex); }
 
             AlchemyBook book = new AlchemyBook();
-            book.Import("Properties/Substances.json", "Properties/Recipes.json");
+            book.Import("Properties/Substances.json", "Properties/Recipes.json", "Properties/Combinations.json");
 
             services = new ServiceCollection()
                 .AddSingleton(book)
@@ -107,7 +107,7 @@ namespace Alchemical_Laboratory
                 }
             }
             Console.Clear();
-            ShowRules();
+            //ShowRules();
 
             Services.GetRequiredService<AlchemyManager>().GetFirstSubs();
             Options();
@@ -152,7 +152,7 @@ namespace Alchemical_Laboratory
         {
             Extensions.CleanStrings(1);
             // [█████░░░░░░]
-            Console.WriteLine($"{Resource.RiskLevel}: {gameState.PrintRiskLevel()}\n");
+            Console.WriteLine($"{Resource.RiskLevel}: {gameState.HeatmapPrint(gameState.RiskLevel, 100)}\n");
             int[] pr = gameState.Progress();
             Console.WriteLine($"{Resource.AlchemyBookProgress}: {pr[0]+"/"+pr[1]} ({Math.Round((double)pr[0] / (double)pr[1] * 100, 2)}%)");
             gameState.DisplayInventory();

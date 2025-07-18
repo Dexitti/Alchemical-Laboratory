@@ -20,6 +20,8 @@ namespace Alchemical_Laboratory
         public Dictionary<Property, double> Characteristics { get; set; }
         public Tools RequiredTools { get; set; }
 
+        public Container Bin {  get; set; }
+
         public bool IsDiscovered
         {
             get => isDiscovered;
@@ -68,20 +70,6 @@ namespace Alchemical_Laboratory
         {
             return Resource.ResourceManager.GetString(Name);
         }
-    }
-
-    [Flags]
-    public enum Property
-    {
-        none = 0,
-        temperature = 1,
-        hardness = 2,
-        volatility = 4,
-        viscosity = 8,
-        toxicity = 16,
-        flammability = 32,
-        explosiveness = 64,
-        radioactivity = 128
     }
 
     [Flags]

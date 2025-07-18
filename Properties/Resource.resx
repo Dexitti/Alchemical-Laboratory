@@ -135,26 +135,26 @@
   <data name="Water" xml:space="preserve">
     <value>Water</value>
   </data>
-  <data name="Temperature" xml:space="preserve">
-    <value>Temperature</value>
+  <data name="temperature" xml:space="preserve">
+    <value>temperature</value>
   </data>
-  <data name="Hardness" xml:space="preserve">
-    <value>Hardness</value>
+  <data name="hardness" xml:space="preserve">
+    <value>hardness</value>
   </data>
-  <data name="Volatility" xml:space="preserve">
-    <value>Volatility</value>
+  <data name="volatility" xml:space="preserve">
+    <value>volatility</value>
   </data>
-  <data name="Viscosity" xml:space="preserve">
-    <value>Viscosity</value>
+  <data name="viscosity" xml:space="preserve">
+    <value>viscosity</value>
   </data>
-  <data name="Toxicity" xml:space="preserve">
-    <value>Toxicity</value>
+  <data name="toxicity" xml:space="preserve">
+    <value>toxicity</value>
   </data>
-  <data name="Flammability" xml:space="preserve">
-    <value>Flammability</value>
+  <data name="flammability" xml:space="preserve">
+    <value>flammability</value>
   </data>
-  <data name="Radioactivity" xml:space="preserve">
-    <value>Radioactivity</value>
+  <data name="radioactivity" xml:space="preserve">
+    <value>radioactivity</value>
   </data>
   <data name="UnlimitedResources" xml:space="preserve">
     <value>unlimited resources</value>
@@ -204,8 +204,8 @@
   <data name="PressToContinue" xml:space="preserve">
     <value>Press any key to continue</value>
   </data>
-  <data name="Explosiveness" xml:space="preserve">
-    <value>Explosiveness</value>
+  <data name="explosiveness" xml:space="preserve">
+    <value>explosiveness</value>
   </data>
   <data name="Fire_Description" xml:space="preserve">
     <value>The primordial force of change and destruction, but also warmth and creation. The essence of energy itself. 🜂</value>
@@ -692,5 +692,53 @@
   </data>
   <data name="AlchemicalLaboratory" xml:space="preserve">
     <value>Alchemical Laboratory</value>
+  </data>
+  <data name="roundBottomFlask" xml:space="preserve">
+    <value>Roundbottom Flask</value>
+  </data>
+  <data name="erlenmeyerFlask" xml:space="preserve">
+    <value>Erlenmeyer Flask</value>
+  </data>
+  <data name="mortar" xml:space="preserve">
+    <value>Mortar</value>
+  </data>
+  <data name="beaker" xml:space="preserve">
+    <value>Beaker</value>
+  </data>
+  <data name="bottle" xml:space="preserve">
+    <value>Bottle</value>
+  </data>
+  <data name="jar" xml:space="preserve">
+    <value>Jar</value>
+  </data>
+  <data name="testTube" xml:space="preserve">
+    <value>Test tube</value>
+  </data>
+  <data name="dish" xml:space="preserve">
+    <value>Dish</value>
+  </data>
+  <data name="box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="thinGlass" xml:space="preserve">
+    <value>Thin glass</value>
+  </data>
+  <data name="temperedGlass" xml:space="preserve">
+    <value>Tempered glass</value>
+  </data>
+  <data name="heatResistantGlass" xml:space="preserve">
+    <value>Heatresistant glass</value>
+  </data>
+  <data name="enameledGlass" xml:space="preserve">
+    <value>Enameled glass</value>
+  </data>
+  <data name="plastic" xml:space="preserve">
+    <value>Plastic</value>
+  </data>
+  <data name="ceramic" xml:space="preserve">
+    <value>Ceramic</value>
+  </data>
+  <data name="wood" xml:space="preserve">
+    <value>Wood</value>
   </data>
 </root>

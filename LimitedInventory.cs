@@ -49,13 +49,15 @@ namespace Alchemical_Laboratory
                 foreach (var pair in buckets)
                 {
                     if (pair.Value < 0) continue;
-                    Console.WriteLine($"{c}. {Resource.ResourceManager.GetString(pair.Key.Name)}: {pair.Value}");
+                    Console.WriteLine($"{c}. {pair.Key.Bin}({pair.Key.Bin.Material}) [{pair.Key} ({pair.Value})]");
                     c++;
                 }
             }
         }
 
         public bool IsEnough(Substance sub) => buckets.TryGetValue(sub, out int count) && count > 0;
+
+        public int AmountOf(Substance sub) => buckets[sub];
 
         public bool Remove(Substance sub)
         {

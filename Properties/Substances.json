@@ -3,7 +3,7 @@
   //{
   //  "Name": null,
   //  "Description": null,
-  //  "Properties": {}
+  //  "Properties": {} значения от 0 до 1 (%/100)
   //},
   {
     "Name": "Fire",

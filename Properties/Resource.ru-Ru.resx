@@ -135,26 +135,26 @@
   <data name="Water" xml:space="preserve">
     <value>Вода</value>
   </data>
-  <data name="Temperature" xml:space="preserve">
-    <value>Температура</value>
+  <data name="temperature" xml:space="preserve">
+    <value>температура</value>
   </data>
-  <data name="Hardness" xml:space="preserve">
-    <value>Твердость</value>
+  <data name="hardness" xml:space="preserve">
+    <value>твердость</value>
   </data>
-  <data name="Volatility" xml:space="preserve">
-    <value>Летучесть</value>
+  <data name="volatility" xml:space="preserve">
+    <value>летучесть</value>
   </data>
-  <data name="Viscosity" xml:space="preserve">
-    <value>Вязкость</value>
+  <data name="viscosity" xml:space="preserve">
+    <value>вязкость</value>
   </data>
-  <data name="Toxicity" xml:space="preserve">
-    <value>Токсичность</value>
+  <data name="toxicity" xml:space="preserve">
+    <value>токсичность</value>
   </data>
-  <data name="Flammability" xml:space="preserve">
-    <value>Горючесть</value>
+  <data name="flammability" xml:space="preserve">
+    <value>горючесть</value>
   </data>
-  <data name="Radioactivity" xml:space="preserve">
-    <value>Радиоактивность</value>
+  <data name="radioactivity" xml:space="preserve">
+    <value>радиоактивность</value>
   </data>
   <data name="UnlimitedResources" xml:space="preserve">
     <value>безграничные ресурсы</value>
@@ -204,8 +204,8 @@
   <data name="PressToContinue" xml:space="preserve">
     <value>Нажмите, чтобы продолжить</value>
   </data>
-  <data name="Explosiveness" xml:space="preserve">
-    <value>Взрывоопасность</value>
+  <data name="explosiveness" xml:space="preserve">
+    <value>взрывоопасность</value>
   </data>
   <data name="Fire_Description" xml:space="preserve">
     <value>Первичная сила перемен и разрушения, но также тепла и созидания. Сама суть энергии. 🜂</value>
@@ -689,5 +689,53 @@
   </data>
   <data name="StartNewGame" xml:space="preserve">
     <value>Начало новой игры</value>
+  </data>
+  <data name="roundBottomFlask" xml:space="preserve">
+    <value>Круглодонная колба</value>
+  </data>
+  <data name="erlenmeyerFlask" xml:space="preserve">
+    <value>Коническая колба</value>
+  </data>
+  <data name="mortar" xml:space="preserve">
+    <value>Ступка</value>
+  </data>
+  <data name="beaker" xml:space="preserve">
+    <value>Стакан</value>
+  </data>
+  <data name="bottle" xml:space="preserve">
+    <value>Бутылка</value>
+  </data>
+  <data name="jar" xml:space="preserve">
+    <value>Банка</value>
+  </data>
+  <data name="testTube" xml:space="preserve">
+    <value>Пробирка</value>
+  </data>
+  <data name="dish" xml:space="preserve">
+    <value>Чаша</value>
+  </data>
+  <data name="box" xml:space="preserve">
+    <value>Ящик</value>
+  </data>
+  <data name="thinGlass" xml:space="preserve">
+    <value>Тонкое стекло</value>
+  </data>
+  <data name="temperedGlass" xml:space="preserve">
+    <value>Каленное стекло</value>
+  </data>
+  <data name="heatResistantGlass" xml:space="preserve">
+    <value>Огнеупорное стекло</value>
+  </data>
+  <data name="enameledGlass" xml:space="preserve">
+    <value>Эмалированное стекло</value>
+  </data>
+  <data name="plastic" xml:space="preserve">
+    <value>Пластик</value>
+  </data>
+  <data name="ceramic" xml:space="preserve">
+    <value>Керамика</value>
+  </data>
+  <data name="wood" xml:space="preserve">
+    <value>Дерево</value>
   </data>
 </root>

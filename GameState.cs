@@ -73,29 +73,27 @@ namespace Alchemical_Laboratory
             return [opened, total];
         }
 
-        public string PrintRiskLevel()
+        public string HeatmapPrint(int value, int total)
         {
-            switch (RiskLevel)
+            switch ((double)value / (double)total)
             {
-                case <= 10: return $"\x1b[38;2;0;255;0m{RiskLevel}/{100}\x1b[0m";
-                case > 10 and <= 15: return $"\x1b[38;2;85;255;0m{RiskLevel}/{100}\x1b[0m";
-                case > 15 and <= 30: return $"\x1b[38;2;170;255;0m{RiskLevel}/{100}\x1b[0m";
-                case > 30 and <= 45: return $"\x1b[38;2;255;255;0m{RiskLevel}/{100}\x1b[0m";
-                case > 45 and <= 60: return $"\x1b[38;2;255;170;0m{RiskLevel}/{100}\x1b[0m";
-                case > 60 and <= 85: return $"\x1b[38;2;255;85;0m{RiskLevel}/{100}\x1b[0m";
-                case > 85 and <= 100: return $"\x1b[38;2;255;0;0m{RiskLevel}/{100}\x1b[0m";
-                default: return $"{RiskLevel}/{100}";
+                case <= 0.1: return $"\x1b[38;2;0;255;0m{value}/{total}\x1b[0m";
+                case > 0.1 and <= 0.15: return $"\x1b[38;2;85;255;0m{value}/{total}\x1b[0m";
+                case > 0.15 and <= 0.3: return $"\x1b[38;2;170;255;0m{value}/{total}\x1b[0m";
+                case > 0.3 and <= 0.45: return $"\x1b[38;2;255;255;0m{value}/{total}\x1b[0m";
+                case > 0.45 and <= 0.6: return $"\x1b[38;2;255;170;0m{value}/{total}\x1b[0m";
+                case > 0.0 and <= 0.85: return $"\x1b[38;2;255;85;0m{value}/{total}\x1b[0m";
+                case > 0.85 and <= 1: return $"\x1b[38;2;255;0;0m{value}/{total}\x1b[0m";
+                default: return $"{value}/{total}";
             }
         }
 
-        public void OnGetNewSubstance(Substance sub) // event handler: получено новое вещество (interface+functional)
+        public virtual void OnGetNewSubstance(Substance sub) // event handler: получено новое вещество (interface+functional)
         {
             Console.Clear();
             Console.WriteLine(Resource.NewSubstanceObtained + "!");
             logger.Info("Got new sub – {sub}!", sub);
             Console.WriteLine($"{sub} – {Resource.ResourceManager.GetString(sub.Description)}\n");
-
-            // совмещение свойств вещества с емкостью
 
             for (int r = 0; r < 2; r++) // выбор рекомендуемых инструментов
             {

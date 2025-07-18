@@ -14,9 +14,6 @@ namespace Alchemical_Laboratory
         {
         }
 
-        public void OnGetNewSubstance(Substance sub)
-        {
-
-        }
+        //OnGetNewSubstance(Substance sub) в родительском классе
     }
 }

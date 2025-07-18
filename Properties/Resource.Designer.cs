@@ -250,6 +250,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Beaker.
+        /// </summary>
+        internal static string beaker {
+            get {
+                return ResourceManager.GetString("beaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Bismuth.
         /// </summary>
         internal static string Bismuth {
@@ -300,6 +309,24 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Bones_Description {
             get {
                 return ResourceManager.GetString("Bones_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bottle.
+        /// </summary>
+        internal static string bottle {
+            get {
+                return ResourceManager.GetString("bottle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Box.
+        /// </summary>
+        internal static string box {
+            get {
+                return ResourceManager.GetString("box", resourceCulture);
             }
         }
         
@@ -372,6 +399,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Calomel_Description {
             get {
                 return ResourceManager.GetString("Calomel_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ceramic.
+        /// </summary>
+        internal static string ceramic {
+            get {
+                return ResourceManager.GetString("ceramic", resourceCulture);
             }
         }
         
@@ -547,6 +583,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Dish.
+        /// </summary>
+        internal static string dish {
+            get {
+                return ResourceManager.GetString("dish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Display ingredient and result description.
         /// </summary>
         internal static string DisplayDescription {
@@ -610,6 +655,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Enameled glass.
+        /// </summary>
+        internal static string enameledGlass {
+            get {
+                return ResourceManager.GetString("enameledGlass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Congratulations on your victory!.
         /// </summary>
         internal static string EndCongratulations {
@@ -619,11 +673,20 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Explosiveness.
+        ///   Ищет локализованную строку, похожую на Erlenmeyer Flask.
         /// </summary>
-        internal static string Explosiveness {
+        internal static string erlenmeyerFlask {
             get {
-                return ResourceManager.GetString("Explosiveness", resourceCulture);
+                return ResourceManager.GetString("erlenmeyerFlask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на explosiveness.
+        /// </summary>
+        internal static string explosiveness {
+            get {
+                return ResourceManager.GetString("explosiveness", resourceCulture);
             }
         }
         
@@ -664,11 +727,11 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Flammability.
+        ///   Ищет локализованную строку, похожую на flammability.
         /// </summary>
-        internal static string Flammability {
+        internal static string flammability {
             get {
-                return ResourceManager.GetString("Flammability", resourceCulture);
+                return ResourceManager.GetString("flammability", resourceCulture);
             }
         }
         
@@ -772,11 +835,20 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Hardness.
+        ///   Ищет локализованную строку, похожую на hardness.
         /// </summary>
-        internal static string Hardness {
+        internal static string hardness {
             get {
-                return ResourceManager.GetString("Hardness", resourceCulture);
+                return ResourceManager.GetString("hardness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Heatresistant glass.
+        /// </summary>
+        internal static string heatResistantGlass {
+            get {
+                return ResourceManager.GetString("heatResistantGlass", resourceCulture);
             }
         }
         
@@ -858,6 +930,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Iron_Description {
             get {
                 return ResourceManager.GetString("Iron_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Jar.
+        /// </summary>
+        internal static string jar {
+            get {
+                return ResourceManager.GetString("jar", resourceCulture);
             }
         }
         
@@ -1033,6 +1114,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Mortar.
+        /// </summary>
+        internal static string mortar {
+            get {
+                return ResourceManager.GetString("mortar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Mud.
         /// </summary>
         internal static string Mud {
@@ -1150,6 +1240,15 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Plastic.
+        /// </summary>
+        internal static string plastic {
+            get {
+                return ResourceManager.GetString("plastic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Poison.
         /// </summary>
         internal static string Poison {
@@ -1240,11 +1339,11 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Radioactivity.
+        ///   Ищет локализованную строку, похожую на radioactivity.
         /// </summary>
-        internal static string Radioactivity {
+        internal static string radioactivity {
             get {
-                return ResourceManager.GetString("Radioactivity", resourceCulture);
+                return ResourceManager.GetString("radioactivity", resourceCulture);
             }
         }
         
@@ -1290,6 +1389,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string RiskLevel {
             get {
                 return ResourceManager.GetString("RiskLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Roundbottom Flask.
+        /// </summary>
+        internal static string roundBottomFlask {
+            get {
+                return ResourceManager.GetString("roundBottomFlask", resourceCulture);
             }
         }
         
@@ -1591,11 +1699,38 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Temperature.
+        ///   Ищет локализованную строку, похожую на temperature.
         /// </summary>
-        internal static string Temperature {
+        internal static string temperature {
             get {
-                return ResourceManager.GetString("Temperature", resourceCulture);
+                return ResourceManager.GetString("temperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tempered glass.
+        /// </summary>
+        internal static string temperedGlass {
+            get {
+                return ResourceManager.GetString("temperedGlass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Test tube.
+        /// </summary>
+        internal static string testTube {
+            get {
+                return ResourceManager.GetString("testTube", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Thin glass.
+        /// </summary>
+        internal static string thinGlass {
+            get {
+                return ResourceManager.GetString("thinGlass", resourceCulture);
             }
         }
         
@@ -1618,11 +1753,11 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Toxicity.
+        ///   Ищет локализованную строку, похожую на toxicity.
         /// </summary>
-        internal static string Toxicity {
+        internal static string toxicity {
             get {
-                return ResourceManager.GetString("Toxicity", resourceCulture);
+                return ResourceManager.GetString("toxicity", resourceCulture);
             }
         }
         
@@ -1672,20 +1807,20 @@ namespace Alchemical_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Viscosity.
+        ///   Ищет локализованную строку, похожую на viscosity.
         /// </summary>
-        internal static string Viscosity {
+        internal static string viscosity {
             get {
-                return ResourceManager.GetString("Viscosity", resourceCulture);
+                return ResourceManager.GetString("viscosity", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Volatility.
+        ///   Ищет локализованную строку, похожую на volatility.
         /// </summary>
-        internal static string Volatility {
+        internal static string volatility {
             get {
-                return ResourceManager.GetString("Volatility", resourceCulture);
+                return ResourceManager.GetString("volatility", resourceCulture);
             }
         }
         
@@ -1704,6 +1839,15 @@ namespace Alchemical_Laboratory.Properties {
         internal static string Water_Description {
             get {
                 return ResourceManager.GetString("Water_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Wood.
+        /// </summary>
+        internal static string wood {
+            get {
+                return ResourceManager.GetString("wood", resourceCulture);
             }
         }
         

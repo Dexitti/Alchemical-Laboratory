@@ -12,7 +12,6 @@ namespace Alchemical_Laboratory
         public HashSet<Substance> Components { get; set; }
         public List<Substance> AuxiliaryResults { get; set; }
 
-        //public bool IsDiscovered { get; set; }
         public bool Advanced { get; set; }
 
         public Recipe(Substance result, HashSet<Substance> components, List<Substance>? auxiliaryResults = null, bool advanced = false)
@@ -20,7 +19,6 @@ namespace Alchemical_Laboratory
             Result = result;
             Components = components;
             AuxiliaryResults = auxiliaryResults ?? [];
-            //IsDiscovered = false;
             Advanced = advanced;
         }
 
